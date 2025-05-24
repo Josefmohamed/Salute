@@ -7,60 +7,8 @@
     "title": "Get In Touch Block",
     "status": true
   },
-  "tutor_cards_block": {
-    "title": "Tutor Cards Block",
-    "status": true
-  },
-  "learning_highlights_block": {
-    "title": "Learning Highlights Block",
-    "status": true
-  },
-  "intro_video_block": {
-    "title": "Intro Video Block",
-    "status": true
-  },
-  "grades_follow_block": {
-    "title": "Grades Follow Block",
-    "status": true
-  },
-  "growth_steps_block": {
-    "title": "Growth Steps Block",
-    "status": true
-  },
-  "free_consultation_banner_block": {
-    "title": "Free Consultation Banner Block",
-    "status": true
-  },
-  "our_story_block": {
-    "title": "Our Story Block",
-    "status": true
-  },
-  "what_drives_us_block": {
-    "title": "What Drives Us Block",
-    "status": true
-  },
-  "our_values_block": {
-    "title": "Our Values Block",
-    "status": true
-  },
-  "our_team_intro_block": {
-    "title": "Our Team Intro Block",
-    "status": true
-  },
-  "reviews_block": {
-    "title": "Reviews Block",
-    "status": true
-  },
-  "our_tutors_are_block": {
-    "title": "Our Tutors Are Block",
-    "status": true
-  },
   "services_block": {
     "title": "Services Block",
-    "status": true
-  },
-  "salute_tutoring_experience_block": {
-    "title": "salute Tutoring Experience block",
     "status": true
   }
 }
