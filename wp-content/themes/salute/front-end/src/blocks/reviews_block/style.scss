@@ -1,0 +1,109 @@
+@import '../../styles/variables.scss';
+
+.reviews_block {
+  padding-block: 50px 75px;
+  @include media-screen-min-992 {
+    padding-block: 31px 100px;
+  }
+  
+  --gap: 32px;
+  @include media-screen-min-1024 {
+    --gap: 55px;
+  }
+  
+  .top-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    @include media-screen-min-1024 {
+      gap: 32px;
+    }
+    
+    .description {
+      max-width: 887px;
+      margin-inline: auto;
+      
+      p {
+        font-size: 14px;
+        @include media-screen-min-768 {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  
+  .reviews-grid {
+    columns: 1;
+    max-width: 1110px;
+    margin-inline: auto;
+    gap: var(--gap);
+    margin-top: 32px;
+    @include media-screen-min-768 {
+      columns: 2;
+    }
+    @include media-screen-min-992 {
+      max-width: 1110px;
+      margin-top: 55px;
+    }
+  }
+  
+  .review-card {
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 15px 0 rgba(147, 147, 147, 0.3);
+    background-color: $white;
+    break-inside: avoid;
+    margin-bottom: var(--gap);
+    
+    @include media-screen-min-768 {
+      padding: 32px;
+    }
+    
+    .review-content {
+      margin-bottom: 30px;
+      
+      p {
+        line-height: 180%;
+        font-family: $roboto;
+      }
+    }
+    
+    
+    .review-footer {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      
+      @include media-screen-min-992 {
+        gap: 12px;
+        flex-direction: row;
+        align-items: center;
+      }
+      
+      .stars {
+        width: 117px;
+        height: 23px;
+      }
+      
+      .reviewer-info {
+        display: flex;
+        align-items: center;
+        
+        .separator {
+          background-color: $coFFD_yellow;
+          color: $coFFD_yellow;
+          width: 2px;
+          height: 18px;
+          display: block;
+          margin-inline: 5px;
+        }
+        
+        .term {
+          margin-top: 2px;
+        }
+      }
+      
+    }
+  }
+}

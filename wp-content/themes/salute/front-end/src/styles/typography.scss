@@ -1,0 +1,313 @@
+@import 'variables.scss';
+
+// region fonts
+
+@font-face {
+  font-weight: 300;
+  font-family: "Poppins";
+  src: url('fonts/Poppins/Poppins-Light.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: "Poppins";
+  src: url('fonts/Poppins/Poppins-Regular.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "Poppins";
+  src: url('fonts/Poppins/Poppins-Medium.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-weight: 600;
+  font-family: "Poppins";
+  src: url('fonts/Poppins/Poppins-SemiBold.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Poppins";
+  src: url('fonts/Poppins/Poppins-Bold.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-weight: 800;
+  font-family: "Poppins";
+  src: url('fonts/Poppins/Poppins-ExtraBold.woff2') format('woff2');
+  font-style: normal;
+}
+
+
+@font-face {
+  font-weight: 400;
+  font-family: "Roboto";
+  src: url('fonts/Roboto/Roboto-Regular.woff2') format('woff2');
+  font-style: normal;
+}
+
+
+// endregion fonts
+
+//region typography
+.display, .display p {
+  font-family: $poppins;
+  color: $black;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  @include media-screen-min-1024 {
+    font-size: 64px;
+  }
+  @include media-screen-min-1440 {
+    font-size: 94px;
+  }
+  @include media-screen-min-1920 {
+    font-size: 110px;
+  }
+}
+
+h1, .salute-h1, .salute-h1 p {
+  font-family: $poppins;
+  color: $black;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 114%;
+  @include media-screen-min-1024 {
+    font-size: 48px;
+  }
+
+  @include media-screen-min-1440 {
+    font-size: 60px;
+  }
+}
+
+h2, .salute-h2, .salute-h2 p {
+  font-family: $poppins;
+  color: $black;
+  font-style: normal;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 130%;
+  @include media-screen-min-1024 {
+    font-size: 36px;
+  }
+  @include media-screen-min-1440 {
+    font-size: 40px;
+  }
+}
+
+h3, .salute-h3, .salute-h3 p {
+  font-family: $poppins;
+  color: $black;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 130%;
+  @include media-screen-min-1024 {
+    font-size: 28px;
+  }
+  @include media-screen-min-1440 {
+    font-size: 34px;
+  }
+}
+
+h4, .salute-h4, .salute-h4 p {
+  font-family: $poppins;
+  color: $black;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 130%;
+  @include media-screen-min-1024 {
+    line-height: 100%;
+    font-size: 22px;
+  }
+  @include media-screen-min-1440 {
+    font-size: 28px;
+  }
+}
+
+h5, .salute-h5, .salute-h5 p {
+  font-family: $poppins;
+  color: $black;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  @include media-screen-min-1024 {
+    font-size: 22px;
+  }
+  @include media-screen-min-1440 {
+    font-size: 26px;
+  }
+}
+
+h6, .salute-h6, .salute-h5 p {
+  font-family: $poppins;
+  color: $black;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  @include media-screen-min-1440 {
+    font-size: 22px;
+  }
+}
+
+
+.paragraph-18, .paragraph-18 p, p {
+  font-family: $poppins;
+  color: $black;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 180%;
+  @include media-screen-min-992 {
+    font-size: 18px;
+  }
+}
+
+.paragraph-16, .paragraph-16 p {
+  font-family: $poppins;
+  color: $black;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.paragraph-14, .paragraph-14 p {
+  font-family: $poppins;
+  color: $black;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.paragraph-12, .paragraph-12 p {
+  font-family: $poppins;
+  color: $black;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+
+.button-large {
+  color: $black;
+  font-family: $roboto;
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+}
+
+.button-base {
+  color: $black;
+  font-family: $roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 100px;
+}
+
+.button-small {
+  color: $black;
+  font-family: $roboto;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 450;
+  line-height: 100%;
+}
+
+.cta-button {
+  @include theme-cta-button-style;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.fw-300, .fw-300 p {
+  font-weight: 300;
+}
+
+.poppins , .poppins p {
+  font-family: $poppins;
+}
+
+.roboto , .roboto p {
+  font-family: $roboto;
+}
+
+
+.fw-400, .fw-400 p {
+  font-weight: 400;
+}
+
+.fw-500, .fw-500 p {
+  font-weight: 500;
+}
+
+.fw-600, .fw-600 p {
+  font-weight: 600;
+}
+
+.fw-700, .fw-700 p {
+  font-weight: 700;
+}
+
+
+.capitalize-text {
+  text-transform: capitalize;
+}
+
+.uppercase-text {
+  text-transform: uppercase;
+}
+
+.white-color, .white-color p {
+  color: $white;
+}
+
+.black-color, .black-color p {
+  color: $black;
+}
+
+.color-transition {
+  transition: color $duration;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+.list-wrapper {
+  gap: 22px;
+
+  .lists {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+
+    .icon-wrapper {
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+    }
+  }
+}

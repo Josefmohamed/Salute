@@ -1,0 +1,103 @@
+@import '../../styles/variables.scss';
+
+.our_story_block {
+  padding-block: 35px 80px;
+  .horizontal-card {
+    gap: 35px;
+    padding-top: 40px;
+    @include media-screen-min-1024 {
+      padding-top: 80px;
+      padding-inline: 20px;
+    }
+  }
+
+  .top-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @include media-screen-min-768 {
+      flex-direction: row;
+    }
+    @include media-screen-min-1024 {
+      align-items: center;
+
+    }
+    .right-image-card {
+      width: 100%;
+
+      @include media-screen-min-768 {
+        width: 55%;
+      }
+
+      .right-image {
+        padding-top: 61.75%;
+      }
+
+    }
+
+
+    .description {
+      width: 100%;
+      padding-top: 35px;
+      @include media-screen-min-768 {
+        width: 41.89%;
+        padding-top: 0;
+      }
+
+
+      p {
+        font-family: $roboto;
+      }
+
+    }
+  }
+
+  .second-description {
+    p {
+      font-family: $roboto;
+    }
+  }
+
+  .name-role {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    width: fit-content;
+
+    .line {
+      width: 4px;
+      height: 20px;
+      background-color: red;
+    }
+
+    &:after {
+      position: absolute;
+      content: "";
+      width: 2px;
+      height: 100%;
+      background-color: red;
+    }
+  }
+
+
+  .reviewer-info {
+    display: flex;
+    align-items: center;
+
+    .separator {
+      background-color: $coFFD_yellow;
+      color: $coFFD_yellow;
+      width: 2px;
+      height: 18px;
+      display: block;
+      margin-inline: 5px;
+    }
+
+    .term {
+      margin-top: 2px;
+    }
+  }
+
+}

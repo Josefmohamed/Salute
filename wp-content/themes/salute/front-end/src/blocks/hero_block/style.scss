@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+
+
+.hero_block {
+  background-color: red;
+  height: 500px;
+  padding-block: 250px;
+  
+  .content{
+  
+  }
+  
+  .left-content , .right-content {
+    color: cyan;
+  }
+}

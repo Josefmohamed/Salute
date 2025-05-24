@@ -1,0 +1,179 @@
+@import '../../styles/variables.scss';
+
+.get_in_touch_block {
+  background: $co555_gray;
+  padding-block: 96px;
+  @include media-screen-min-768 {
+    padding-block: 144px 100px;
+  }
+  @include media-screen-min-1280 {
+    padding-block: 176px 128px;
+  }
+  
+  .title {
+    color: $co555_gray;
+    margin-bottom: 48px;
+    @include media-screen-min-600 {
+      max-width: 400px;
+    }
+    @include media-screen-min-768 {
+      max-width: 610px;
+      font-size: 48px;
+      margin-bottom: 96px;
+    }
+  }
+  
+  .content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    @include media-screen-min-1024 {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    .left-content {
+      position: relative;
+      width: 100%;
+      @include media-screen-min-1024 {
+        max-width: 613px;
+        width: 49.20%;
+      }
+      @include media-screen-min-1280 {
+        width: 56.2%;
+      }
+      @include media-screen-min-1440 {
+        width: 49.20%;
+      }
+      
+      .title-form {
+        margin-bottom: 32px;
+        @include media-screen-min-768 {
+          font-size: 34px;
+        }
+      }
+      
+      
+    }
+    
+    .right-content {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      margin-top: 48px;
+      row-gap: 48px;
+      column-gap: 24px;
+      @include media-screen-min-768 {
+        row-gap: 48px;
+        column-gap: 24px;
+      }
+      @include media-screen-min-1024 {
+        row-gap: 32px;
+        column-gap: 24px;
+        margin-top: 0;
+        width: 42%;
+        max-width: 396px;
+      }
+      @include media-screen-min-1440 {
+        width: 31.62%;
+      }
+      
+      .branch-locations-wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        
+        .branch-locations {
+          @include media-screen-max-768 {
+            width: 47%;
+          }
+          @include media-screen-min-1024 {
+            width: 46.21%;
+          }
+          
+        }
+      }
+      
+      .bottom-content {
+        width: 100%;
+        gap: 16px;
+        @include media-screen-max-1280 {
+          max-width: 314px;
+        }
+        
+        .description {
+          p {
+            color: $co555_gray;
+          }
+        }
+      }
+    }
+  }
+  
+  .branch-address {
+    max-width: 130px;
+    
+    br {
+      display: none;
+    }
+  }
+  
+  .branch-phone {
+    font-weight: 450;
+  }
+  
+  .column {
+    width: 46.12%;
+    @include media-screen-min-768 {
+      width: 30.9%;
+    }
+    @include media-screen-min-1024 {
+      width: 46.9%;
+    }
+  }
+  
+  .enquires {
+    @include media-screen-max-768 {
+      width: 100%;
+    }
+    @include media-screen-min-1024 {
+      width: 100%;
+    }
+    
+    .col-title {
+      margin-bottom: 16px;
+    }
+    
+    .enquire-title {
+      @include media-screen-min-768{
+        font-size: 34px;
+      }
+    }
+    .box-address {
+      p {
+        line-height: 140%;
+        @include media-screen-min-1024 {
+          line-height: 11px;
+        }
+      }
+      
+      br {
+        display: none;
+      }
+    }
+    
+    .cta-link {
+      line-height: 11px;
+    }
+    
+    .phone {
+      line-height: 11px;
+    }
+  }
+  
+  .branch-title {
+    font-size: 20px;
+  }
+  
+}
