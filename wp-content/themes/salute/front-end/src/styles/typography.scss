@@ -1,4 +1,5 @@
 @import 'variables.scss';
+
 // region fonts
 
 @font-face {
@@ -59,7 +60,7 @@
 }
 
 h1, .salute-h1, .salute-h1 p {
-  font-family: $urbanist;
+  font-family: $maxima;
   color: $black;
   font-size: 50px;
   font-weight: 400;
@@ -74,7 +75,7 @@ h1, .salute-h1, .salute-h1 p {
 }
 
 h2, .salute-h2, .salute-h2 p {
-  font-family: $urbanist;
+  font-family: $maxima;
   color: $black;
   font-style: normal;
   font-size: 40px;
@@ -89,7 +90,7 @@ h2, .salute-h2, .salute-h2 p {
 }
 
 h3, .salute-h3, .salute-h3 p {
-  font-family: $urbanist;
+  font-family: $maxima;
   color: $black;
   font-style: normal;
   font-weight: 400;
@@ -104,7 +105,7 @@ h3, .salute-h3, .salute-h3 p {
 }
 
 h4, .salute-h4, .salute-h4 p {
-  font-family: $urbanist;
+  font-family: $maxima;
   color: $black;
   font-style: normal;
   font-weight: 400;
@@ -120,7 +121,7 @@ h4, .salute-h4, .salute-h4 p {
 }
 
 h5, .salute-h5, .salute-h5 p {
-  font-family: $urbanist;
+  font-family: $maxima;
   color: $black;
   font-style: normal;
   font-weight: 400;
@@ -135,7 +136,7 @@ h5, .salute-h5, .salute-h5 p {
 }
 
 h6, .salute-h6, .salute-h5 p {
-  font-family: $urbanist;
+  font-family: $maxima;
   color: $black;
   font-style: normal;
   font-weight: 400;
@@ -147,7 +148,7 @@ h6, .salute-h6, .salute-h5 p {
 }
 
 .paragraph-28, .paragraph-28 p {
-  font-family: $urbanist;
+  font-family: $maxima;
   color: $black;
   font-style: normal;
   font-weight: 400;
@@ -159,7 +160,7 @@ h6, .salute-h6, .salute-h5 p {
 }
 
 .paragraph-26, .paragraph-26 p {
-  font-family: $urbanist;
+  font-family: $maxima;
   color: $black;
   font-style: normal;
   font-weight: 400;
@@ -168,7 +169,7 @@ h6, .salute-h6, .salute-h5 p {
 }
 
 .paragraph-24, .paragraph-24 p {
-  font-family: $urbanist;
+  font-family: $maxima;
   color: $black;
   font-size: 24px;
   font-style: normal;
@@ -177,7 +178,7 @@ h6, .salute-h6, .salute-h5 p {
 }
 
 .paragraph-20, .paragraph-20 p {
-  font-family: $urbanist;
+  font-family: $maxima;
   color: $black;
   font-size: 20px;
   font-style: normal;
@@ -186,7 +187,7 @@ h6, .salute-h6, .salute-h5 p {
 }
 
 .paragraph-18, .paragraph-18 p, p {
-  font-family: $urbanist;
+  font-family: $maxima;
   color: $black;
   font-size: 16px;
   font-style: normal;
