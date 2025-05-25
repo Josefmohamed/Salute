@@ -7,16 +7,6 @@
       "text": "#000000",
       "palette": [
         {
-          "slug": "yellow",
-          "color": "#FFF500",
-          "name": "Yellow"
-        },
-        {
-          "slug": "gray",
-          "color": "#555555",
-          "name": "Gray"
-        },
-        {
           "slug": "black",
           "color": "#000000",
           "name": "Black"
@@ -27,120 +17,38 @@
           "name": "Light"
         },
         {
-          "slug": "red",
-          "color": "#FC3A3A",
-          "name": "Red"
+          "slug": "sky-breeze",
+          "color": "#8BCCFE",
+          "name": "Sky Breeze"
         },
         {
-          "slug": "yellow",
-          "color": "#FFD623",
-          "name": "Yellow"
+          "slug": "midnight-depth",
+          "color": "#011632",
+          "name": "Midnight Depth"
         },
         {
-          "slug": "green",
-          "color": "#20C641",
-          "name": "Green"
+          "slug": "skybolt-blue",
+          "color": "#2A90DD",
+          "name": "Skybolt Blue"
         },
         {
-          "slug": "sky",
-          "color": "#CCF2FF",
-          "name": "Sky"
+          "slug": "twilight-steel",
+          "color": "#182A3B",
+          "name": "Twilight Steel"
         },
         {
-          "slug": "blue",
-          "color": "#0563DE",
-          "name": "Blue"
+          "slug": "graphite-gray",
+          "color": "#333333",
+          "name": "Graphite Gray"
         },
         {
-          "slug": "dark",
-          "color": "#1F1F1F",
-          "name": "Dark"
-        },
-        {
-          "slug": "lavender",
-          "color": "#E4DCFF",
-          "name": "Lavender"
-        },
-        {
-          "slug": "blue",
-          "color": "#3782E5",
-          "name": "Blue"
-        },
-        {
-          "slug": "green",
-          "color": "#4DD167",
-          "name": "Green"
-        },
-        {
-          "slug": "yellow2",
-          "color": "#FFDE4F",
-          "name": "Yellow 2"
-        },
-        {
-          "slug": "orange",
-          "color": "#FFA941",
-          "name": "Orange"
-        },
-        {
-          "slug": "red2",
-          "color": "#FD6161",
-          "name": "Red 2"
-        },
-        {
-          "slug": "cream",
-          "color": "#FFEAD0",
-          "name": "Cream"
-        },
-        {
-          "slug": "orange2",
-          "color": "#FF9412",
-          "name": "Orange 2"
-        },
-        {
-          "slug": "pink",
-          "color": "#FED8D8",
-          "name": "Pink"
-        },
-        {
-          "slug": "mint",
-          "color": "#D2F4D9",
-          "name": "Mint"
-        },
-        {
-          "slug": "blue",
-          "color": "#00BFFF",
-          "name": "Blue"
-        },
-        {
-          "slug": "purple",
-          "color": "#7A4FFF",
-          "name": "Purple"
-        },
-        {
-          "slug": "violet",
-          "color": "#D135ED",
-          "name": "Violet"
-        },
-        {
-          "slug": "pink2",
-          "color": "#F6D7FB",
-          "name": "Pink 2"
-        },
-        {
-          "slug": "cyan",
-          "color": "#01C6D9",
-          "name": "Cyan"
-        },
-        {
-          "slug": "cyan2",
-          "color": "#CCF4F7",
-          "name": "Cyan 2"
-        },
-        {
-          "slug": "pink3",
-          "color": "#FF4CB4",
-          "name": "Pink 3"
+          "slug": "frosted-sky",
+          "color": "#E9F7FE",
+          "name": "Frosted Sky"
         }
+
+
+
       ]
     }
   },

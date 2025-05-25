@@ -1,0 +1,134 @@
+@import '../../styles/variables.scss';
+
+.faqs_block {
+  padding-block: 70px 60px;
+  @include media-screen-min-1024 {
+    padding-block: 138px 123px;
+  }
+
+  .content {
+    gap: 30px;
+    margin: 0 auto;
+    @include media-screen-max-768 {
+      gap: 40px;
+    }
+    @include media-screen-min-1024 {
+      max-width: 1000px;
+    }
+    .text {
+      color: #2A90DD;
+    }
+  }
+
+  .accordion-content {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+  }
+
+  .accordion-content[aria-hidden="false"] {
+    grid-template-rows: 1fr;
+  }
+
+  .accordion-content > div {
+    overflow: hidden;
+  }
+
+
+  .accordion {
+    margin-top: 65px;
+    @include media-screen-min-1440 {
+      margin-top: 103px;
+      padding-inline: 130px 122px;
+    }
+  }
+
+  .accordion-panel {
+    border-radius: 8px;
+    background-color: blue;
+    //background-color: $frosted-sky;
+    padding: 30px;
+    cursor: pointer;
+    @include media-screen-min-1280 {
+      padding: 30px 53px 38px 63px;
+    }
+    &:not(:last-child) {
+      margin-bottom: 30px;
+      @include media-screen-min-1024 {
+        margin-bottom: 59px;
+      }
+    }
+
+
+    .title {
+      position: relative;
+    }
+
+    .answer {
+      p {
+        font-style: normal;
+        font-weight: 500;
+        line-height: 25px;
+        font-size: 22px;
+        @include media-screen-max-992 {
+          font-size: 18px;
+        }
+      }
+      .spacer {
+        height: 20px;
+        @include media-screen-min-1024 {
+          height: 60px;
+        }
+      }
+      .line-answer {
+        width: 100%;
+        height: 2px;
+        background-color: $white;
+      }
+      .answer-svg {
+        width: 39px;
+        height: 18px;
+        margin-left: auto;
+        display: flex;
+        margin-top: 35px;
+      }
+    }
+  }
+
+
+  .accordion-trigger {
+    text-align: left;
+    background-color: transparent;
+    border: transparent;
+    @include media-screen-max-992 {
+      font-size: 18px;
+    }
+    @include media-screen-min-992 {
+      max-width: 85%;
+    }
+  }
+
+  .accordion-trigger .toggle-open {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    transition: transform $duration;
+    margin-left: 20px;
+
+
+
+    @include media-screen-min-992{
+      width: 39px;
+      height: 37px;
+    }
+  }
+
+
+  .accordion-trigger[aria-expanded="true"] .toggle-open {
+    transform: scaleY(-1);
+  }
+}

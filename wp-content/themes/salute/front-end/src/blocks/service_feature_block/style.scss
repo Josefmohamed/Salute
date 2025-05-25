@@ -1,0 +1,41 @@
+@import '../../styles/variables.scss';
+
+.service_feature_block {
+  background-color: $twilight-steel;
+  .cards-wrapper {
+    display: flex;
+    border-radius: 50px;
+    flex-direction: column;
+    @include media-screen-min-768 {
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+    }
+    @include media-screen-min-1024 {
+      padding: 115px 16px 0 43px;
+    }
+    .left-content {
+      width: 100%;
+      gap: 15px;
+      @include media-screen-min-768 {
+        width: 37.13%;
+        gap: 30px;
+      }
+      .text {
+        color: $sky-breeze;
+      }
+    }
+    .right-image-card {
+      width: 100%;
+      @include media-screen-min-768 {
+        width: 41.73%;
+      }
+      .left-image {
+        padding-top: 127.15%;
+        img {
+          border-radius: 27px;
+        }
+      }
+    }
+  }
+}

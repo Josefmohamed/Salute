@@ -77,16 +77,15 @@
 h1, .salute-h1, .salute-h1 p {
   font-family: $poppins;
   color: $black;
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 114%;
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 106%;
   @include media-screen-min-1024 {
-    font-size: 48px;
+    font-size: 85px;
   }
 
   @include media-screen-min-1440 {
-    font-size: 60px;
+    font-size: 104px;
   }
 }
 
@@ -94,14 +93,14 @@ h2, .salute-h2, .salute-h2 p {
   font-family: $poppins;
   color: $black;
   font-style: normal;
-  font-size: 28px;
-  font-weight: 400;
-  line-height: 130%;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 106%;
   @include media-screen-min-1024 {
-    font-size: 36px;
+    font-size: 65px;
   }
   @include media-screen-min-1440 {
-    font-size: 40px;
+    font-size: 82px;
   }
 }
 
@@ -110,13 +109,13 @@ h3, .salute-h3, .salute-h3 p {
   color: $black;
   font-style: normal;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 35px;
   line-height: 130%;
   @include media-screen-min-1024 {
-    font-size: 28px;
+    font-size: 55px;
   }
   @include media-screen-min-1440 {
-    font-size: 34px;
+    font-size: 64px;
   }
 }
 
@@ -125,14 +124,14 @@ h4, .salute-h4, .salute-h4 p {
   color: $black;
   font-style: normal;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 25px;
   line-height: 130%;
   @include media-screen-min-1024 {
     line-height: 100%;
-    font-size: 22px;
+    font-size: 40px;
   }
   @include media-screen-min-1440 {
-    font-size: 28px;
+    font-size: 54px;
   }
 }
 
@@ -141,13 +140,13 @@ h5, .salute-h5, .salute-h5 p {
   color: $black;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 150%;
   @include media-screen-min-1024 {
-    font-size: 22px;
+    font-size: 30px;
   }
   @include media-screen-min-1440 {
-    font-size: 26px;
+    font-size: 40px;
   }
 }
 
@@ -156,13 +155,53 @@ h6, .salute-h6, .salute-h5 p {
   color: $black;
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   line-height: 150%;
   @include media-screen-min-1440 {
-    font-size: 22px;
+    font-size: 30px;
   }
 }
 
+
+
+.paragraph-28, .paragraph-28 p {
+  font-family: $poppins;
+  color: $black;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 25px;
+  font-size: 25px;
+  @include media-screen-min-1024 {
+    font-size: 28px;
+  }
+}
+
+.paragraph-26, .paragraph-26 p {
+  font-family: $poppins;
+  color: $black;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+    font-size: 26px;
+}
+
+.paragraph-24, .paragraph-24 p {
+  font-family: $poppins;
+  color: $black;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.paragraph-20, .paragraph-20 p {
+  font-family: $poppins;
+  color: $black;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
 
 .paragraph-18, .paragraph-18 p, p {
   font-family: $poppins;
@@ -175,34 +214,6 @@ h6, .salute-h6, .salute-h5 p {
     font-size: 18px;
   }
 }
-
-.paragraph-16, .paragraph-16 p {
-  font-family: $poppins;
-  color: $black;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-}
-
-.paragraph-14, .paragraph-14 p {
-  font-family: $poppins;
-  color: $black;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-}
-
-.paragraph-12, .paragraph-12 p {
-  font-family: $poppins;
-  color: $black;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 150%;
-}
-
 
 .button-large {
   color: $black;
@@ -268,6 +279,10 @@ h6, .salute-h6, .salute-h5 p {
   font-weight: 700;
 }
 
+.fw-800, .fw-800 p {
+  font-weight: 800;
+}
+
 
 .capitalize-text {
   text-transform: capitalize;
@@ -295,19 +310,9 @@ h6, .salute-h6, .salute-h5 p {
   gap: 16px;
 }
 
-
-.list-wrapper {
-  gap: 22px;
-
-  .lists {
-    display: flex;
-    align-items: center;
-    column-gap: 8px;
-
-    .icon-wrapper {
-      width: 26px;
-      height: 26px;
-      flex-shrink: 0;
-    }
-  }
+.line {
+  width: 92px;
+  height: 3px;
+  background-color: $midnight-depth;
+  margin: 0 auto;
 }

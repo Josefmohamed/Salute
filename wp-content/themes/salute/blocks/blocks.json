@@ -10,5 +10,17 @@
   "services_block": {
     "title": "Services Block",
     "status": true
+  },
+  "our_vision_block": {
+    "title": "Our Vision Block",
+    "status": true
+  },
+  "service_feature_block": {
+    "title": "Service Feature Block",
+    "status": true
+  },
+  "faqs_block": {
+    "title": "Faqs Block",
+    "status": true
   }
 }
