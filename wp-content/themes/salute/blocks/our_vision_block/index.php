@@ -35,12 +35,13 @@ $image = get_field('image');
                   echo bis_get_attachment_picture(
                       $image,
                       [
-                          375 => [327, 202, 1],
-                          1024 => [506, 312, 1],
-                          1280 => [550, 340, 1],
-                          1440 => [638, 394, 1],
-                          1920 => [638, 394, 1],
-                          3840 => [638, 394, 1]
+                          375 => [327, 416, 1],
+                          1024 => [394, 501, 1],
+                          1280 => [438, 557, 1],
+                          1440 => [486, 618, 1],
+                          1728 => [626, 796, 1],
+                          1920 => [719, 915, 1],
+                          3840 => [1652, 2101, 1]
                       ],
                       [
                           'retina' => true, 'picture_class' => $picture_class,
@@ -48,12 +49,12 @@ $image = get_field('image');
                   );
                   ?>
               </div>
-              <div class="right-content">
+              <div class="right-content column">
                   <?php if ($title) { ?>
                       <h4 class="abrite-h4 text fw-800"><?= $title ?></h4>
                   <?php } ?>
                   <?php if ($description) { ?>
-                      <div class="paragraph-18 description roboto"><?= $description ?></div>
+                      <div class="paragraph-24 fw-500 description urbanist"><?= $description ?></div>
                   <?php } ?>
               </div>
           </div>

@@ -11,14 +11,14 @@
       flex-direction: row;
       align-items: center;
     }
-    @include media-screen-min-1024 {
-      padding: 115px 16px 0 43px;
+    @include media-screen-min-1440 {
+      padding-inline: 43px 16px;
     }
     .left-content {
       width: 100%;
       gap: 15px;
       @include media-screen-min-768 {
-        width: 37.13%;
+        width: 44.13%;
         gap: 30px;
       }
       .text {
@@ -28,7 +28,11 @@
     .right-image-card {
       width: 100%;
       @include media-screen-min-768 {
-        width: 41.73%;
+        width: 49.47%;
+      }
+      @include media-screen-min-1440 {
+        padding-top: 115px;
+        margin-bottom: -115px;
       }
       .left-image {
         padding-top: 127.15%;

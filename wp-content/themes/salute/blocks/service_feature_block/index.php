@@ -31,10 +31,10 @@ $image = get_field('image');
           <div class="cards-wrapper">
               <div class="left-content column">
                   <?php if ($title) { ?>
-                      <h4 title="abrite-h4 text fw-800"><?= $title ?></h4>
+                      <h4 class="abrite-h4 text fw-800"><?= $title ?></h4>
                   <?php } ?>
                   <?php if ($description) { ?>
-                      <div class="paragraph-18 description white-color"><?= $description ?></div>
+                      <div class="paragraph-18 description urbanist white-color"><?= $description ?></div>
                   <?php } ?>
               </div>
               <div class="right-image-card">
