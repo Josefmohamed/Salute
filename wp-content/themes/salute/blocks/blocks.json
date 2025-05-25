@@ -22,5 +22,10 @@
   "faqs_block": {
     "title": "Faqs Block",
     "status": true
+  },
+  "testimonials_block": {
+    "title": "Testimonials Block",
+    "status": true
   }
+
 }

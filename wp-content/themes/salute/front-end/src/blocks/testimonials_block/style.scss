@@ -1,0 +1,32 @@
+@import '../../styles/variables.scss';
+.testimonials_block {
+  padding-block: 70px 60px;
+  @include media-screen-min-1024 {
+    padding-block: 138px 123px;
+  }
+  .content {
+    gap: 30px;
+    margin: 0 auto;
+    @include media-screen-max-768 {
+      gap: 40px;
+    }
+    @include media-screen-min-1024 {
+      max-width: 1000px;
+    }
+    .text {
+      color: #2A90DD;
+    }
+  }
+  .card {
+    background-color: #E9F7FE;
+    padding: 41px 44px 38px 46px;
+    .stars{
+      flex-shrink: 0;
+      width: 90px;
+      height: 23px;
+      @include media-screen-min-1024 {
+        width: 122px;
+      }
+    }
+  }
+}

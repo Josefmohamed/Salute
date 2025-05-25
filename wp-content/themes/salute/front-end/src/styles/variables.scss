@@ -12,7 +12,7 @@ $skybolt-blue: #2A90DD;
 $twilight-steel: #182A3B;
 $graphite-gray: #333333;
 $frosted-sky: #E9F7FE;
-
+$pale-sky: #E6F6FE;
 
 $coFFF_yellow: #FFF500;
 $co555_gray: #555555;
@@ -47,9 +47,8 @@ $coCCF_cyan2: #CCF4F7;
 $coFF4_pink3: #FF4CB4;
 
 
-$poppins: 'Poppins';
-$roboto: 'Roboto';
-
+$urbanist: 'Urbanist';
+$maxima: 'Maxima Nouva';
 
 $container-padding-mobile: 16px;
 $container-padding-tablet: 24px;
@@ -70,6 +69,7 @@ $xxx-large-screen-min-width: 2500px;
 //region media query
 
 //region {only} media
+
 
 @mixin media-screen-max-600() {
   @media screen and (max-width: $small-screen-max-width) {
@@ -183,7 +183,7 @@ $xxx-large-screen-min-width: 2500px;
   font-style: normal;
   text-transform: capitalize;
   transition: background-color $duration, color $duration, border-color $duration;
-  font-family: $poppins;
+  font-family: $urbanist;
   color: $black;
   font-weight: 600;
   font-size: 16px;
@@ -200,7 +200,7 @@ $xxx-large-screen-min-width: 2500px;
 }
 
 @mixin input-style {
-  font-family: $roboto;
+  font-family: $maxima;
   font-size: 19px;
   font-style: normal;
   font-weight: 400;

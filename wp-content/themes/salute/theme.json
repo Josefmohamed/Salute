@@ -45,8 +45,13 @@
           "slug": "frosted-sky",
           "color": "#E9F7FE",
           "name": "Frosted Sky"
-        }
+        },
 
+        {
+          "slug": "pale-sky",
+          "color": "#E6F6FE",
+          "name": "Pale Sky"
+        }
 
 
       ]

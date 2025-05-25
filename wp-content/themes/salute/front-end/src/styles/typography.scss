@@ -1,54 +1,38 @@
 @import 'variables.scss';
-
 // region fonts
 
 @font-face {
-  font-weight: 300;
-  font-family: "Poppins";
-  src: url('fonts/Poppins/Poppins-Light.woff2') format('woff2');
+  font-weight: 500;
+  font-family: "Urbanist";
+  src: url('fonts/Urbanist-Medium.woff2') format('woff2');
+  font-style: normal;
+}
+
+@font-face {
+  font-weight: 100;
+  font-family: "Maxima Nouva";
+  src: url('fonts/MaximaNouva-Thin.woff2') format('woff2');
   font-style: normal;
 }
 
 @font-face {
   font-weight: 400;
-  font-family: "Poppins";
-  src: url('fonts/Poppins/Poppins-Regular.woff2') format('woff2');
-  font-style: normal;
-}
-
-@font-face {
-  font-weight: 500;
-  font-family: "Poppins";
-  src: url('fonts/Poppins/Poppins-Medium.woff2') format('woff2');
-  font-style: normal;
-}
-
-@font-face {
-  font-weight: 600;
-  font-family: "Poppins";
-  src: url('fonts/Poppins/Poppins-SemiBold.woff2') format('woff2');
+  font-family: "Maxima Nouva";
+  src: url('fonts/MaximaNouva-Regular.woff2') format('woff2');
   font-style: normal;
 }
 
 @font-face {
   font-weight: 700;
-  font-family: "Poppins";
-  src: url('fonts/Poppins/Poppins-Bold.woff2') format('woff2');
+  font-family: "Maxima Nouva";
+  src: url('fonts/MaximaNouva-Bold.woff2') format('woff2');
   font-style: normal;
 }
 
 @font-face {
   font-weight: 800;
-  font-family: "Poppins";
-  src: url('fonts/Poppins/Poppins-ExtraBold.woff2') format('woff2');
-  font-style: normal;
-}
-
-
-@font-face {
-  font-weight: 400;
-  font-family: "Roboto";
-  src: url('fonts/Roboto/Roboto-Regular.woff2') format('woff2');
+  font-family: "Maxima Nouva";
+  src: url('fonts/MaximaNouva-ExtraBold.woff2') format('woff2');
   font-style: normal;
 }
 
@@ -57,7 +41,7 @@
 
 //region typography
 .display, .display p {
-  font-family: $poppins;
+  font-family: $urbanist;
   color: $black;
   font-size: 48px;
   font-style: normal;
@@ -75,10 +59,10 @@
 }
 
 h1, .salute-h1, .salute-h1 p {
-  font-family: $poppins;
+  font-family: $urbanist;
   color: $black;
   font-size: 50px;
-  font-weight: 800;
+  font-weight: 400;
   line-height: 106%;
   @include media-screen-min-1024 {
     font-size: 85px;
@@ -90,11 +74,11 @@ h1, .salute-h1, .salute-h1 p {
 }
 
 h2, .salute-h2, .salute-h2 p {
-  font-family: $poppins;
+  font-family: $urbanist;
   color: $black;
   font-style: normal;
   font-size: 40px;
-  font-weight: 800;
+  font-weight: 400;
   line-height: 106%;
   @include media-screen-min-1024 {
     font-size: 65px;
@@ -105,7 +89,7 @@ h2, .salute-h2, .salute-h2 p {
 }
 
 h3, .salute-h3, .salute-h3 p {
-  font-family: $poppins;
+  font-family: $urbanist;
   color: $black;
   font-style: normal;
   font-weight: 400;
@@ -120,7 +104,7 @@ h3, .salute-h3, .salute-h3 p {
 }
 
 h4, .salute-h4, .salute-h4 p {
-  font-family: $poppins;
+  font-family: $urbanist;
   color: $black;
   font-style: normal;
   font-weight: 400;
@@ -136,7 +120,7 @@ h4, .salute-h4, .salute-h4 p {
 }
 
 h5, .salute-h5, .salute-h5 p {
-  font-family: $poppins;
+  font-family: $urbanist;
   color: $black;
   font-style: normal;
   font-weight: 400;
@@ -151,7 +135,7 @@ h5, .salute-h5, .salute-h5 p {
 }
 
 h6, .salute-h6, .salute-h5 p {
-  font-family: $poppins;
+  font-family: $urbanist;
   color: $black;
   font-style: normal;
   font-weight: 400;
@@ -162,13 +146,11 @@ h6, .salute-h6, .salute-h5 p {
   }
 }
 
-
-
 .paragraph-28, .paragraph-28 p {
-  font-family: $poppins;
+  font-family: $urbanist;
   color: $black;
   font-style: normal;
-  font-weight: 800;
+  font-weight: 400;
   line-height: 25px;
   font-size: 25px;
   @include media-screen-min-1024 {
@@ -177,16 +159,16 @@ h6, .salute-h6, .salute-h5 p {
 }
 
 .paragraph-26, .paragraph-26 p {
-  font-family: $poppins;
+  font-family: $urbanist;
   color: $black;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 30px;
     font-size: 26px;
 }
 
 .paragraph-24, .paragraph-24 p {
-  font-family: $poppins;
+  font-family: $urbanist;
   color: $black;
   font-size: 24px;
   font-style: normal;
@@ -195,7 +177,7 @@ h6, .salute-h6, .salute-h5 p {
 }
 
 .paragraph-20, .paragraph-20 p {
-  font-family: $poppins;
+  font-family: $urbanist;
   color: $black;
   font-size: 20px;
   font-style: normal;
@@ -204,7 +186,7 @@ h6, .salute-h6, .salute-h5 p {
 }
 
 .paragraph-18, .paragraph-18 p, p {
-  font-family: $poppins;
+  font-family: $urbanist;
   color: $black;
   font-size: 16px;
   font-style: normal;
@@ -217,7 +199,7 @@ h6, .salute-h6, .salute-h5 p {
 
 .button-large {
   color: $black;
-  font-family: $roboto;
+  font-family: $maxima;
   font-size: 19px;
   font-style: normal;
   font-weight: 400;
@@ -226,7 +208,7 @@ h6, .salute-h6, .salute-h5 p {
 
 .button-base {
   color: $black;
-  font-family: $roboto;
+  font-family: $maxima;
   font-size: 16px;
   font-style: normal;
   font-weight: 450;
@@ -235,7 +217,7 @@ h6, .salute-h6, .salute-h5 p {
 
 .button-small {
   color: $black;
-  font-family: $roboto;
+  font-family: $maxima;
   font-size: 13px;
   font-style: normal;
   font-weight: 450;
@@ -250,18 +232,18 @@ h6, .salute-h6, .salute-h5 p {
   font-style: italic;
 }
 
+
+.urbanist , .urbanist p {
+  font-family: $urbanist;
+}
+
+.maxima , .maxima p {
+  font-family: $maxima;
+}
+
 .fw-300, .fw-300 p {
   font-weight: 300;
 }
-
-.poppins , .poppins p {
-  font-family: $poppins;
-}
-
-.roboto , .roboto p {
-  font-family: $roboto;
-}
-
 
 .fw-400, .fw-400 p {
   font-weight: 400;
@@ -279,7 +261,7 @@ h6, .salute-h6, .salute-h5 p {
   font-weight: 700;
 }
 
-.fw-800, .fw-800 p {
+.fw-800, .fw-800 {
   font-weight: 800;
 }
 

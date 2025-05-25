@@ -29,6 +29,15 @@
       @include media-screen-min-768 {
         width: 37.13%;
       }
+      .text {
+        font-family: $maxima;
+
+      }
+      .description {
+        p {
+          font-family: $maxima;
+        }
+      }
     }
   }
 }

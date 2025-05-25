@@ -45,13 +45,15 @@
 
   .accordion-panel {
     border-radius: 8px;
-    background-color: blue;
-    //background-color: $frosted-sky;
+    //background-color: blue;
+    background-color: $frosted-sky;
     padding: 30px;
     cursor: pointer;
     @include media-screen-min-1280 {
       padding: 30px 53px 38px 63px;
     }
+    box-shadow: 0px 4.72px 18.89px 0px #00000014;
+
     &:not(:last-child) {
       margin-bottom: 30px;
       @include media-screen-min-1024 {
@@ -100,6 +102,7 @@
     text-align: left;
     background-color: transparent;
     border: transparent;
+    color:$midnight-depth;
     @include media-screen-max-992 {
       font-size: 18px;
     }
@@ -117,9 +120,6 @@
     transform: translateY(-50%);
     display: block;
     transition: transform $duration;
-    margin-left: 20px;
-
-
 
     @include media-screen-min-992{
       width: 39px;

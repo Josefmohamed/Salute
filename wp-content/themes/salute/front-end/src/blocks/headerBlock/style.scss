@@ -19,15 +19,24 @@ header {
   z-index: 9999;
   transition: background-color $duration;
   transform: translateX(0);
-  padding-block: 24px;
-  
-  
+  padding-top: 30px;
+  @include media-screen-min-1024 {
+    padding-top: 61px;
+  }
+
   // header
   .container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
     position: relative;
+    background-color: #8BCCFE26;
+    @include media-screen-max-1024 {
+      justify-content: space-between;
+    }
+    @include media-screen-min-1024 {
+      padding-inline: 44px;
+
+    }
   }
   
   // logo
@@ -36,8 +45,9 @@ header {
     height: 46px;
     z-index: 90;
     margin-bottom: 10px;
+    flex-shrink: 0;
     @include media-screen-min-1024 {
-      width: 165px;
+      width: 183px;
       height: 46px;
     }
     
@@ -161,8 +171,8 @@ header {
     position: relative;
     align-items: center;
     flex-direction: row;
-    margin-left: auto;
-    
+    margin-left: 136px;
+
     @include media-screen-max-1024 {
       position: fixed;
       top: 0;
@@ -212,13 +222,14 @@ header {
   .primary-menu {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 40px;
     @include media-screen-min-1024 {
       align-items: center;
       flex-direction: row;
     }
-    @include media-screen-min-1440 {
-      gap: 37px;
+    .header-link {
+      font-weight: 100;
+      line-height: 155%;
     }
   }
   
@@ -227,7 +238,7 @@ header {
     cursor: pointer;
     
     a {
-      color: $co555_gray;
+      color: $midnight-depth;
       position: relative;
       z-index: 2;
       overflow: hidden;
@@ -238,7 +249,7 @@ header {
   
     &:hover {
       a {
-        color: $co378_blue;
+        color: $skybolt-blue;
       }
     }
     
@@ -342,23 +353,9 @@ header {
     }
   }
   
-  .cta-wrappers {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    
-    .cta-button {
-      min-height: 52px;
-    }
-    
-    .login-cta {
-      background-color: $coF5F_light;
-  
-      &:hover{
-        background-color: $co378_blue;
-        color: $white;
-      }
-    }
+
+  &.dark-header {
+
   }
 }
 

@@ -6,7 +6,7 @@
   <meta content="ie=edge" http-equiv="X-UA-Compatible">
   <!-- Third party code ACF-->
   <?php
-  
+  $header_virtion = get_field('page_settings', get_the_ID());
   $code_in_head_tag = get_field('code_in_head_tag', 'options');
   $code_before_body_tag_after_head_tag = get_field('code_before_body_tag_after_head_tag', 'options');
   $code_after_body_tag = get_field('code_after_body_tag', 'options');
@@ -22,29 +22,17 @@
 <?= $code_after_body_tag ?>
 <!-- header ACF -->
 <?php
-
-$banner_text = get_field('banner_text', 'options');
 $header_logo = get_field('header_logo', 'options');
-$login = get_field('login', 'options');
-$contact_us = get_field('cta_button', 'options');
 
 ?>
-<?php if ($banner_text): ?>
-  <div class="banner-wrapper">
-    <div class="paragraph-14 white-color fw-400"> <?= $banner_text ?></div>
-  </div>
-<?php endif; ?>
-<header class="salute-header">
+<header class="salute-header <?= $header_virtion ?>">
   <div class="container">
     <!--     logo-->
-    
-    
     <?php if ($header_logo) { ?>
       <a href="<?= site_url() ?>" target="_self" role="img" class="header-logo" aria-labelledby=" header_logo">
-        <?= \Theme\Helpers::display_attachment($header_logo, array("width" => 165, "height" => 45)) ?>
+        <?= \Theme\Helpers::display_attachment($header_logo, array("width" => 183, "height" => 46)) ?>
       </a>
     <?php } ?>
-    
     <!-- burger menu and cross-->
     <button aria-label="Open Menu Links" class="burger-menu">
       <span></span>
@@ -63,7 +51,7 @@ $contact_us = get_field('cta_button', 'options');
               ?>
               <?php if (!empty($menu_link) && is_array($menu_link)) { ?>
                 <li class="menu-item  <?= ($is_has_sub_menu) ? 'menu-item-has-children' : '' ?>">
-                  <a class="header-link paragraph-16 fw-500 capitalize-text color-transition" href="<?= $menu_link['url'] ?>" target="<?= $menu_link['target'] ?>">
+                  <a class="header-link paragraph-28 capitalize-text color-transition" href="<?= $menu_link['url'] ?>" target="<?= $menu_link['target'] ?>">
                     <?= $menu_link['title'] ?></a>
                   <?php if ($is_has_sub_menu && have_rows('submenu', 'options')) { ?>
                     <div class="arrow">
@@ -95,18 +83,6 @@ $contact_us = get_field('cta_button', 'options');
             <?php } ?>
           </ul>
         <?php } ?>
-        <div class="cta-wrappers">
-          <?php if (!empty($login) && is_array($login)) { ?>
-            <a class="cta-button login-cta content-us mobile-cta" href="<?= $login['url'] ?>" target="<?= $login['target'] ?>">
-              <?= $login['title'] ?>
-            </a>
-          <?php } ?>
-          <?php if (!empty($contact_us) && is_array($contact_us)) { ?>
-            <a class="cta-button content-us" href="<?= $contact_us['url'] ?>" target="<?= $contact_us['target'] ?>">
-              <?= $contact_us['title'] ?>
-            </a>
-          <?php } ?>
-        </div>
       </div>
     </nav>
   </div>

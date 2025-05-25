@@ -50,7 +50,7 @@ $image = get_field('image');
               </div>
               <div class="right-content">
                   <?php if ($title) { ?>
-                      <h4 title="abrite-h4 text fw-600"><?= $title ?></h4>
+                      <h4 class="abrite-h4 text fw-800"><?= $title ?></h4>
                   <?php } ?>
                   <?php if ($description) { ?>
                       <div class="paragraph-18 description roboto"><?= $description ?></div>
