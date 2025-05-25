@@ -42,7 +42,6 @@ $posts_per_page = get_field('number_of_posts', $query_options) || -1;
           <?php } ?>
           <div class="line"></div>
       </div>
-
       <?php
       $args = array(
           'post_type' => 'faqs',
@@ -53,7 +52,6 @@ $posts_per_page = get_field('number_of_posts', $query_options) || -1;
       // The Query
       $the_query = new WP_Query($args);
       $have_posts = $the_query->have_posts();
-
       ?>
       <?php if ($automatically_or_manual === 'manual') { ?>
           <?php
@@ -65,7 +63,6 @@ $posts_per_page = get_field('number_of_posts', $query_options) || -1;
                           ?>
                       <?php endforeach; ?>
                   </div>
-
               </div>
           <?php endif; ?>
       <?php } else {

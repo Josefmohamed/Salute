@@ -26,6 +26,7 @@ $header_logo = get_field('header_logo', 'options');
 
 ?>
 <header class="salute-header <?= $header_version ?>">
+
   <div class="container">
     <!--     logo-->
     <?php if ($header_logo) { ?>
@@ -47,37 +48,11 @@ $header_logo = get_field('header_logo', 'options');
             <?php while (have_rows('menu_links', 'options')) {
               the_row();
               $menu_link = get_sub_field('link');
-              $is_has_sub_menu = get_sub_field('is_has_sub_menu');
               ?>
               <?php if (!empty($menu_link) && is_array($menu_link)) { ?>
-                <li class="menu-item  <?= ($is_has_sub_menu) ? 'menu-item-has-children' : '' ?>">
+                <li class="menu-item">
                   <a class="header-link paragraph-28 capitalize-text color-transition" href="<?= $menu_link['url'] ?>" target="<?= $menu_link['target'] ?>">
                     <?= $menu_link['title'] ?></a>
-                  <?php if ($is_has_sub_menu && have_rows('submenu', 'options')) { ?>
-                    <div class="arrow">
-                      <svg
-                          xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
-                          viewBox="0 0 448 512">
-                        <path fill="#d1d1d1"
-                              d="M441.9 167.3l-19.8-19.8c-4.7-4.7-12.3-4.7-17 0L224 328.2 42.9 147.5c-4.7-4.7-12.3-4.7-17 0L6.1 167.3c-4.7 4.7-4.7 12.3 0 17l209.4 209.4c4.7 4.7 12.3 4.7 17 0l209.4-209.4c4.7-4.7 4.7-12.3 0-17z"
-                              class=""></path>
-                      </svg>
-                    </div>
-                    <ul class="sub-menu">
-                      <?php while (have_rows('submenu', 'options')) {
-                        the_row();
-                        $submenu_link = get_sub_field('submenu_link');
-                        ?>
-                        <?php if ($submenu_link) { ?>
-                          <li class="menu-item-in-sub-menu">
-                            <a class="header-sublink paragraph-16 fw-500 capitalize-text color-transition" href="<?= $submenu_link['url'] ?>" target="<?= $submenu_link['target'] ?>">
-                              <?= $submenu_link['title'] ?>
-                            </a>
-                          </li>
-                        <?php } ?>
-                      <?php } ?>
-                    </ul>
-                  <?php } ?>
                 </li>
               <?php } ?>
             <?php } ?>

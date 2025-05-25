@@ -19,24 +19,15 @@ header {
   z-index: 9999;
   transition: background-color $duration;
   transform: translateX(0);
-  padding-top: 30px;
-  @include media-screen-min-1024 {
-    padding-top: 61px;
-  }
+  padding-block: 24px;
+
 
   // header
   .container {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     position: relative;
-    background-color: #8BCCFE26;
-    @include media-screen-max-1024 {
-      justify-content: space-between;
-    }
-    @include media-screen-min-1024 {
-      padding-inline: 44px;
-
-    }
   }
 
   // logo
@@ -45,9 +36,8 @@ header {
     height: 46px;
     z-index: 90;
     margin-bottom: 10px;
-    flex-shrink: 0;
     @include media-screen-min-1024 {
-      width: 183px;
+      width: 165px;
       height: 46px;
     }
 
@@ -171,7 +161,7 @@ header {
     position: relative;
     align-items: center;
     flex-direction: row;
-    margin-left: 136px;
+    margin-left: auto;
 
     @include media-screen-max-1024 {
       position: fixed;
@@ -222,14 +212,13 @@ header {
   .primary-menu {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     @include media-screen-min-1024 {
       align-items: center;
       flex-direction: row;
     }
-    .header-link {
-      font-weight: 100;
-      line-height: 155%;
+    @include media-screen-min-1440 {
+      gap: 37px;
     }
   }
 
@@ -238,7 +227,7 @@ header {
     cursor: pointer;
 
     a {
-      color: $midnight-depth;
+      color: $co555_gray;
       position: relative;
       z-index: 2;
       overflow: hidden;
@@ -249,7 +238,7 @@ header {
 
     &:hover {
       a {
-        color: $skybolt-blue;
+        color: $co378_blue;
       }
     }
 
@@ -353,10 +342,6 @@ header {
     }
   }
 
-
-  &.dark-header {
-
-  }
 }
 
 

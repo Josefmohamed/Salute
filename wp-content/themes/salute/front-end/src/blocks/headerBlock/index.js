@@ -4,11 +4,11 @@ import {gsap} from "gsap";
 export function headerBlock() {
     const header = document.querySelector('header');
     if (!header) return;
-    
+
     const burgerMenu = header.querySelector('.burger-menu');
     const menuLinks = header.querySelector('.navbar');
-    
-    
+
+
     if (!burgerMenu) return;
     const burgerTl = gsap.timeline({paused: true});
     const burgerSpans = burgerMenu.querySelectorAll('span');
@@ -50,14 +50,14 @@ export function headerBlock() {
             });
         }
     });
-    
+
     // region open sub menu in responsive
     const menuItems = header.querySelectorAll('.menu-item-has-children');
     const mobileMedia = window.matchMedia('(max-width: 992px)');
     menuItems.forEach((menuItem) => {
         const menuItemBody = menuItem.querySelector('.sub-menu');
         menuItem?.addEventListener('click', (e) => {
-            
+
             if (!mobileMedia.matches || !menuItemBody || e.target.classList.contains('header-link') || e.target.closest('.sub-menu,.menu-item-in-sub-menu a')) return;
             const isOpened = menuItem?.classList.toggle('menu-item-active');
             if (!isOpened) {
@@ -76,8 +76,8 @@ export function headerBlock() {
             }
         });
     });
-    
-    
+
+
     // endregion open sub menu in responsive
 
 }

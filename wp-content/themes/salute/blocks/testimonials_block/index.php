@@ -21,14 +21,17 @@ if (isset($block)) {
 }
 ?>
 <?php
-$description = get_field('description');
 $title = get_field('title');
-
+$description = get_field('description');
 $automatically_or_manual = get_field('automatically_or_manual');
 $testimonials_card = get_field('testimonials_card');
 $query_options = get_field('query_options');
+
+
 $order = get_field('order', $query_options) || "DESC";
 $posts_per_page = get_field('number_of_posts', $query_options) || -1;
+
+
 $args = array(
     'post_type' => 'testimonials',
     'posts_per_page' => $posts_per_page,
@@ -38,8 +41,6 @@ $args = array(
 // The Query
 $the_query = new WP_Query($args);
 $have_posts = $the_query->have_posts();
-
-
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
   <div class="container">
@@ -58,8 +59,8 @@ $have_posts = $the_query->have_posts();
           if ($testimonials_card): ?>
                   <div class="swiper testimonials-swiper">
                   <div class="swiper-wrapper cards-wrapper">
-                      <?php foreach ($testimonials_card as $faq):
-                          get_template_part("partials/testimonial", '', array('post_id' => $faq));
+                      <?php foreach ($testimonials_card as $testimonials):
+                          get_template_part("partials/testimonial", '', array('post_id' => $testimonials));
                           ?>
                       <?php endforeach; ?>
                   </div>
