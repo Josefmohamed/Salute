@@ -52,10 +52,11 @@ $have_posts = $the_query->have_posts();
           <?php } ?>
           <div class="line"></div>
       </div>
-      <?php if ($automatically_or_manual === 'manual') { ?>
+  </div>
+    <?php if ($automatically_or_manual === 'manual') { ?>
           <?php
           if ($testimonials_card): ?>
-              <div class="swiper testimonials-swiper">
+                  <div class="swiper testimonials-swiper">
                   <div class="swiper-wrapper cards-wrapper">
                       <?php foreach ($testimonials_card as $faq):
                           get_template_part("partials/testimonial", '', array('post_id' => $faq));
@@ -80,6 +81,4 @@ $have_posts = $the_query->have_posts();
           /* Restore original Post Data */
           wp_reset_postdata(); ?>
       <?php } ?>
-
-  </div>
 </section>

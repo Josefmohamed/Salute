@@ -6,7 +6,7 @@
   <meta content="ie=edge" http-equiv="X-UA-Compatible">
   <!-- Third party code ACF-->
   <?php
-  $header_virtion = get_field('page_settings', get_the_ID());
+  $header_version = get_field('page_settings', get_the_ID());
   $code_in_head_tag = get_field('code_in_head_tag', 'options');
   $code_before_body_tag_after_head_tag = get_field('code_before_body_tag_after_head_tag', 'options');
   $code_after_body_tag = get_field('code_after_body_tag', 'options');
@@ -25,7 +25,7 @@
 $header_logo = get_field('header_logo', 'options');
 
 ?>
-<header class="salute-header <?= $header_virtion ?>">
+<header class="salute-header <?= $header_version ?>">
   <div class="container">
     <!--     logo-->
     <?php if ($header_logo) { ?>
