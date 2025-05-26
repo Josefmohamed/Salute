@@ -46,13 +46,17 @@
           "color": "#E9F7FE",
           "name": "Frosted Sky"
         },
-
         {
           "slug": "pale-sky",
           "color": "#E6F6FE",
           "name": "Pale Sky"
-        }
+        },
 
+        {
+          "slug": "midnight-overlay",
+          "color": "#182A3B99",
+          "name": "Midnight Overlay"
+        }
 
       ]
     }

@@ -14,7 +14,8 @@ require_once 'entities/Entity.php';
 global $entities;
 $entities = [
     'Testimonials',
-    'Faqs',];
+    'Faqs',
+    ];
 
 array_map(function ($entityName) {
   require dirname(__FILE__) . '/entities/' . $entityName . '.php';

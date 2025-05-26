@@ -2,11 +2,12 @@
 $post_id = @$args['post_id'] ?: get_the_ID();
 $post_title = get_the_title($post_id);
 $answer = get_field('answer', $post_id);
+
 ?>
-<div class="accordion-panel" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<div class="accordion-panel " itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
   <?php if ($post_title) { ?>
-    <div id="panel2-title" class="title">
-      <button class="accordion-trigger paragraph-28" aria-expanded="false" aria-controls="accordion1-content">
+    <div id="panel2-title" class="title ">
+      <button class="accordion-trigger paragraph-28 fw-800" aria-expanded="false" aria-controls="accordion1-content">
         <?= $post_title ?>
           <svg class="toggle-open minus-plus in-desk" width="39" height="37" viewBox="0 0 39 37" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M0.866372 24.0779C4.32359 23.0199 8.27938 23.7794 11.0202 26.3599C13.7583 28.9378 14.5677 32.6614 13.444 35.9122C14.7705 36.3165 16.1555 36.5917 17.5893 36.7226C18.9769 32.202 17.7823 27.1169 14.0001 23.5543C10.2134 19.9917 4.80445 18.8661 0.0011821 20.1776C0.142871 21.5249 0.435106 22.8314 0.867257 24.0779L0.866372 24.0779Z" fill="#2A90DD"/>
@@ -22,8 +23,8 @@ $answer = get_field('answer', $post_id);
   <?php if ($answer) { ?>
     <div class="accordion-content" role="region" aria-labelledby="panel2-title" aria-hidden="true" id="panel2-content">
       <div class="body-6 answer regular white-color" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-          <p class="spacer"></p>
           <div class="line-answer"></div>
+          <p class="spacer"></p>
           <?= $answer ?>
           <svg class="answer-svg" width="39" height="18" viewBox="0 0 39 18" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M19.5026 0.00501844C21.8705 0.00501864 24.2383 0.877442 26.0415 2.62229L39 15.1621L36.0674 18L23.1036 5.45516C21.114 3.52981 17.8808 3.52981 15.8912 5.45516L2.93264 18L2.48096e-07 15.1621L12.9586 2.61727C14.7617 0.872427 17.1295 3.81007e-06 19.4974 4.01708e-06L19.5026 0.00501844Z" fill="white"/>

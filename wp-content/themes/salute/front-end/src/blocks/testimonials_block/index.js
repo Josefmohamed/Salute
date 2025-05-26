@@ -1,36 +1,31 @@
 import './style.scss';
-import Swiper from 'swiper';
 import 'swiper/swiper.scss';
-import 'swiper/modules/navigation.scss';
-import {Navigation} from 'swiper/modules';
+import './style.scss';
+import Swiper from 'swiper';
 
 export function testimonials_block() {
   const block = document.querySelector('.testimonials_block');
+  if (!block) return;
   const swiper = new Swiper(block.querySelector('.testimonials-swiper'), {
-    slidesPerView: 'auto',
+    slidesPerView: 1.1,
     spaceBetween: 16,
     loop: true,
-    modules: [Navigation],
     breakpoints: {
       600: {
-        spaceBetween: 16,
-        slidesPerView: 2,
+        spaceBetween: 25,
+        slidesPerView: 1.5,
       },
       992: {
-        slidesPerView: 3,
+        spaceBetween: 25,
+        slidesPerView: 2,
       },
       1024: {
         slidesPerView: 3,
-        spaceBetween: 20,
       },
-
-    },
-    navigation: {
-      nextEl: block.querySelector(".swiper-button-next"),
-      prevEl: block.querySelector(".swiper-button-prev"),
+      1440: {
+        slidesPerView: 3.36,
+        spaceBetween: 41,
+      },
     },
   });
-
-
-  if (!block) return;
 }

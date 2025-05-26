@@ -56,19 +56,6 @@ $privacy_policy = get_field('privacy_policy', 'options');
                   <div class="privacy-policy paragraph-18"><?= $privacy_policy ?></div>
               <?php endif; ?>
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
       </div>
   </div>
 </footer>

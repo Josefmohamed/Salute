@@ -6,6 +6,9 @@ import {get_in_touch_block} from './get_in_touch_block';
 import {our_vision_block} from './our_vision_block';
 import {service_feature_block} from './service_feature_block';
 import {faqs_block} from './faqs_block';
+import {services_block} from './services_block';
+
+
 import {testimonials_block} from './testimonials_block';
 
 export function indexBlocks() {
@@ -17,5 +20,6 @@ export function indexBlocks() {
   service_feature_block()
   faqs_block()
   testimonials_block()
+  services_block()
 }
 

@@ -2,13 +2,16 @@
 
 .service_feature_block {
   background-color: $twilight-steel;
+  @include media-screen-max-992  {
+    padding-block: 60px;
+  }
   .cards-wrapper {
     display: flex;
     border-radius: 50px;
     flex-direction: column;
-    @include media-screen-min-768 {
-      justify-content: space-between;
+    @include media-screen-min-992 {
       flex-direction: row;
+      justify-content: space-between;
       align-items: center;
     }
     @include media-screen-min-1440 {
@@ -17,7 +20,10 @@
     .left-content {
       width: 100%;
       gap: 15px;
-      @include media-screen-min-768 {
+      @include media-screen-max-992 {
+        margin-bottom: 30px;
+      }
+      @include media-screen-min-992 {
         width: 44.13%;
         gap: 30px;
       }
@@ -27,12 +33,11 @@
     }
     .right-image-card {
       width: 100%;
-      @include media-screen-min-768 {
+
+      @include media-screen-min-992 {
         width: 49.47%;
-      }
-      @include media-screen-min-1440 {
-        padding-top: 115px;
         margin-bottom: -115px;
+        padding-top: 115px;
       }
       .left-image {
         padding-top: 127.15%;

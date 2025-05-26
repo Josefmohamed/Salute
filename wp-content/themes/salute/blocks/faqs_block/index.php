@@ -23,12 +23,23 @@ if (isset($block)) {
 <?php
 $description = get_field('description');
 $title = get_field('title');
-$automatically_or_manual = get_field('automatically_or_manual');
-$faqs_posts = get_field('faqs_card');
-$query_options = get_field('query_options');
-$order = get_field('order', $query_options) || "DESC";
-$posts_per_page = get_field('number_of_posts', $query_options) || -1;
 
+
+$programmatic_or_manual = get_field("manual_or_programmatic");
+if ($programmatic_or_manual === 'programmatic') {
+    $query_options = get_field("query_options") ?: [];
+    $number_of_posts = isset($query_options['number_of_posts']) ? (int)$query_options['number_of_posts'] : -1;
+    $order = isset($query_options['order']) && in_array($query_options['order'], ['asc', 'desc']) ? $query_options['order'] : 'DESC';
+    $args = [
+        "post_type" => "faqs",
+        "posts_per_page" => $number_of_posts,
+        "order" => $order,
+        "post_status" => "publish",
+        "paged" => 1,
+        'orderby' => 'date',
+    ];
+    $the_query = new WP_Query($args);
+}
 
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
@@ -42,44 +53,30 @@ $posts_per_page = get_field('number_of_posts', $query_options) || -1;
           <?php } ?>
           <div class="line"></div>
       </div>
-      <?php
-      $args = array(
-          'post_type' => 'faqs',
-          'posts_per_page' => $posts_per_page,
-          'order' => $order,
-          'post_status' => 'publish'
-      );
-      // The Query
-      $the_query = new WP_Query($args);
-      $have_posts = $the_query->have_posts();
-      ?>
-      <?php if ($automatically_or_manual === 'manual') { ?>
-          <?php
-          if ($faqs_posts): ?>
-              <div class="wrapper">
-                  <div class="accordion">
-                      <?php foreach ($faqs_posts as $faq):
-                          get_template_part("partials/faq-card", '', array('post_id' => $faq));
-                          ?>
-                      <?php endforeach; ?>
-                  </div>
-              </div>
-          <?php endif; ?>
-      <?php } else {
+      <?php if ($programmatic_or_manual === 'manual') {
           ?>
-          <?php if ($have_posts) { ?>
-              <div class="wrapper">
-                  <div class="accordion">
-                      <?php while ($the_query->have_posts()) {
-                          $the_query->the_post();
-                          get_template_part("partials/faq-card", '', array('post_id' => get_the_ID()));
-                          ?>
-                      <?php } ?>
-                  </div>
+          <div class="wrapper">
+              <div class="accordion">
+              <?php
+              $cards = get_field("faqs_card");
+              if (is_array($cards)) {
+                  foreach ($cards as $card) {
+                      get_template_part("partials/faq-card", "", ["post_id" => $card->ID]);
+                  }
+              }
+              ?>
               </div>
-          <?php }
-          /* Restore original Post Data */
-          wp_reset_postdata(); ?>
+          </div>
+      <?php } elseif (isset($the_query) && $the_query->have_posts()) { ?>
+          <div class="wrapper">
+              <div class="accordion">
+              <?php while ($the_query->have_posts()) {
+                  $the_query->the_post();
+                  get_template_part("partials/faq-card", "", ["post_id" => get_the_ID()]);
+              } ?>
+              <?php wp_reset_postdata(); ?>
+              </div>
+          </div>
       <?php } ?>
   </div>
 </section>

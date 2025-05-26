@@ -23,24 +23,25 @@ if (isset($block)) {
 <?php
 $title = get_field('title');
 $description = get_field('description');
-$automatically_or_manual = get_field('automatically_or_manual');
-$testimonials_card = get_field('testimonials_card');
-$query_options = get_field('query_options');
 
 
-$order = get_field('order', $query_options) || "DESC";
-$posts_per_page = get_field('number_of_posts', $query_options) || -1;
+$programmatic_or_manual = get_field("manual_or_programmatic");
+if ($programmatic_or_manual === 'programmatic') {
+    $query_options = get_field("query_options") ?: [];
+    $number_of_posts = isset($query_options['number_of_posts']) ? (int)$query_options['number_of_posts'] : -1;
+    $order = isset($query_options['order']) && in_array($query_options['order'], ['asc', 'desc']) ? $query_options['order'] : 'DESC';
+    $args = [
+        "post_type" => "testimonials",
+        "posts_per_page" => $number_of_posts,
+        "order" => $order,
+        "post_status" => "publish",
+        "paged" => 1,
+        'orderby' => 'date',
+    ];
+    $the_query = new WP_Query($args);
+}
 
 
-$args = array(
-    'post_type' => 'testimonials',
-    'posts_per_page' => $posts_per_page,
-    'order' => $order,
-    'post_status' => 'publish'
-);
-// The Query
-$the_query = new WP_Query($args);
-$have_posts = $the_query->have_posts();
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
   <div class="container">
@@ -49,37 +50,34 @@ $have_posts = $the_query->have_posts();
               <h4 class="abrite-h4 text fw-800 text-center"><?= $title ?></h4>
           <?php } ?>
           <?php if ($description) { ?>
-              <div class="paragraph-18 description text-center"><?= $description ?></div>
+              <div class="paragraph-20 description text-center"><?= $description ?></div>
           <?php } ?>
           <div class="line"></div>
       </div>
   </div>
-    <?php if ($automatically_or_manual === 'manual') { ?>
-          <?php
-          if ($testimonials_card): ?>
-                  <div class="swiper testimonials-swiper">
-                  <div class="swiper-wrapper cards-wrapper">
-                      <?php foreach ($testimonials_card as $testimonials):
-                          get_template_part("partials/testimonial", '', array('post_id' => $testimonials));
-                          ?>
-                      <?php endforeach; ?>
-                  </div>
-              </div>
-          <?php endif; ?>
-      <?php } else {
-          ?>
-          <?php if ($have_posts) { ?>
-              <div class="swiper testimonials-swiper" >
-                  <div class="swiper-wrapper cards-wrapper">
-                      <?php while ($the_query->have_posts()) {
-                          $the_query->the_post();
-                          get_template_part("partials/testimonial", '', array('post_id' => get_the_ID()));
-                          ?>
-                      <?php } ?>
-                  </div>
-              </div>
-          <?php }
-          /* Restore original Post Data */
-          wp_reset_postdata(); ?>
-      <?php } ?>
+    <?php if ($programmatic_or_manual === 'manual') {
+        ?>
+        <div class="swiper testimonials-swiper">
+            <div class="swiper-wrapper cards-wrapper">
+                <?php
+                $cards = get_field("testimonials_card");
+                if (is_array($cards)) {
+                    foreach ($cards as $card) {
+                        get_template_part("partials/testimonial", "", ["post_id" => $card->ID]);
+                    }
+                }
+                ?>
+            </div>
+        </div>
+    <?php } elseif (isset($the_query) && $the_query->have_posts()) { ?>
+        <div class="swiper testimonials-swiper">
+            <div class="swiper-wrapper cards-wrapper">
+            <?php while ($the_query->have_posts()) {
+                $the_query->the_post();
+                get_template_part("partials/testimonial", "", ["post_id" => get_the_ID()]);
+            } ?>
+            <?php wp_reset_postdata(); ?>
+            </div>
+        </div>
+    <?php } ?>
 </section>

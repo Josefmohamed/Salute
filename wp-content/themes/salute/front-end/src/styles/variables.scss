@@ -13,6 +13,9 @@ $twilight-steel: #182A3B;
 $graphite-gray: #333333;
 $frosted-sky: #E9F7FE;
 $pale-sky: #E6F6FE;
+$midnight-overlay: #182A3B99;
+
+
 
 $coFFF_yellow: #FFF500;
 $co555_gray: #555555;
@@ -201,10 +204,10 @@ $xxx-large-screen-min-width: 2500px;
 
 @mixin input-style {
   font-family: $maxima;
-  font-size: 19px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 400;
-  line-height: 100%;
+  line-height: 30px;
 }
 
 

@@ -7,21 +7,21 @@ body {
   .gform_wrapper.gravity-theme input:not([type="submit"]):not([type="number"]),
   select, textarea, .gform_wrapper.gravity-theme textarea, {
     @include input-style;
-    color: $co555_gray;
+    color: $midnight-overlay;
     margin-bottom: 0;
     margin-top: auto;
     border: none;
     outline: none;
-    padding-left: 15px;
-    padding-block: 11px;
+    padding-bottom: 20px;
+    padding-left: 0;
     height: 50px;
-    border-bottom: 1px solid $co555_gray;
+    border-bottom: 1px solid $midnight-overlay;
     background: transparent !important;
     transition: border-color $duration, color $duration;
-    font-size: 19px !important;
-
+    font-size: 22px !important;
+    line-height: 30px;
     &::placeholder {
-      color: $co555_gray;
+      color: $midnight-overlay;
       font-family: $maxima;
       font-size: 19px !important;
       font-style: normal;
@@ -31,13 +31,11 @@ body {
     }
     
     &:hover, &:focus {
-      border-color: $co555_gray !important;
-      color: $co555_gray;
-
+      border-color: $skybolt-blue !important;
+      color: $skybolt-blue;
       &::placeholder {
-        color: $co555_gray;
+        color: $skybolt-blue;
       }
-
     }
   }
   
@@ -47,8 +45,8 @@ body {
     height: 50px !important;
     position: relative;
     border: none !important;
-    border-bottom: 1px solid $co555_gray !important;
-
+    border-bottom: 1px solid $midnight-overlay !important;
+    margin-top: 50px !important;
   }
   
   
@@ -62,6 +60,7 @@ body {
     font-style: normal;
     font-weight: 400;
     line-height: 27px;
+    display: none;
   }
   
   
@@ -111,9 +110,9 @@ body {
   .gform_wrapper.gravity-theme .gsection_description,
   .gform_wrapper.gravity-theme .instruction {
     text-align: left;
-    color: $co555_gray;
+    color: $skybolt-blue;
     @include input-style;
-    font-size: 13px;
+    font-size: 17px;
     text-transform: lowercase;
     margin: 3px 0 0 0 !important;
     padding: 0 !important;

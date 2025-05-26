@@ -8,27 +8,89 @@
   .content {
     gap: 30px;
     margin: 0 auto;
-    @include media-screen-max-768 {
+    @include media-screen-600 {
       gap: 40px;
-    }
-    @include media-screen-min-1024 {
-      max-width: 1000px;
+      max-width: 612px;
     }
     .text {
       color: #2A90DD;
     }
+    .description {
+      p {
+        color: $graphite-gray;
+      }
+    }
   }
   .cards-wrapper {
-    padding-left: 112px;
+    padding-left: 15px;
+    margin-top: 25px;
+    @include media-screen-min-1024 {
+      margin-top: 54px;
+    }
+    @include media-screen-min-1440 {
+      padding-left: 112px;
+    }
     .card {
+      box-shadow: 0px 4.72px 18.89px 0px #00000014;
+      border-radius: 14px;
       background-color: $frosted-sky;
-      padding: 41px 44px 38px 46px;
-      .stars{
-        flex-shrink: 0;
-        width: 90px;
-        height: 23px;
-        @include media-screen-min-1024 {
-          width: 122px;
+      transition: background-color $duration;
+      height: auto;
+      padding: 30px;
+      @include media-screen-min-1440 {
+        padding: 41px 44px 38px 46px;
+      }
+      .author-info {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 30px;
+        .author-image {
+          width: 82px;
+          height: 82px;
+          img {
+            border-radius: 50%;
+          }
+        }
+        .stars{
+          flex-shrink: 0;
+          width: 90px;
+          height: 23px;
+          @include media-screen-min-1024 {
+            width: 122px;
+          }
+        }
+        .author-name {
+          transition: color $duration;
+        }
+      }
+      .comment {
+        p {
+          transition: color $duration;
+        }
+      }
+      .svg-quote {
+        transition: fill $duration;
+        display: flex;
+        margin-left: auto;
+        margin-top: 30px;
+      }
+      &:hover {
+        background-color: $skybolt-blue;
+        .author-info {
+          .author-name {
+            color: $pale-sky;
+          }
+        }
+        .comment {
+          p {
+            color: $pale-sky;
+          }
+        }
+        .svg-quote {
+          path {
+            fill: $pale-sky;
+          }
         }
       }
     }

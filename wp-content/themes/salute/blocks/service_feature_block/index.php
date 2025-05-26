@@ -31,10 +31,10 @@ $image = get_field('image');
           <div class="cards-wrapper">
               <div class="left-content column">
                   <?php if ($title) { ?>
-                      <h4 class="abrite-h4 text fw-800"><?= $title ?></h4>
+                      <h4 class="abrite-h4 text uppercase-text fw-800"><?= $title ?></h4>
                   <?php } ?>
                   <?php if ($description) { ?>
-                      <div class="paragraph-18 description urbanist white-color"><?= $description ?></div>
+                      <div class="paragraph-24 description urbanist white-color"><?= $description ?></div>
                   <?php } ?>
               </div>
               <div class="right-image-card">
@@ -43,12 +43,13 @@ $image = get_field('image');
                   echo bis_get_attachment_picture(
                       $image,
                       [
-                          375 => [327, 202, 1],
-                          1024 => [506, 312, 1],
-                          1280 => [550, 340, 1],
-                          1440 => [638, 394, 1],
-                          1920 => [638, 394, 1],
-                          3840 => [638, 394, 1]
+                          375 => [327, 416, 1],
+                          1024 => [475, 604, 1],
+                          1280 => [520, 662, 1],
+                          1440 => [570, 725, 1],
+                          1728 => [713, 906, 1],
+                          1920 => [808, 1027, 1],
+                          3840 => [1758, 2235, 1]
                       ],
                       [
                           'retina' => true, 'picture_class' => $picture_class,

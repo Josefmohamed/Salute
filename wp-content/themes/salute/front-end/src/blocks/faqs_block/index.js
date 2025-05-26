@@ -3,6 +3,9 @@ import './style.scss';
 
 export function faqs_block() {
   const block = document.querySelector('.faqs_block');
+
+  if (!block) return;
+
   const accordion = block.querySelector(".accordion");
 
   accordion.addEventListener("click", (e) => {
@@ -17,14 +20,16 @@ export function faqs_block() {
     const activePanelIsOpened = activeButton.getAttribute("aria-expanded");
 
     if (activePanelIsOpened === "true") {
-      panelToActivate.querySelector("button").setAttribute("aria-expanded", false);
-      panelToActivate.querySelector(".accordion-content").setAttribute("aria-hidden", true);
+      activeButton.setAttribute("aria-expanded", false);
+      activePanel.setAttribute("aria-hidden", true);
+      panelToActivate.classList.remove("accordion-panel-style");
     } else {
-      panelToActivate.querySelector("button").setAttribute("aria-expanded", true);
-      panelToActivate.querySelector(".accordion-content").setAttribute("aria-hidden", false);
+      activeButton.setAttribute("aria-expanded", true);
+      activePanel.setAttribute("aria-hidden", false);
+      panelToActivate.classList.add("accordion-panel-style");
     }
   }
 
-  if (!block) return;
+
 
 }

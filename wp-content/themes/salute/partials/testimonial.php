@@ -1,10 +1,7 @@
 <?php
 $post_id = @$args['post_id'] ?: get_the_ID();
-
 $author_image = get_field('author_image', $post_id);
-
 $post_title = get_the_title($post_id);
-
 $comment = get_field('comment', $post_id);
 $testimonial_title = get_the_title($post_id);
 ?>
@@ -17,7 +14,7 @@ $testimonial_title = get_the_title($post_id);
         <?php } ?>
         <div class="author-content">
             <?php if ($post_title) { ?>
-                <h2 class="paragraph-18 fw-800 "><?= $post_title ?></h2>
+                <h2 class="paragraph-18 fw-800 author-name"><?= $post_title ?></h2>
             <?php } ?>
             <svg class="stars" width="123" height="25" viewBox="0 0 123 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12.3457 0.703613L14.9877 8.83479H23.5373L16.6205 13.8601L19.2625 21.9913L12.3457 16.966L5.42888 21.9913L8.07087 13.8601L1.15407 8.83479H9.7037L12.3457 0.703613Z" fill="#FFC062"/>
@@ -29,6 +26,18 @@ $testimonial_title = get_the_title($post_id);
         </div>
     </div>
     <?php if ($comment) { ?>
-        <div class="comment paragraph-18 fw-500"> <?= $comment ?> </div>
+        <div class="comment paragraph-18 urbanist fw-500"> <?= $comment ?> </div>
     <?php } ?>
+    <svg class="svg-quote" width="33" height="28" viewBox="0 0 33 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clip-path="url(#clip0_27_1814)">
+            <path d="M19.0686 10.3412L19.0686 2.04108C19.0686 0.9133 19.987 -0.000136559 21.1209 -0.00013646L30.9478 -0.000135601C32.0816 -0.000135502 33 0.913301 33 2.04108L33 9.77563C33 15.0683 32.2308 18.8985 30.6892 21.2694C28.9104 24.051 26.2167 26.2356 22.6078 27.8234C21.7375 28.206 20.7164 27.9487 20.1395 27.1952L19.498 26.3577C18.7371 25.3651 19.0371 23.9207 20.1428 23.3321C21.6861 22.5126 22.8913 21.4788 23.7599 20.2307C24.7148 18.8589 25.348 17.0106 25.658 14.6841C25.8205 13.464 24.8607 12.3807 23.6223 12.3807L21.1192 12.3807C19.9853 12.3807 19.067 11.4673 19.067 10.3395L19.0686 10.3412Z" fill="#011632"/>
+            <path d="M0.000553721 10.3412L0.000554447 2.04114C0.000554545 0.913361 0.918926 -7.55244e-05 2.0528 -7.54252e-05L11.8814 -7.4566e-05C13.0152 -7.44669e-05 13.9336 0.913363 13.9336 2.04115L13.9336 9.77569C13.9336 15.0683 13.1644 18.8985 11.6244 21.2695C9.84403 24.051 7.15025 26.2373 3.54142 27.8251C2.67112 28.2077 1.64997 27.9505 1.07309 27.197L0.431558 26.3594C-0.32933 25.3668 -0.0292851 23.9224 1.07641 23.3338C2.61973 22.5143 3.82489 21.4805 4.69353 20.2324C5.64837 18.8606 6.28161 17.0123 6.5916 14.6858C6.75406 13.4657 5.79425 12.3824 4.55594 12.3824L2.0528 12.3824C0.918925 12.3824 0.000553623 11.469 0.000553721 10.3412Z" fill="#011632"/>
+        </g>
+        <defs>
+            <clipPath id="clip0_27_1814">
+                <rect width="33" height="28" fill="white" transform="translate(33 28) rotate(-180)"/>
+            </clipPath>
+        </defs>
+    </svg>
+
 </div>
