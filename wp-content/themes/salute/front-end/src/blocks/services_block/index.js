@@ -3,6 +3,7 @@ import './style.scss';
 export function services_block() {
   const block = document.querySelector('.services_block');
   if (!block) return;
+
   const accordion = block.querySelector(".accordion");
 
   accordion.addEventListener("click", (e) => {

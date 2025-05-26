@@ -16,7 +16,7 @@
       max-width: 1000px;
     }
     .text {
-      color: #2A90DD;
+      color: $skybolt-blue;
     }
   }
 
@@ -24,7 +24,6 @@
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 500ms;
-
   }
 
   .accordion-content[aria-hidden="false"] {
@@ -53,25 +52,6 @@
     }
     box-shadow: 0 4.72px 18.89px 0 #00000014;
     transition: background-color $duration;
-    &:hover {
-      background-color: $skybolt-blue;
-      .accordion-trigger {
-        color: $white;
-      }
-      .toggle-open {
-        path {
-          fill: $white;
-        }
-      }
-    }
-    &:not(:last-child) {
-      margin-bottom: 30px;
-      @include media-screen-min-1024 {
-        margin-bottom: 59px;
-      }
-    }
-
-
     .title {
       position: relative;
     }
@@ -87,9 +67,9 @@
         }
       }
       .spacer {
-        height: 40px;
+        height: 30px;
         @include media-screen-min-1024 {
-          height: 60px;
+          height: 49px;
         }
       }
       .line-answer {
@@ -111,14 +91,73 @@
       }
     }
 
-    &.accordion-panel-style {
-      background-color: $skybolt-blue;
-      .accordion-trigger {
-        color: $white;
+    .link-index {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 30px;
+      .link {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        transition: color $duration;
+        .link-svg {
+          transition: fill $duration , rect $duration;
+        }
       }
-      .toggle-open {
-        path {
-          fill: $white;
+      .index-card {
+        transition: color $duration;
+        color: $midnight-depth;
+        font-size: 60px;
+        line-height: 28px;
+      }
+    }
+
+    &.accordion-panel-style {
+      background-color: $midnight-depth;
+      .accordion-trigger {
+        color: $sky-breeze;
+      }
+      .index-card {
+        color: $frosted-sky;
+      }
+      .link-index {
+        .link {
+          color: $frosted-sky;
+          .link-svg {
+            rect {
+              fill: $sky-breeze;
+            }
+            path {
+              fill: $midnight-depth;
+            }
+          }
+        }
+        .index-card {
+          color: $frosted-sky;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: $midnight-depth;
+      .accordion-trigger {
+        color: $sky-breeze;
+      }
+      .link-index {
+        .link {
+          color: $frosted-sky;
+          .link-svg {
+            rect {
+              fill: $sky-breeze;
+            }
+            path {
+              fill: $midnight-depth;
+            }
+          }
+        }
+        .index-card {
+          color: $frosted-sky;
         }
       }
     }

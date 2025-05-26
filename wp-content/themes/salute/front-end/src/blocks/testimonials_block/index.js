@@ -2,6 +2,8 @@ import './style.scss';
 import 'swiper/swiper.scss';
 import './style.scss';
 import Swiper from 'swiper';
+// import {Pagination} from "swiper/types/modules";
+import {Pagination} from 'swiper/modules';
 
 export function testimonials_block() {
   const block = document.querySelector('.testimonials_block');
@@ -26,6 +28,11 @@ export function testimonials_block() {
         slidesPerView: 3.36,
         spaceBetween: 41,
       },
+    },
+    modules: [Pagination],
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
     },
   });
 }

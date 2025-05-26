@@ -80,4 +80,5 @@ if ($programmatic_or_manual === 'programmatic') {
             </div>
         </div>
     <?php } ?>
+    <div class="swiper-pagination"></div>
 </section>

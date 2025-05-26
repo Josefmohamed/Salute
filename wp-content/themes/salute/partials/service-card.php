@@ -2,7 +2,9 @@
 $post_id = @$args['post_id'] ?: get_the_ID();
 $post_title = get_the_title($post_id);
 $comment = get_field('comment', $post_id);
+$cta_link = get_field('cta_link',$post_id);
 $index = get_row_index();
+$index = 0;
 
 ?>
 <div class="accordion-panel" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
@@ -25,5 +27,18 @@ $index = get_row_index();
       </div>
     </div>
   <?php } ?>
-    <span><?= $index ?></span>
+    <div class="link-index">
+        <?php if (!empty($cta_link) && is_array($cta_link)) { ?>
+            <a class="link paragraph-20" href="<?= $cta_link['url'] ?>" target="<?= $cta_link['target'] ?>">
+                <svg class="link-svg" width="33" height="35" viewBox="0 0 33 35" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.789062" y="0.333496" width="32.1811" height="34" rx="8" fill="#011632"/>
+                    <path d="M24.717 24.9248H22.6262V15.2158C22.6262 13.5045 21.2972 12.1122 19.6638 12.1122H9.03906V9.92334H19.6653C22.451 9.92334 24.717 12.2973 24.717 15.2158V24.9248Z" fill="#E9F7FE"/>
+                    <path d="M10.4824 24.9249H9.03906V22.7345H10.4824C14.9491 22.7345 18.5827 18.9278 18.5827 14.2483H20.6735C20.6735 17.0999 19.6133 19.7803 17.6888 21.798C15.7643 23.8142 13.2043 24.9249 10.4824 24.9249Z" fill="#E9F7FE"/>
+                </svg>
+
+                <?= $cta_link['title'] ?>
+            </a>
+        <?php } ?>
+        <span class="paragraph-28 index-card fw-800"><?=  $index ?></span>
+    </div>
 </div>
