@@ -3,7 +3,10 @@
 .services_block {
   padding-block: 70px 60px;
   @include media-screen-min-1024 {
-    padding-block: 138px 123px;
+    padding-block: 300px 100px;
+  }
+  @include media-screen-min-1440 {
+    padding-block: 425px 138px;
   }
 
   .content {
@@ -12,8 +15,8 @@
     @include media-screen-max-768 {
       gap: 40px;
     }
-    @include media-screen-min-1024 {
-      max-width: 1000px;
+    @include media-screen-min-768 {
+      max-width: 776px;
     }
     .text {
       color: $skybolt-blue;
@@ -38,11 +41,24 @@
   .accordion {
     margin-top: 65px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 53px 58px;
+    row-gap: 20px;
+    @include media-screen-min-768 {
+      grid-template-columns: repeat(2,1fr);
+      gap: 40px 25px;
+    }
+    @include media-screen-min-992 {
+      gap: 45px 50px;
+    }
+    @include media-screen-min-1440 {
+      grid-template-columns: repeat(3,1fr);
+      gap: 53px 58px;
+    }
   }
 
   .accordion-panel {
+    //display: flex;
+    //flex-direction: column;
+    height: fit-content;
     border-radius: 8px;
     background-color: $frosted-sky;
     padding: 30px;

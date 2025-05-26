@@ -5,9 +5,11 @@ export function services_block() {
   if (!block) return;
 
   const accordion = block.querySelector(".accordion");
+  const accordions = block.querySelectorAll(".accordion-panel");
 
   accordion.addEventListener("click", (e) => {
     const activePanel = e.target.closest(".accordion-panel");
+
     if (!activePanel) return;
     toggleAccordion(activePanel);
   });
