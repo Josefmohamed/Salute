@@ -24,7 +24,6 @@
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 500ms;
-
   }
 
   .accordion-content[aria-hidden="false"] {
@@ -105,12 +104,16 @@
         margin-top: 35px;
       }
     }
+
     &.active {
       background-color: red;
     }
 
     &.accordion-panel-style {
       background-color: $skybolt-blue;
+      .toggle-open {
+        transform: translateY(-50%) rotate(180deg);
+      }
       .accordion-trigger {
         color: $white;
       }
@@ -120,9 +123,7 @@
         }
       }
     }
-
   }
-
 
   .accordion-trigger {
     text-align: left;
@@ -149,12 +150,10 @@
     top: 50%;
     transform: translateY(-50%);
     display: block;
-
+    transition: transform $duration;
     @include media-screen-min-992{
       width: 39px;
       height: 37px;
     }
   }
-
-
 }
