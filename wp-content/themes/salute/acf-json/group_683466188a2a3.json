@@ -22,23 +22,6 @@
             "toolbar": "full",
             "media_upload": 0,
             "delay": 1
-        },
-        {
-            "key": "field_68346636c097e",
-            "label": "Cta Link",
-            "name": "cta_link",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "allow_in_bindings": 0
         }
     ],
     "location": [
@@ -59,5 +42,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748264537
+    "modified": 1748357602
 }
