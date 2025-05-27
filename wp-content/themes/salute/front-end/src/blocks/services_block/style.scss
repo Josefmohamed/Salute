@@ -2,6 +2,9 @@
 
 .services_block {
   padding-block: 70px 60px;
+  @include media-screen-min-768 {
+    padding-top: 230px;
+  }
   @include media-screen-min-1024 {
     padding-block: 300px 100px;
   }
