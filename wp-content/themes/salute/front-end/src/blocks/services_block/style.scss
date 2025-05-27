@@ -2,8 +2,25 @@
 
 .services_block {
   padding-block: 70px 60px;
+  @include media-screen-min-768 {
+    padding-top: 230px;
+  }
   @include media-screen-min-1024 {
-    padding-block: 138px 123px;
+    padding-block: 300px 100px;
+  }
+  @include media-screen-min-1440 {
+    padding-block: 425px 138px;
+  }
+  $card-padding-mobile: 30px;
+  $card-padding: 57px;
+  .card {
+    padding-inline: $card-padding;
+    overflow: hidden;
+
+    .full-width-inner {
+      margin-inline: -$card-padding;
+      width: calc(100% + #{$card-padding * 2});
+    }
   }
 
   .content {
@@ -12,11 +29,14 @@
     @include media-screen-max-768 {
       gap: 40px;
     }
-    @include media-screen-min-1024 {
-      max-width: 1000px;
+    @include media-screen-min-768 {
+      max-width: 776px;
     }
     .text {
       color: $skybolt-blue;
+    }
+    .description {
+      color: $graphite-gray;
     }
   }
 
@@ -34,36 +54,54 @@
     overflow: hidden;
   }
 
-
   .accordion {
     margin-top: 65px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 53px 58px;
+    row-gap: 20px;
+    @include media-screen-min-768 {
+      grid-template-columns: repeat(2,1fr);
+      gap: 40px 25px;
+    }
+    @include media-screen-min-992 {
+      gap: 45px 50px;
+    }
+    @include media-screen-min-1440 {
+      grid-template-columns: repeat(3,1fr);
+      gap: 53px 58px;
+    }
   }
 
   .accordion-panel {
+    height: fit-content;
     border-radius: 8px;
     background-color: $frosted-sky;
-    padding: 30px;
     cursor: pointer;
-    @include media-screen-min-1280 {
-      padding: 55px 50px 40px 57px;
-    }
     box-shadow: 0 4.72px 18.89px 0 #00000014;
     transition: background-color $duration;
+    padding-block: 30px 25px;
+    @include media-screen-min-1024 {
+      padding-block: 58px 45px;
+    }
     .title {
       position: relative;
+      padding-inline: $card-padding-mobile;
+      @include media-screen-min-1280  {
+        padding-inline: $card-padding;
+      }
     }
 
     .answer {
+      padding-inline: 30px;
+      @include media-screen-min-1280 {
+        padding-inline: 50px 57px;
+      }
       p {
         font-style: normal;
-        font-weight: 500;
-        line-height: 25px;
-        font-size: 22px;
-        @include media-screen-max-992 {
-          font-size: 18px;
+        font-weight: 700;
+        line-height: 140%;
+        font-size: 18px;
+        @include media-screen-min-1024 {
+          font-size: 20px;
         }
       }
       .spacer {
@@ -72,37 +110,37 @@
           height: 49px;
         }
       }
-      .line-answer {
-        width: 100%;
-        height: 2px;
-        background-color: $white;
-        position: relative;
-        top: 25px;
-        @include media-screen-min-1024 {
-          top: 42px;
-        }
+      .svg-answer {
+        margin-top: 18px;
+        margin-inline: -$card-padding;
+        width: calc(100% + #{$card-padding * 2});
       }
-      .answer-svg {
-        width: 39px;
-        height: 18px;
-        margin-left: auto;
-        display: flex;
-        margin-top: 35px;
-      }
+
     }
 
     .link-index {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      margin-top: 30px;
+      margin-top: 50px;
       .link {
         display: flex;
         align-items: center;
         gap: 15px;
+        color: $midnight-depth;
         transition: color $duration;
-        .link-svg {
-          transition: fill $duration , rect $duration;
+        .svg-cards {
+          width: 32px;
+          height: 34px;
+          border-radius: 8px;
+          background-color: $midnight-depth;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: background-color $duration;
+          .svg-arrow {
+            transition: fill $duration;
+          }
         }
       }
       .index-card {
@@ -111,9 +149,14 @@
         font-size: 60px;
         line-height: 28px;
       }
+      padding-inline: $card-padding-mobile;
+
+      @include media-screen-min-1280  {
+        padding-inline: $card-padding;
+      }
     }
 
-    &.accordion-panel-style {
+    &.accordion-panel-style , &:hover {
       background-color: $midnight-depth;
       .accordion-trigger {
         color: $sky-breeze;
@@ -124,10 +167,7 @@
       .link-index {
         .link {
           color: $frosted-sky;
-          .link-svg {
-            rect {
-              fill: $sky-breeze;
-            }
+          .svg-arrow {
             path {
               fill: $midnight-depth;
             }
@@ -135,35 +175,15 @@
         }
         .index-card {
           color: $frosted-sky;
+        }
+        .svg-cards {
+          background-color: $sky-breeze;
         }
       }
     }
 
-    &:hover {
-      background-color: $midnight-depth;
-      .accordion-trigger {
-        color: $sky-breeze;
-      }
-      .link-index {
-        .link {
-          color: $frosted-sky;
-          .link-svg {
-            rect {
-              fill: $sky-breeze;
-            }
-            path {
-              fill: $midnight-depth;
-            }
-          }
-        }
-        .index-card {
-          color: $frosted-sky;
-        }
-      }
-    }
 
   }
-
 
   .accordion-trigger {
     text-align: left;
@@ -190,7 +210,5 @@
       height: 37px;
     }
   }
-
-
 
 }

@@ -43,7 +43,7 @@ if ($programmatic_or_manual === 'programmatic') {
 
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
-  <div class="container">
+    <div class="container">
       <div class="content column">
           <?php if ($title) { ?>
               <h4 class="abrite-h4 text fw-800 text-center"><?= $title ?></h4>
@@ -53,30 +53,41 @@ if ($programmatic_or_manual === 'programmatic') {
           <?php } ?>
           <div class="line"></div>
       </div>
-      <?php if ($programmatic_or_manual === 'manual') {
-          ?>
-          <div class="wrapper">
-              <div class="accordion">
-                  <?php
-                  $cards = get_field("service_card");
-                  if (is_array($cards)) {
-                      foreach ($cards as $card) {
-                          get_template_part("partials/service-card", "", ["post_id" => $card->ID]);
-                      }
-                  }
-                  ?>
-              </div>
-          </div>
-      <?php } elseif (isset($the_query) && $the_query->have_posts()) { ?>
-          <div class="wrapper">
-              <div class="accordion">
-                  <?php while ($the_query->have_posts()) {
-                      $the_query->the_post();
-                      get_template_part("partials/service-card", "", ["post_id" => get_the_ID()]);
-                  } ?>
-                  <?php wp_reset_postdata(); ?>
-              </div>
-          </div>
-      <?php } ?>
-  </div>
+        <?php if ($programmatic_or_manual === 'manual') { ?>
+            <div class="wrapper">
+                <div class="accordion">
+                    <?php
+                    $cards = get_field("service_card");
+                    if (is_array($cards)) {
+                        $index = 1;
+                        foreach ($cards as $card) {
+                            get_template_part("partials/service-card", "", [
+                                "post_id" => $card->ID,
+                                "index" => $index
+                            ]);
+                            $index++;
+                        }
+                    }
+                    ?>
+                </div>
+            </div>
+        <?php } elseif (isset($the_query) && $the_query->have_posts()) { ?>
+            <div class="wrapper">
+                <div class="accordion">
+                    <?php
+                    $index = 1;
+                    while ($the_query->have_posts()) {
+                        $the_query->the_post();
+                        get_template_part("partials/service-card", "", [
+                            "post_id" => get_the_ID(),
+                            "index" => $index
+                        ]);
+                        $index++;
+                    }
+                    wp_reset_postdata();
+                    ?>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
 </section>

@@ -25,6 +25,7 @@ $title_form = get_field('title_form');
 $description_form = get_field('description_form');
 $title = get_field('title');
 $description = get_field('description');
+$follow_us = get_field('follow_us');
 $form = get_field('form');
 $phone_number = get_field('phone_number');
 $email = get_field('email');
@@ -33,12 +34,14 @@ $email = get_field('email');
   <div class="container">
     <div class="content-wrapper">
         <div class="left-content">
-            <?php if ($title) { ?>
-            <h4 class="salute-h4 title fw-800"><?= $title ?></h4>
-            <?php } ?>
-            <?php if ($description) { ?>
-            <div class="description salute-h6"><?= $description ?></div>
-            <?php } ?>
+            <div class="top-content">
+                <?php if ($title) { ?>
+                    <h4 class="salute-h4 title uppercase-text fw-800"><?= $title ?></h4>
+                <?php } ?>
+                <?php if ($description) { ?>
+                    <div class="description salute-h6"><?= $description ?></div>
+                <?php } ?>
+            </div>
             <div class="tel-and-mail">
                 <?php if ($phone_number) : ?>
                     <a href="tel:<?= $phone_number ?>" class="phone-number paragraph-20 twilight-steel">
@@ -64,23 +67,28 @@ $email = get_field('email');
                     </a>
                 <?php endif; ?>
             </div>
-            <?php if (have_rows('social_links')) { ?>
-                <div class="social-links-wrapper">
-                    <?php while (have_rows('social_links')) {
-                        the_row();
-                        $url = get_sub_field('url');
-                        $icon = get_sub_field('icon');
-                        ?>
-                        <a href="<?= $url ?>" target="_blank" class="social-link" aria-label=" (opens in a new tab)">
-                            <?php if (!empty($icon) && is_array($icon)) { ?>
-                                <picture class="icon-wrapper cover-image">
-                                    <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">
-                                </picture>
-                            <?php } ?>
-                        </a>
-                    <?php } ?>
-                </div>
-            <?php } ?>
+            <div class="social-links-follow column">
+                <?php if ($follow_us) { ?>
+                    <div class="paragraph-26 fw-700 follow-us"><?= $follow_us ?></div>
+                <?php } ?>
+                <?php if (have_rows('social_links')) { ?>
+                    <div class="social-links-wrapper">
+                        <?php while (have_rows('social_links')) {
+                            the_row();
+                            $url = get_sub_field('url');
+                            $icon = get_sub_field('icon');
+                            ?>
+                            <a href="<?= $url ?>" target="_blank" class="social-link" aria-label=" (opens in a new tab)">
+                                <?php if (!empty($icon) && is_array($icon)) { ?>
+                                    <picture class="icon-wrapper cover-image">
+                                        <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">
+                                    </picture>
+                                <?php } ?>
+                            </a>
+                        <?php } ?>
+                    </div>
+                <?php } ?>
+            </div>
         </div>
         <?php if ($form) {?>
             <div class="contact-us-form-wrapper iv-st-from-bottom contact-details">
