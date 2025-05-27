@@ -28,7 +28,7 @@ $image = get_field('image');
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
   <div class="container">
-      <div class="cards-wrapper">
+      <div class="content-wrapper">
           <div class="left-image-card">
                   <?php
                   $picture_class = 'left-image aspect-ratio';
@@ -51,7 +51,7 @@ $image = get_field('image');
               </div>
           <div class="right-content column">
                   <?php if ($title) { ?>
-                      <h4 class="abrite-h4 text fw-800"><?= $title ?></h4>
+                      <h4 class="salute-h4 text fw-800"><?= $title ?></h4>
                   <?php } ?>
                   <?php if ($description) { ?>
                       <div class="paragraph-24 fw-500 description urbanist"><?= $description ?></div>
