@@ -33,10 +33,12 @@ $cta_button = get_field('cta_button');
         echo bis_get_attachment_picture(
             $image,
             [
-                375 => [375, 544, 1],
-                1024 => [1280, 630, 1],
-                1280 => [1280, 630, 1],
-                1440 => [1440, 1333, 1],
+                375 => [375, 668, 1],
+                1024 => [1024, 668, 1],
+                1280 => [1280, 836, 1],
+                1440 => [1440, 955, 1],
+                1728 => [1728, 1338, 1],
+                1920 => [1920, 1338, 1]
             ],
             [
                 'retina' => true, 'picture_class' => $picture_class,
@@ -47,7 +49,7 @@ $cta_button = get_field('cta_button');
     <div class="container">
         <div class="content column">
             <?php if ($title): ?>
-                <h1 class="salute-h1 title white-color"><?= $title ?></h1>
+                <h1 class="salute-h2 fw-800 title white-color"><?= $title ?></h1>
             <?php endif; ?>
             <?php if ($description): ?>
                 <div class="paragraph-28 description white-color"><?= $description ?></div>

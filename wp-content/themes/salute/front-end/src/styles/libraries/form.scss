@@ -7,6 +7,7 @@ body {
   .gform_wrapper.gravity-theme input:not([type="submit"]):not([type="number"]),
   select, textarea, .gform_wrapper.gravity-theme textarea, {
     @include input-style;
+    overflow: hidden;
     color: $midnight-overlay;
     margin-bottom: 0;
     margin-top: auto;

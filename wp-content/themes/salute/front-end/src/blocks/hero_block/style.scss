@@ -1,6 +1,4 @@
 @import '../../styles/variables.scss';
-
-
 .hero_block {
   position: relative;
   height: 100vh;
@@ -10,6 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 0 0 50px 50px;
   @include media-screen-min-1024 {
     padding-block: 5vh;
   }
@@ -33,6 +32,24 @@
     content: "";
     background: linear-gradient(rgba(1, 22, 50, 0.9), rgba(1, 22, 50, 0.9));
     z-index: -2;
+  }
+  .content {
+    gap: 25px;
+    @include media-screen-min-1024 {
+      padding-left: 126px;
+    }
+    .description {
+      margin-bottom: 25px;
+      @include media-screen-min-600 {
+        max-width: 500px;
+      }
+      @include media-screen-min-1024 {
+        max-width: 554px;
+      }
+    }
+  }
+  .container {
+    width: 100%;
   }
 
   .cover-image {

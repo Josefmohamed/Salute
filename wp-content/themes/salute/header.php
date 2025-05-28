@@ -26,8 +26,7 @@ $header_logo = get_field('header_logo', 'options');
 
 ?>
 <header class="salute-header <?= $header_version ?>">
-
-  <div class="container">
+  <div class="header-container">
       <div class="cards-wrapper">
           <!--     logo-->
           <?php if ($header_logo) { ?>
@@ -62,6 +61,5 @@ $header_logo = get_field('header_logo', 'options');
               </div>
           </nav>
       </div>
-
   </div>
 </header>
