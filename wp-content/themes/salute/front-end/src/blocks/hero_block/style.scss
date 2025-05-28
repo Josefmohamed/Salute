@@ -3,18 +3,14 @@
   position: relative;
   height: 100vh;
   overflow: hidden;
-  padding-block:4vh;
+  padding-block: 30vh 4vh;
   z-index: 4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 0 0 50px 50px;
   @include media-screen-min-1024 {
-    padding-block: 5vh;
+    padding-block: 30vh 5vh;
   }
   @include media-screen-min-1280{
-    padding-block: 19vh 5vh;
-
+    padding-block: 34.5vh 5vh;
   }
 
   &:after, .cover-image {
@@ -33,9 +29,10 @@
     background: linear-gradient(rgba(1, 22, 50, 0.9), rgba(1, 22, 50, 0.9));
     z-index: -2;
   }
+
   .content {
     gap: 25px;
-    @include media-screen-min-1024 {
+    @include media-screen-min-1440 {
       padding-left: 126px;
     }
     .description {
