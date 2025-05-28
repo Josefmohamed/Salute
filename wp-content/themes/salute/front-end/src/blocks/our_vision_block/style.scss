@@ -1,5 +1,84 @@
 @import '../../styles/variables.scss';
 
 .our_vision_block {
+  position: relative;
+  padding-bottom: 80px;
+  @include media-screen-min-600 {
+    margin-top: -100px;
+    padding-bottom: 80px;
+  }
+  @include media-screen-min-1024 {
+    padding-bottom: 200px;
+  }
+  @include media-screen-min-1440 {
+    margin-top: -204px;
+    padding-bottom: 405px;
+  }
 
+  .container {
+    @include media-screen-max-600 {
+      padding: 0;
+    }
+  }
+
+
+  .content-wrapper {
+    position: relative;
+    background-color: $frosted-sky;
+    border-radius: 50px;
+    padding: 50px 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 55px;
+    max-width: 1500px;
+    margin: 0 auto;
+    @include media-screen-min-768 {
+      padding: 80px 80px;
+    }
+    @include media-screen-min-1024 {
+      flex-direction: row;
+      padding: 80px 55px 0;
+    }
+    @include media-screen-min-1440 {
+      padding: 120px 94px 0 118px;
+    }
+  }
+
+  .left-image-card {
+
+    @include media-screen-min-1024 {
+      margin-bottom: -180px;
+      width: 48.6%;
+      flex-shrink: 0;
+    }
+    @include media-screen-min-1440 {
+      margin-bottom: -263px;
+    }
+
+    .left-image {
+      padding-top: 127.15%;
+      border-radius: 27px;
+    }
+  }
+
+  .right-content {
+    gap: 18px;
+    @include media-screen-min-1024 {
+      padding-bottom: 80px;
+      margin-top: 83px;
+      max-width: 457px;
+    }
+    @include media-screen-min-1440 {
+      max-width: 557px;
+    }
+
+    h4 {
+      text-transform: uppercase;
+      color: $skybolt-blue;
+      @include media-screen-min-1440 {
+        line-height: 140%;
+      }
+    }
+  }
 }
