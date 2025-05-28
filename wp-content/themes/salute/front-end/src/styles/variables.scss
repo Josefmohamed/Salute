@@ -193,12 +193,26 @@ $xxx-large-screen-min-width: 2500px;
   background-color: $twilight-steel;
   padding: 19px 30px;
   border-radius: 20px;
-  svg {
-    display: none;
-  }
   &:hover{
     background-color: $co378_blue;
     color: $white;
+  }
+  &.light {
+    color: $midnight-depth;
+    background-color: $sky-breeze;
+    svg {
+      margin-left: 15px;
+      transition: fill $duration;
+    }
+    &:hover{
+      background-color: $co378_blue;
+      color: $white;
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+    }
   }
 }
 

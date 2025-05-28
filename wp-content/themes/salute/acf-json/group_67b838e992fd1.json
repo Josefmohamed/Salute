@@ -3,32 +3,51 @@
     "title": "Hero Block",
     "fields": [
         {
+            "key": "field_67db5831e24e1",
+            "label": "Image",
+            "name": "image",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "60",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "id",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 1,
+            "preview_size": "medium"
+        },
+        {
             "key": "field_67db5d71e24e7",
             "label": "Title",
             "name": "title",
             "aria-label": "",
-            "type": "text",
+            "type": "wysiwyg",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_67db5bcfe24e4",
-                        "operator": "!=empty"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
             "default_value": "",
-            "maxlength": "",
             "allow_in_bindings": 1,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 0,
+            "delay": 1
         },
         {
             "key": "field_67db5bcfe24e4",
@@ -59,15 +78,7 @@
             "type": "link",
             "instructions": "",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_67db5d47e24e6",
-                        "operator": "!=",
-                        "value": "1"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -75,95 +86,6 @@
             },
             "return_format": "array",
             "allow_in_bindings": 0
-        },
-        {
-            "key": "field_67db53f8e24e0",
-            "label": "Media Type",
-            "name": "media_type",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "50",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "video": "Video",
-                "image": "Image"
-            },
-            "default_value": "",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "allow_in_bindings": 0,
-            "layout": "horizontal",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_67db5884e24e2",
-            "label": "Video",
-            "name": "video",
-            "aria-label": "",
-            "type": "file",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_67db53f8e24e0",
-                        "operator": "==",
-                        "value": "video"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "60",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 1
-        },
-        {
-            "key": "field_67db5831e24e1",
-            "label": "Image",
-            "name": "image",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_67db53f8e24e0",
-                        "operator": "==",
-                        "value": "image"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "60",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "allow_in_bindings": 1,
-            "preview_size": "medium"
         }
     ],
     "location": [
@@ -184,5 +106,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748322603
+    "modified": 1748408990
 }
