@@ -245,6 +245,7 @@ header {
       background-color: $skybolt-blue;
       transition: width $duration , font-weight $duration;
     }
+
     a {
       color: $midnight-depth;
       position: relative;
@@ -252,6 +253,7 @@ header {
       overflow: hidden;
       font-weight: 100;
       transition: font-size $duration;
+      line-height: 155%;
       @include media-screen-min-1024 {
         display: block;
       }
@@ -369,6 +371,7 @@ header {
   }
 
   &.dark-header {
+    position: absolute;
     .menu-item {
       &:after {
         position: absolute;

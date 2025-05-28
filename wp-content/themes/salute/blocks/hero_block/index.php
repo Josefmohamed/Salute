@@ -27,7 +27,7 @@ $description = get_field('description');
 $cta_button = get_field('cta_button');
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
-    <div class="images-animation-wrapper">
+    <div class="hero-image">
         <?php
         $picture_class = 'cover-image';
         echo bis_get_attachment_picture(

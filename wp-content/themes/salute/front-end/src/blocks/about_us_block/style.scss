@@ -1,0 +1,63 @@
+@import '../../styles/variables.scss';
+
+.about_us_block {
+  background-color: $midnight-depth;
+  padding-block: 70px 60px;
+  @include media-screen-min-768 {
+    padding-top: 230px;
+  }
+  @include media-screen-min-1024 {
+    padding-block: 300px 100px;
+  }
+  @include media-screen-min-1440 {
+    padding-block: 425px 138px;
+  }
+  .about-us-svg {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 45%;
+    @include media-screen-min-1440 {
+      top: 52%;
+    }
+  }
+  .cards-wrapper {
+    display: flex;
+    border-radius: 50px;
+    flex-direction: column;
+    @include media-screen-min-992 {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include media-screen-min-1440 {
+      padding-inline: 28px 135px;
+    }
+    .left-content {
+      width: 100%;
+      gap: 25px;
+      @include media-screen-max-992 {
+        margin-bottom: 30px;
+      }
+      @include media-screen-min-992 {
+        width: 48.76%;
+        gap: 150px;
+      }
+      .text {
+        color: $sky-breeze;
+      }
+    }
+    .right-image-card {
+      width: 100%;
+      @include media-screen-min-992 {
+        width: 41.88%;
+      }
+      .left-image {
+        padding-top: 110.71%;
+        img {
+          border-radius: 27px;
+        }
+      }
+    }
+  }
+}

@@ -26,6 +26,10 @@
   "testimonials_block": {
     "title": "Testimonials Block",
     "status": true
+  },
+  "about_us_block": {
+    "title": "About Us Block",
+    "status": true
   }
 
 }
