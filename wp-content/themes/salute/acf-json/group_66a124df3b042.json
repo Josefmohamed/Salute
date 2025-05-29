@@ -3,45 +3,6 @@
     "title": "Site Settings",
     "fields": [
         {
-            "key": "field_683072ecf49f8",
-            "label": "Banner",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_68307339f49f9",
-            "label": "Banner Text",
-            "name": "banner_text",
-            "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "allow_in_bindings": 0,
-            "tabs": "all",
-            "toolbar": "full",
-            "media_upload": 0,
-            "delay": 1
-        },
-        {
             "key": "field_66a12506837b6",
             "label": "Header",
             "name": "",
@@ -326,24 +287,6 @@
             "delay": 1
         },
         {
-            "key": "field_68260ad3d7e71",
-            "label": "Growth Steps",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
             "key": "field_682a3683407f3",
             "label": "Title",
             "name": "blcok_title",
@@ -569,5 +512,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748181812
+    "modified": 1748527775
 }

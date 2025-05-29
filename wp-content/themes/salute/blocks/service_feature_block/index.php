@@ -57,8 +57,6 @@ $image = get_field('image');
                   );
                   ?>
               </div>
-
-
           </div>
   </div>
 </section>

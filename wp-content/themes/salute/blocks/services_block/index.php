@@ -24,7 +24,9 @@ if (isset($block)) {
 $title = get_field('title');
 $description = get_field('description');
 $cta_link = get_field('cta_link');
-
+$block_type = get_field('block_type');
+$service_image = get_field('service_image');
+$image_title = get_field('image_title');
 $programmatic_or_manual = get_field("manual_or_programmatic");
 if ($programmatic_or_manual === 'programmatic') {
     $query_options = get_field("query_options") ?: [];
@@ -42,7 +44,32 @@ if ($programmatic_or_manual === 'programmatic') {
 }
 
 ?>
-<section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
+<section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?> <?= $block_type ?>">
+    <div class="service-image-card">
+        <?php
+        $picture_class = 'service-image aspect-ratio';
+        echo bis_get_attachment_picture(
+            $service_image,
+            [
+                375 => [327, 131, 1],
+                1024 => [936, 374, 1],
+                1280 => [1192, 476, 1],
+                1440 => [1352, 540, 1],
+                1728 => [1640, 655, 1],
+                1920 => [1832, 732, 1],
+                3840 => [3752, 1498, 1]
+            ],
+            [
+                'retina' => true,
+                'picture_class' => $picture_class,
+            ],
+        );
+        ?>
+
+        <?php if ($image_title): ?>
+            <h4 class="image-title fw-800 salute-h4"><?= esc_html($image_title) ?></h4>
+        <?php endif; ?>
+    </div>
     <div class="container">
       <div class="content column">
           <?php if ($title) { ?>
