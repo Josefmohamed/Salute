@@ -1,16 +1,17 @@
 @import '../../styles/variables.scss';
+
 .hero_block {
   position: relative;
   height: 100vh;
   overflow: hidden;
-  padding-block: 30vh 4vh;
+  padding-block: 30vh 6vh;
   z-index: 4;
   border-radius: 0 0 50px 50px;
   @include media-screen-min-1024 {
-    padding-block: 30vh 5vh;
+    padding-block: 30vh 10vh;
   }
-  @include media-screen-min-1280{
-    padding-block: 34.5vh 5vh;
+  @include media-screen-min-1280 {
+    padding-block: 34.5vh 10vh;
   }
 
   &:after, .cover-image {
@@ -30,21 +31,39 @@
     z-index: -2;
   }
 
-  .hero-svg {
-    position: absolute;
-    right: 0;
-    @include media-screen-min-1280 {
-      top: 43.38%;
-    }
+  .container {
+    padding-right: 0;
   }
 
   .content {
+    position: relative;
     gap: 25px;
     @include media-screen-min-1440 {
       padding-left: 126px;
     }
+
+    .title {
+      position: relative;
+
+      .hero-svg {
+        position: absolute;
+        height: fit-content;
+        right: 0;
+        width: 67.6%;
+        bottom: -15px;
+        @include media-screen-min-600 {
+          bottom: 0;
+        }
+        @include media-screen-min-1024 {
+          bottom: 20px;
+        }
+      }
+
+    }
+
     .description {
       margin-bottom: 25px;
+      padding-right: 24px;
       @include media-screen-min-600 {
         max-width: 500px;
       }
@@ -52,11 +71,9 @@
         max-width: 554px;
       }
     }
+
   }
 
-  .container {
-    width: 100%;
-  }
 
   .cover-image {
     img {
