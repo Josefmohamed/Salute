@@ -7,7 +7,7 @@
     left: 0;
     width: 100%;
     z-index: -1;
-    display: none;
+    top: 50%;
     @include media-screen-min-1024 {
       top: 62.82%;
       display: flex;
