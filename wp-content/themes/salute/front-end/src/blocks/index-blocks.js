@@ -9,6 +9,7 @@ import {faqs_block} from './faqs_block';
 import {services_block} from './services_block';
 import {testimonials_block} from './testimonials_block';
 import {blogs_block} from './blogs_block';
+import {about_us_block} from './about_us_block';
 
 export function indexBlocks() {
   headerBlock()
@@ -20,6 +21,7 @@ export function indexBlocks() {
   faqs_block()
   testimonials_block()
   services_block()
+  about_us_block()
   blogs_block()
 }
 

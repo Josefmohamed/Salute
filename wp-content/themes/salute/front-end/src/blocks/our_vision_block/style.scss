@@ -3,6 +3,7 @@
 .our_vision_block {
   position: relative;
   padding-bottom: 80px;
+  z-index: 5;
   @include media-screen-min-600 {
     margin-top: -100px;
     padding-bottom: 80px;
@@ -12,7 +13,7 @@
   }
   @include media-screen-min-1440 {
     margin-top: -204px;
-    padding-bottom: 405px;
+    padding-bottom: 451px;
   }
 
   .container {

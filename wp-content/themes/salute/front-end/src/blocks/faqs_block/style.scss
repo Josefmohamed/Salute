@@ -28,9 +28,6 @@
 
   .accordion-content[aria-hidden="false"] {
     grid-template-rows: 1fr;
-    .accordion-panel & {
-      background-color: red;
-    }
   }
 
   .accordion-content > div {
@@ -65,7 +62,6 @@
       }
     }
 
-
     .title {
       position: relative;
     }
@@ -76,6 +72,7 @@
         font-weight: 500;
         line-height: 25px;
         font-size: 22px;
+        max-width: 99%;
         @include media-screen-max-992 {
           font-size: 18px;
         }
@@ -137,23 +134,22 @@
     @include media-screen-max-992 {
       font-size: 18px;
     }
-    @include media-screen-min-992 {
+    @include media-screen-min-600 {
       max-width: 85%;
     }
-  }
-
-  .accordion-trigger .toggle-open {
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block;
-    transition: transform $duration;
-    @include media-screen-min-992{
-      width: 39px;
-      height: 37px;
+    .toggle-open {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      display: block;
+      transition: transform $duration;
+      @include media-screen-min-992{
+        width: 39px;
+        height: 37px;
+      }
     }
   }
 }

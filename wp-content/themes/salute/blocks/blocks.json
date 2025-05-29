@@ -30,6 +30,10 @@
 "blogs_block": {
     "title": "Blogs Block",
     "status": true
+  },
+  "about_us_block": {
+    "title": "About Us Block",
+    "status": true
   }
 
 }

@@ -22,7 +22,7 @@ $answer = get_field('answer', $post_id);
   <?php } ?>
   <?php if ($answer) { ?>
     <div class="accordion-content" role="region" aria-labelledby="panel2-title" aria-hidden="true" id="panel2-content">
-      <div class="body-6 answer regular white-color" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+      <div class="body-6 answer urbanist white-color" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
           <div class="line-answer"></div>
           <p class="spacer"></p>
           <?= $answer ?>
