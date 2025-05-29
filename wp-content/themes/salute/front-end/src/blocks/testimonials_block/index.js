@@ -2,7 +2,6 @@ import './style.scss';
 import 'swiper/swiper.scss';
 import './style.scss';
 import Swiper from 'swiper';
-// import {Pagination} from "swiper/types/modules";
 import {Pagination} from 'swiper/modules';
 
 export function testimonials_block() {
@@ -22,6 +21,9 @@ export function testimonials_block() {
         slidesPerView: 2,
       },
       1024: {
+        slidesPerView: 2.5,
+      },
+      1280: {
         slidesPerView: 3,
       },
       1440: {

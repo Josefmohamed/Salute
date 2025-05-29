@@ -250,7 +250,7 @@ header {
       border-radius: 15px;
       bottom: -15px;
       background-color: $skybolt-blue;
-      transition: width $duration , font-weight $duration;
+      transition: width $duration;
     }
 
     a {
@@ -259,7 +259,7 @@ header {
       z-index: 2;
       overflow: hidden;
       font-weight: 100;
-      transition: font-size $duration;
+      transition: font-size $duration , font-weight $duration ;
       line-height: 155%;
       @include media-screen-min-1024 {
         display: block;

@@ -45,7 +45,7 @@ if ($programmatic_or_manual === 'programmatic') {
 
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?> <?= $block_type ?>">
-    <div class="service-image-card">
+    <div class="service-image-card ">
         <?php
         $picture_class = 'service-image aspect-ratio';
         echo bis_get_attachment_picture(
@@ -65,7 +65,6 @@ if ($programmatic_or_manual === 'programmatic') {
             ],
         );
         ?>
-
         <?php if ($image_title): ?>
             <h4 class="image-title fw-800 salute-h4"><?= esc_html($image_title) ?></h4>
         <?php endif; ?>
