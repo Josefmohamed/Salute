@@ -27,8 +27,7 @@ $image = get_field('image');
 
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
-
-      <div class="cards-wrapper">
+      <div class="content-wrapper">
               <div class="left-content column">
                   <?php if ($title) { ?>
                       <h4 class="abrite-h4 text uppercase-text fw-800"><?= $title ?></h4>
@@ -45,7 +44,7 @@ $image = get_field('image');
                       [
                           375 => [327, 362, 1],
                           1024 => [402, 445, 1],
-                          1280 => [441, 488, 1],
+                          1280 => [509, 564, 1],
                           1440 => [439, 486, 1],
                           1728 => [560, 620, 1],
                           1920 => [640, 709, 1],

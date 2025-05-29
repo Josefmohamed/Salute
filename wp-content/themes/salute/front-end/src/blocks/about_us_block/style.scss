@@ -1,40 +1,36 @@
 @import '../../styles/variables.scss';
-
 .about_us_block {
-  .cards-wrapper {
+  padding-bottom: 80px;
+  @include media-screen-min-768 {
+    padding-bottom: 187px;
+  }
+  .content-wrapper {
     display: flex;
     border-radius: 0 0 50px 50px;
     flex-direction: column;
     background-color: $midnight-depth;
-    padding-block: 70px 60px;
     margin: 0 auto;
     padding-inline: 24px;
+    padding-block: 220px 100px;
     @include media-screen-min-768 {
       padding-inline: 32px;
-    }
-    @include media-screen-min-1280 {
-      padding-inline: 114px;
-      //max-width: 1440px;
-    }
-    @include media-screen-min-768 {
-      //padding-top: 230px;
-    }
-    @include media-screen-min-1024 {
-      padding-block: 300px 100px;
-    }
-    @include media-screen-min-1440 {
-      padding-block: 425px 138px;
     }
     @include media-screen-min-992 {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
     }
+    @include media-screen-min-1024 {
+      padding-block: 327px 160px;
+    }
+    @include media-screen-min-1440 {
+      padding-inline: 142px 249px;
+    }
     .left-content {
       width: 100%;
       gap: 25px;
       @include media-screen-max-992 {
-        margin-bottom: 30px;
+        margin-bottom: 50px;
       }
       @include media-screen-min-992 {
         width: 48.76%;
@@ -42,6 +38,11 @@
       }
       .text {
         color: $sky-breeze;
+      }
+      .description {
+        @include media-screen-max-992 {
+          max-width: 515px;
+        }
       }
     }
     .right-image-card {
@@ -59,11 +60,28 @@
   }
   .about-us-highlights {
     gap: 50px;
+    padding-top: 80px;
+    @include media-screen-min-768 {
+      padding-top: 100px;
+    }
+    @include media-screen-min-1024 {
+      padding-top: 128px;
+      gap: 100px;
+    }
+    @include media-screen-min-1440 {
+      padding-inline: 28px 25px;
+    }
     .about-us-highlight {
       display: flex;
       align-items: flex-start;
       gap: 41px;
+      @include media-screen-max-768 {
+        flex-direction: column;
+      }
       p {
+        @include media-screen-max-600 {
+          font-size: 20px;
+        }
         line-height: 120%;
       }
       .about-us-highlight-svg {
