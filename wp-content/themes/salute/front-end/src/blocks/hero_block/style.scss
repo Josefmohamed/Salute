@@ -30,6 +30,14 @@
     z-index: -2;
   }
 
+  .hero-svg {
+    position: absolute;
+    right: 0;
+    @include media-screen-min-1280 {
+      top: 43.38%;
+    }
+  }
+
   .content {
     gap: 25px;
     @include media-screen-min-1440 {
@@ -45,6 +53,7 @@
       }
     }
   }
+
   .container {
     width: 100%;
   }

@@ -4,6 +4,12 @@
   @include media-screen-min-768 {
     padding-bottom: 187px;
   }
+  .about-us-top-svg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 29.72%;
+  }
   .content-wrapper {
     display: flex;
     border-radius: 0 0 50px 50px;
@@ -90,5 +96,11 @@
         flex-shrink: 0;
       }
     }
+  }
+  .about-us-bottom-svg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 35.55%;
   }
 }

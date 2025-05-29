@@ -31,7 +31,10 @@ $phone_number = get_field('phone_number');
 $email = get_field('email');
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
-  <div class="container">
+    <svg class="get-in-touch-svg" width="1728" height="56" viewBox="0 0 1728 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M161.48 0.000143684C162.333 0.000143609 163.211 0.000147347 164.132 0.0170693C167.757 0.0424519 1760 0.228516 1805.03 0.228516L1805 16.4139C1752 16.4139 167.681 16.2279 164.004 16.194C155.654 16.1263 151.798 16.3717 146.083 17.3278C127.036 20.5259 116.758 27.1507 104.859 34.8246C94.4525 41.5339 83.6794 48.4718 66.6455 53.3536C61.7494 54.7496 55.0023 55.5196 44.0757 55.9088C38.4033 56.1118 -19.7101 55.9426 -73.4307 55.7311C-119.517 55.5534 -182.237 55.3504 -185.998 55.3335L-185.921 39.1565C-160.537 39.2834 -106.68 39.4272 -73.4392 39.5541C-16.4347 39.7741 38.318 39.9264 43.4785 39.7403C52.7418 39.4103 58.6616 38.7927 62.1077 37.8028C76.813 33.5893 86.1105 27.5991 95.9624 21.2535C108.262 13.3174 120.98 5.12736 143.354 1.37079C149.922 0.270893 154.758 0.000144271 161.48 0.000143684Z" fill="#8BCCFE"/>
+    </svg>
+    <div class="container">
     <div class="content-wrapper">
         <div class="left-content">
             <div class="top-content">
@@ -94,7 +97,7 @@ $email = get_field('email');
             <div class="contact-us-form-wrapper iv-st-from-bottom contact-details">
                 <div class="column form-info">
                     <?php if ($title_form) { ?>
-                        <h6 class="salute-h6 fw-800 form-title"><?= $title_form ?></h6>
+                        <h6 class="salute-h6 fw-800 uppercase-text form-title"><?= $title_form ?></h6>
                     <?php } ?>
                     <?php if ($description_form) { ?>
                         <div class="paragraph-22"><?= $description_form ?></div>

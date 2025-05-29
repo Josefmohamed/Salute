@@ -1,14 +1,21 @@
 @import '../../styles/variables.scss';
 
 .get_in_touch_block {
-  padding-block: 91px;
-  @include media-screen-min-768 {
-    padding-bottom: 150px;
+    padding-block: 259px 256px;
+  .get-in-touch-svg {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+    display: none;
+    @include media-screen-min-1024 {
+      top: 62.82%;
+      display: flex;
+    }
+    @include media-screen-min-1280 {
+      top: 71.20%;
+    }
   }
-  @include media-screen-min-1280 {
-    padding-bottom: 256px;
-  }
-
   .content-wrapper {
     display: flex;
     align-items: flex-start;
@@ -60,12 +67,11 @@
         flex-direction: column;
         gap: 20px;
         @include media-screen-min-600 {
-          gap: 0;
           align-items: center;
           flex-direction: row;
-          justify-content: space-between;
         }
         @include media-screen-min-1024 {
+          justify-content: space-between;
           margin-top: 360px;
         }
         @include media-screen-min-1440 {
@@ -164,8 +170,9 @@
       }
       .form-info {
         padding-bottom: 50px;
-        @include media-screen-max-1024 {
-          padding-bottom: 100px;
+        gap: 21px;
+        @include media-screen-min-1024 {
+          padding-bottom: 80px;
         }
         .form-title {
           color: $twilight-steel;
@@ -173,5 +180,4 @@
       }
     }
   }
-  
 }
