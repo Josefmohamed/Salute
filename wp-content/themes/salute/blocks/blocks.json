@@ -26,6 +26,10 @@
   "testimonials_block": {
     "title": "Testimonials Block",
     "status": true
+  },
+"blogs_block": {
+    "title": "Blogs Block",
+    "status": true
   }
 
 }
