@@ -4,7 +4,7 @@ $post_title = get_the_title($post_id);
 $post_image = get_the_post_thumbnail($post_id);
 $thumbnail_id = get_post_thumbnail_id($post_id);
 ?>
-<div class="swiper-slide card" id="post-id-<?= $post_id ?>">
+<div class="swiper-slide blog-card" id="post-id-<?= $post_id ?>">
 
     <?php if ($post_title) { ?>
         <a class="salute-h3 fw-800 card-title" href="<?= get_permalink($post_id); ?>">

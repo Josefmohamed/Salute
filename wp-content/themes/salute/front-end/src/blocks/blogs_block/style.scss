@@ -25,7 +25,7 @@
   }
 
   .cards-wrapper {
-    .card {
+    .blog-card {
       position: relative;
       border-radius: 50px;
       background-color: $midnight-depth;
@@ -33,15 +33,15 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: 150px 50px;
+      padding: 150px 24px;
       overflow: hidden;
-      @include media-screen-min-600 {
+      @include media-screen-min-768 {
         padding: 200px 50px;
       }
-      @include media-screen-min-992{
+      @include media-screen-min-992 {
         padding: 200px 100px;
       }
-      @include media-screen-min-1280{
+      @include media-screen-min-1280 {
         padding: 277px 100px 263px;
       }
 
@@ -53,6 +53,7 @@
         max-width: 1101px;
         line-height: 120%;
         transition: color $duration;
+
         &:hover {
           color: $sky-breeze;
         }
@@ -60,20 +61,20 @@
         @include media-screen-min-768 {
           font-size: 35px;
         }
-          @include media-screen-min-1024 {
+        @include media-screen-min-1024 {
           display: -webkit-box;
           -webkit-line-clamp: 3;
           -webkit-box-orient: vertical;
           overflow: hidden;
           text-overflow: ellipsis;
         }
-        @include media-screen-min-1280{
+        @include media-screen-min-1280 {
           font-size: 55px;
         }
         @include media-screen-min-1440 {
           font-size: 64px;
         }
-        }
+      }
 
       &:after, .cover-image {
         width: 100%;
