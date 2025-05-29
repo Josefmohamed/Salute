@@ -1,8 +1,9 @@
 @import '../../styles/variables.scss';
 
 .blogs_block {
-  padding-block: 71px 123px;
-  @include media-screen-min-1024 {
+  padding-block: 200px 123px;
+  @include media-screen-min-768 {
+    padding-block: 248px 123px;
   }
 
   .container {
