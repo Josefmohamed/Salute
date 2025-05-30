@@ -66,6 +66,7 @@ $medium-screen-min-992: 992px;
 $large-screen-min-width: 1280px;
 $large-screen-max-width: 1279.8px;
 $x-large-screen-min-width: 1440px;
+$xn-large-screen-min-width: 1500px;
 $xx-large-screen-min-width: 1920px;
 $xxx-large-screen-min-width: 2500px;
 
@@ -148,6 +149,12 @@ $xxx-large-screen-min-width: 2500px;
 
 @mixin media-screen-min-1440() {
   @media screen and (min-width: $x-large-screen-min-width) {
+    @content;
+  }
+}
+
+@mixin media-screen-min-1500() {
+  @media screen and (min-width: $xn-large-screen-min-width) {
     @content;
   }
 }

@@ -23,6 +23,7 @@ footer {
       align-items: center;
       justify-content: space-between;
       gap: 20px;
+      flex-wrap: wrap;
       @include media-screen-max-992 {
         flex-direction: column;
         gap: 40px;
