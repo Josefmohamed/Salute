@@ -38,8 +38,7 @@ $index = $args['index'] ?? null;
             </div>
             <span class="label">Learn more</span>
         </div>
-        <!-- Somewhere in your markup -->
-        <?php if ($index !== null && $index <= 9): ?>
+        <?php if ($index !== null): ?>
             <span class="paragraph-28 index-card fw-800">
         <?= str_pad($index, 2, '0', STR_PAD_LEFT); ?>
     </span>
