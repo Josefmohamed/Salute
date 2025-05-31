@@ -27,13 +27,16 @@
     "title": "Testimonials Block",
     "status": true
   },
-"blogs_block": {
+  "blogs_block": {
     "title": "Blogs Block",
     "status": true
   },
   "about_us_block": {
     "title": "About Us Block",
     "status": true
+  },
+  "why_join_salute_block": {
+    "title": "Why Join Salute Block",
+    "status": true
   }
-
 }

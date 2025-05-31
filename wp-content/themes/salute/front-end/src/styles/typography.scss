@@ -253,7 +253,9 @@ h6, .salute-h6, .salute-h6 p {
 .italic {
   font-style: italic;
 }
-
+.midnight-depth , .midnight-depth p {
+  color: $midnight-depth;
+}
 .urbanist , .urbanist p {
   font-family: $urbanist;
 }

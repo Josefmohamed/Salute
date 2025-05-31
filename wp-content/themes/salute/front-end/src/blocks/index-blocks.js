@@ -10,7 +10,7 @@ import {services_block} from './services_block';
 import {testimonials_block} from './testimonials_block';
 import {blogs_block} from './blogs_block';
 import {about_us_block} from './about_us_block';
-
+import {why_join_salute_block} from './why_join_salute_block';
 export function indexBlocks() {
   headerBlock()
   hero_block()
@@ -23,5 +23,6 @@ export function indexBlocks() {
   services_block()
   about_us_block()
   blogs_block()
+  why_join_salute_block()
 }
 
