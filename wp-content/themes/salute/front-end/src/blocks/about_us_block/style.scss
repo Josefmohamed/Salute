@@ -8,17 +8,22 @@
     position: absolute;
     left: 0;
     width: 100%;
-    //600 => 375
-    //top: 11.5%;
-    //
+    top: 57%;
+    @include media-screen-min-600 {
+      top: 50%;
+    }
+    @include media-screen-min-992 {
+      top: 45.3%;
+    }
     @include media-screen-min-1024 {
-      top: 25.2%;
+      top: 49.6%;
     }
     @include media-screen-min-1280 {
-      top: 25.32%;
+      top: 45.5%;
     }
     @include media-screen-min-1500 {
-      top: 29.72%;
+      top: 51.67%;
+      //top: 29.72%;
     }
   }
   .about-us-bottom-svg {
@@ -26,9 +31,16 @@
     right: 0;
     bottom: -88px;
     z-index: 1;
+    @include media-screen-min-992 {
+      width: 28%;
+      bottom: -128px;
+    }
     @include media-screen-max-600 {
       width: 93%;
       bottom: -100px;
+    }
+    @include media-screen-min-1280 {
+      bottom: -88px;
     }
   }
   .content-wrapper {
@@ -74,7 +86,7 @@
         gap: 80px;
       }
       @include media-screen-min-1500 {
-        //padding-block: 147px 80px;
+        padding-block: 147px 80px;
         gap: 130px;
       }
       .text {
