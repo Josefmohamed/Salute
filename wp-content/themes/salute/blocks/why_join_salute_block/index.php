@@ -38,17 +38,17 @@ $title = get_field('title');
             the_row();
             $highlight_title = get_sub_field('highlight_title');
             $highlight_description = get_sub_field('highlight_description');
-                ?>
+            ?>
         <div class="join-salute-highlight">
             <?php if ($highlight_title) { ?>
-                    <h6 class="join-salute-title fw-800 paragraph-32 capitalize-text">
+                    <div class="join-salute-title fw-800 paragraph-32 capitalize-text">
                         <svg class="join-salute-title-svg" width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect y="0.706543" width="40" height="40" rx="8" fill="#011632"/>
                             <path d="M29.5974 29.4584H26.984V17.3221C26.984 15.183 25.3227 13.4426 23.2809 13.4426H10V10.7065H23.2828C26.7649 10.7065 29.5974 13.674 29.5974 17.3221V29.4584Z" fill="#E9F7FE"/>
                             <path d="M11.8042 29.4586H10V26.7206H11.8042C17.3876 26.7206 21.9296 21.9622 21.9296 16.1128H24.5431C24.5431 19.6773 23.2178 23.0278 20.8122 25.55C18.4066 28.0702 15.2066 29.4586 11.8042 29.4586Z" fill="#E9F7FE"/>
                         </svg>
                         <?= $highlight_title ?>
-                    </h6>
+                    </div>
                 <?php } ?>
             <?php if ($highlight_description) { ?>
                     <div class="highlight-description paragraph-20 midnight-depth">

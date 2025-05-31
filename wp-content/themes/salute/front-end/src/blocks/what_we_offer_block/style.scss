@@ -1,0 +1,53 @@
+@import '../../styles/variables.scss';
+.what_we_offer_block {
+    padding-block: 280px 80px;
+  .title {
+    color: $skybolt-blue;
+    margin-inline: auto;
+    max-width: 240px;
+    @include media-screen-min-1024 {
+      max-width: 380px;
+    }
+    @include media-screen-min-1440 {
+      max-width: 455px;
+    }
+  }
+  .offer-highlights {
+    margin-top: 41px;
+    background-color: $midnight-depth;
+    border-radius: 20px;
+    display: grid;
+    padding: 50px 30px;
+    @include media-screen-min-600 {
+      grid-template-columns: repeat(2,1fr);
+    }
+    @include media-screen-min-1440 {
+      grid-template-columns: repeat(3,1fr);
+      gap: 70px 180px;
+      padding: 93px 51px 110px ;
+      margin-inline: 42px 61px;
+    }
+    .offer-highlight {
+      color: $midnight-depth;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      @include media-screen-min-600 {
+        gap: 24px;
+      }
+      .offer-highlight-title {
+        align-items: center;
+        gap: 34px;
+      }
+      .offer-highlight-svg {
+        flex-shrink: 0;
+        //width: 30px;
+        //height: 30px;
+        //@include media-screen-min-600 {
+          width: 52px;
+          height: 52px;
+        //}
+      }
+    }
+  }
+}

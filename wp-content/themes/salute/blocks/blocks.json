@@ -38,5 +38,9 @@
   "why_join_salute_block": {
     "title": "Why Join Salute Block",
     "status": true
+  },
+  "what_we_offer_block": {
+    "title": "What We Offer Block",
+    "status": true
   }
 }
