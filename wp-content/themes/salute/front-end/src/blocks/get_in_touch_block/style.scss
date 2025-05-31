@@ -1,7 +1,10 @@
 @import '../../styles/variables.scss';
 
 .get_in_touch_block {
+    padding-block: 200px 100px;
+  @include media-screen-min-1024 {
     padding-block: 259px 256px;
+  }
   .get-in-touch-svg {
     position: absolute;
     left: 0;
@@ -18,8 +21,11 @@
   }
   .content-wrapper {
     display: flex;
-    align-items: flex-start;
     flex-direction: column;
+    align-items: center;
+    @include media-screen-min-1280 {
+      align-items: flex-start;
+    }
     @include media-screen-min-1024 {
       flex-direction: row;
       justify-content: space-between;
@@ -27,7 +33,6 @@
     @include media-screen-min-1440 {
       padding-left: 17px;
     }
-
     .left-content {
       position: relative;
       width: 100%;
@@ -47,7 +52,6 @@
         flex-direction:column;
         margin-bottom: 50px;
       }
-
       .top-content {
         max-width: 290px;
         @include media-screen-min-992 {
@@ -61,96 +65,100 @@
           }
         }
       }
-
-      .tel-and-mail {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        @include media-screen-min-600 {
-          align-items: center;
-          flex-direction: row;
-        }
+      .contact-social-links {
         @include media-screen-min-1024 {
-          justify-content: space-between;
+          margin-top: 250px;
+        }
+        @include media-screen-min-1280 {
           margin-top: 360px;
         }
         @include media-screen-min-1440 {
           margin-top: 459px;
         }
-        .phone-number {
-          transition: color $duration;
+        .tel-and-mail {
           display: flex;
-          align-items: center;
-          gap: 10px;
-          .same-svg {
-            transition: fill $duration;
+          flex-direction: column;
+          gap: 20px;
+          @include media-screen-min-600 {
+            align-items: center;
+            flex-direction: row;
+          }
+          @include media-screen-min-1024 {
+            justify-content: space-between;
+          }
+          .phone-number {
+            transition: color $duration;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            .same-svg {
+              transition: fill $duration;
+            }
+
+            &:hover {
+              color: $skybolt-blue;
+              .phone-svg {
+                fill: $skybolt-blue;
+              }
+              .same-svg {
+                path {
+                  fill: $skybolt-blue;
+                }
+              }
+            }
           }
 
-          &:hover {
-            color: $skybolt-blue;
-            .phone-svg {
-              fill: $skybolt-blue;
+          .email  {
+            transition: color $duration;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            &:hover {
+              color: $skybolt-blue;
+              .same-svg {
+                path {
+                  fill: $skybolt-blue;
+                }
+              }
             }
-            .same-svg {
-              path {
-                fill: $skybolt-blue;
+          }
+
+        }
+        .social-links-follow {
+          gap: 13px;
+          margin-top: 50px;
+          @include media-screen-min-1024 {
+            margin-top: 80px;
+          }
+          @include media-screen-min-1440 {
+            margin-top: 112px;
+          }
+          .follow-us {
+            color: $skybolt-blue;
+          }
+        }
+        .social-links-wrapper {
+          display: flex;
+          align-items: center;
+          gap: 9px;
+          flex-wrap: wrap;
+          .social-link {
+            width: 31px;
+            height: 31px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .icon-wrapper {
+              width: 20px;
+              height: 20px;
+              img {
+                object-fit: contain;
               }
             }
           }
         }
-
-        .email  {
-          transition: color $duration;
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          &:hover {
-            color: $skybolt-blue;
-            .same-svg {
-              path {
-                fill: $skybolt-blue;
-              }
-            }
-          }
-        }
-
       }
-
-      .social-links-follow {
-        gap: 13px;
-        @include media-screen-min-1024 {
-          margin-top: 80px;
-        }
-        @include media-screen-min-1440 {
-          margin-top: 112px;
-        }
-        .follow-us {
-          color: $skybolt-blue;
-        }
-      }
-      .social-links-wrapper {
-        display: flex;
-        align-items: center;
-        gap: 9px;
-        flex-wrap: wrap;
-        .social-link {
-          width: 31px;
-          height: 31px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          .icon-wrapper {
-            width: 20px;
-            height: 20px;
-            img {
-              object-fit: contain;
-            }
-          }
-        }
-      }
-
     }
-
     .contact-us-form-wrapper {
       background-color: $frosted-sky;
       border-radius: 25px;

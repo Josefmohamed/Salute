@@ -11,6 +11,9 @@
     //600 => 375
     //top: 11.5%;
     //
+    @include media-screen-min-1024 {
+      top: 25.2%;
+    }
     @include media-screen-min-1280 {
       top: 25.32%;
     }
@@ -50,6 +53,12 @@
         margin-bottom: 50px;
       }
       @include media-screen-min-992 {
+        width: 48.76%;
+      }
+      @include media-screen-min-992{
+        gap: 80px;
+      }
+      @include media-screen-min-1280 {
         width: 48.76%;
         gap: 80px;
       }

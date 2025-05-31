@@ -249,6 +249,7 @@
         height: 100%;
         //right: 2.54%;
         right: 2.68%;
+        pointer-events: none;
       }
 
       .service-image {
@@ -277,10 +278,14 @@
       }
       .image-title {
         position: absolute;
-        top: 38.32%;
         color: $sky-breeze;
         max-width: 130px;
-        left: 60px;
+        top: 25%;
+        left: 40px;
+        @include media-screen-min-600 {
+          top: 38.32%;
+          left: 60px;
+        }
         @include media-screen-min-768 {
           left: 120px;
         }

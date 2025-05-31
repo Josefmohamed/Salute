@@ -153,7 +153,7 @@ h6, .salute-h6, .salute-h6 p {
   font-weight: 400;
   line-height: 120%;
   font-size: 25px;
-  @include media-screen-min-1024 {
+  @include media-screen-min-1280 {
     font-size: 32px;
   }
 }
