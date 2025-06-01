@@ -17,7 +17,7 @@
       flex-direction: row;
       justify-content: space-between;
     }
-    @include media-screen-min-1440 {
+    @include media-screen-min-1500 {
       padding-inline: 130px 112px;
     }
     .left-content {

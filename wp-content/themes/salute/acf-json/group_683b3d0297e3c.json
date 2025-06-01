@@ -46,6 +46,33 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
+                    "key": "field_683c6b6335841",
+                    "label": "Icon",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium",
+                    "parent_repeater": "field_683b3d02a0f82"
+                },
+                {
                     "key": "field_683b3d02ab4b2",
                     "label": "Highlight Title",
                     "name": "highlight_title",
@@ -110,5 +137,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1748713561
+    "modified": 1748790199
 }
