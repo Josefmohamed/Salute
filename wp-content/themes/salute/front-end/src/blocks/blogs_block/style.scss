@@ -1,9 +1,9 @@
 @import '../../styles/variables.scss';
 
 .blogs_block {
-  padding-block: 200px 123px;
-  @include media-screen-min-768 {
-    padding-block: 248px 123px;
+  padding-block: 225px 123px;
+  @include media-screen-min-1280   {
+    padding-block: 248px 346px;
   }
 
   .container {
@@ -89,7 +89,7 @@
 
       &:after {
         content: "";
-        background: rgba(1, 22, 50, 0.2);
+        background: linear-gradient(#011632e6, #011632e6);
         z-index: -1;
       }
     }

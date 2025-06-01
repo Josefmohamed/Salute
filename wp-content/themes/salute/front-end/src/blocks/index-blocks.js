@@ -12,7 +12,7 @@ import {blogs_block} from './blogs_block';
 import {about_us_block} from './about_us_block';
 import {why_join_salute_block} from './why_join_salute_block';
 import {what_we_offer_block} from './what_we_offer_block';
-
+import {page_not_found} from './page_not_found';
 export function indexBlocks() {
   headerBlock()
   hero_block()
@@ -27,5 +27,6 @@ export function indexBlocks() {
   blogs_block()
   why_join_salute_block()
   what_we_offer_block()
+  page_not_found()
 }
 
