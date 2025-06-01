@@ -42,5 +42,10 @@
   "what_we_offer_block": {
     "title": "What We Offer Block",
     "status": true
+  },
+  "join_salute_block": {
+    "title": "Join Salute Block",
+    "status": true
   }
+
 }

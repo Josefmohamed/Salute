@@ -94,7 +94,6 @@ $email = get_field('email');
                     <?php } ?>
                 </div>
             </div>
-
         </div>
         <?php if ($form) {?>
             <div class="contact-us-form-wrapper iv-st-from-bottom contact-details">

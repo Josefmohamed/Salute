@@ -64,6 +64,11 @@
             margin-bottom: 48px;
           }
         }
+        .description {
+          p {
+            color: $twilight-steel;
+          }
+        }
       }
       .contact-social-links {
         @include media-screen-min-1024 {

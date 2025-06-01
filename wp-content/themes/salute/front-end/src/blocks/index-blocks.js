@@ -13,6 +13,8 @@ import {about_us_block} from './about_us_block';
 import {why_join_salute_block} from './why_join_salute_block';
 import {what_we_offer_block} from './what_we_offer_block';
 import {page_not_found} from './page_not_found';
+import {join_salute_block} from './join_salute_block';
+
 export function indexBlocks() {
   headerBlock()
   hero_block()
@@ -28,5 +30,6 @@ export function indexBlocks() {
   why_join_salute_block()
   what_we_offer_block()
   page_not_found()
+  join_salute_block()
 }
 
