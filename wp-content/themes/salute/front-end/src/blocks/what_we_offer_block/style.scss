@@ -16,37 +16,39 @@
     margin-top: 41px;
     background-color: $midnight-depth;
     border-radius: 20px;
-    display: grid;
     padding: 50px 30px;
-    @include media-screen-min-600 {
-      grid-template-columns: repeat(2,1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 70px;
+    @include media-screen-min-768 {
+      column-gap: 10px;
     }
-    @include media-screen-min-1440 {
-      grid-template-columns: repeat(3,1fr);
-      gap: 70px 180px;
+    @include media-screen-min-1500 {
       padding: 93px 51px 110px ;
       margin-inline: 42px 61px;
     }
     .offer-highlight {
-      color: $midnight-depth;
       display: flex;
       align-items: center;
       gap: 15px;
-      @include media-screen-min-600 {
-        gap: 24px;
+      width: 100%;
+      @include media-screen-min-768 {
+        width: 49%;
       }
-      .offer-highlight-title {
-        align-items: center;
+      @include media-screen-min-992 {
+        width: 32.32%;
+      }
+      @include media-screen-min-1024 {
         gap: 34px;
       }
-      .offer-highlight-svg {
+      p {
+        color: $frosted-sky;
+      }
+      .offer-highlight-icon {
         flex-shrink: 0;
-        //width: 30px;
-        //height: 30px;
-        //@include media-screen-min-600 {
-          width: 52px;
-          height: 52px;
-        //}
+        width: 52px;
+        height: 52px;
       }
     }
   }

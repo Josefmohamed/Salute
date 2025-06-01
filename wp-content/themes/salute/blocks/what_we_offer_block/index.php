@@ -35,14 +35,17 @@ $title = get_field('title');
     <div class="offer-highlights">
         <?php while (have_rows('what_offer_highlights')) {
             the_row();
+            $icon = get_sub_field('icon');
             $offer_title = get_sub_field('offer_title');
             ?>
             <?php if ($offer_title) { ?>
-                    <div class="offer-highlight paragraph-32 capitalize-text column text-center column">
-                        <svg class="offer-highlight-svg" width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M52 20.4286V31.5714H46.217C37.8716 31.5714 31.1013 38.3418 31.1013 46.6872V52H20.9222V46.6872C20.9222 38.3418 14.1519 31.5714 5.80651 31.5714H0V20.4286H5.783C14.1284 20.4286 20.8987 13.6582 20.8987 5.31284V0H31.0778V5.31284C31.0778 13.6582 37.8481 20.4286 46.1935 20.4286H51.9765H52Z" fill="#8BCCFE"/>
-                        </svg>
-                        <?= $offer_title ?>
+                <div class="offer-highlight paragraph-32 capitalize-text column text-center column">
+                    <?php if (!empty($icon) && is_array($icon)) { ?>
+                        <picture class="offer-highlight-icon">
+                            <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">
+                        </picture>
+                    <?php } ?>
+                    <?= $offer_title ?>
                     </div>
                 <?php } ?>
         <?php } ?>
