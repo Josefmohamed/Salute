@@ -18,6 +18,11 @@
     .text {
       color: #2A90DD;
     }
+    .description {
+      p {
+        color: $graphite-gray;
+      }
+    }
   }
 
   .accordion-content {

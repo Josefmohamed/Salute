@@ -15,7 +15,7 @@ footer {
     @include media-screen-min-1024 {
       gap: 82px;
     }
-    @include media-screen-min-1440 {
+    @include media-screen-min-1500 {
       padding-inline: 28px 14px;
     }
     .top-content {
@@ -25,9 +25,9 @@ footer {
       flex-wrap: wrap;
       @include media-screen-max-992 {
         flex-direction: column;
-        gap: 40px;
+          gap: 40px;
       }
-      .header-logo {
+      .footer-logo {
         flex-shrink: 0;
         display: block;
         width: 200px;
