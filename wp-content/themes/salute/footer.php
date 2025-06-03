@@ -8,7 +8,7 @@ $privacy_policy = get_field('privacy_policy', 'options');
 ?>
 <footer>
   <div class="container">
-      <div class="footer-cards column">
+      <div class="footer-cards">
           <div class="top-content">
                   <?php if ($footer_logo) { ?>
                       <a href="<?= site_url() ?>" target="_self" role="img" class="footer-logo" aria-labelledby=" header_logo">
