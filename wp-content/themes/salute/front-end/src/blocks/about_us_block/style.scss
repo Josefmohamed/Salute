@@ -36,8 +36,9 @@
       bottom: -128px;
     }
     @include media-screen-max-600 {
-      width: 93%;
-      bottom: -100px;
+      bottom: -60px;
+      height: auto;
+      width: 52vw;
     }
     @include media-screen-min-1280 {
       bottom: -88px;

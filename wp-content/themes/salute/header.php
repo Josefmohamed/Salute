@@ -51,7 +51,7 @@ $header_logo = get_field('header_logo', 'options');
                               ?>
                               <?php if (!empty($menu_link) && is_array($menu_link)) { ?>
                                   <li class="menu-item">
-                                      <a class="header-link paragraph-28 capitalize-text color-transition" href="<?= $menu_link['url'] ?>" target="<?= $menu_link['target'] ?>">
+                                      <a data-text="Home" class="header-link paragraph-28 capitalize-text color-transition" href="<?= $menu_link['url'] ?>" target="<?= $menu_link['target'] ?>">
                                           <?= $menu_link['title'] ?></a>
                                   </li>
                               <?php } ?>
