@@ -8,7 +8,7 @@
     position: absolute;
     left: 0;
     width: 100%;
-    top: 57%;
+    top: 65%;
     @include media-screen-min-600 {
       top: 50%;
     }
@@ -122,7 +122,7 @@
       padding-top: 128px;
       gap: 100px;
     }
-    @include media-screen-min-1440 {
+    @include media-screen-min-1500 {
       padding-inline: 28px 25px;
     }
     .about-us-highlight {

@@ -1,11 +1,13 @@
 @import '../../styles/variables.scss';
 
 .faqs_block {
-  padding-block: 70px 60px;
+  padding-block: 70px 30px;
   @include media-screen-min-1024 {
+    padding-block: 100px;
+  }
+  @include media-screen-min-1440 {
     padding-block: 138px 123px;
   }
-
   .content {
     gap: 30px;
     margin: 0 auto;
@@ -140,7 +142,7 @@
       font-size: 18px;
     }
     @include media-screen-min-600 {
-      max-width: 85%;
+      width: 92.4%;
     }
     .toggle-open {
       width: 30px;

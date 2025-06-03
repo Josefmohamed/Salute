@@ -6,7 +6,7 @@
     padding-top: 230px;
   }
   @include media-screen-min-1024 {
-    padding-block: 300px 100px;
+    padding-block: 200px 100px;
   }
   @include media-screen-min-1440 {
     padding-block: 425px 138px;
@@ -212,13 +212,15 @@
   }
 
   &.image {
-    padding-block: 200px;
-
+    padding-block: 160px 200px;
     @include media-screen-min-768 {
-      padding-top: 230px;
+      padding-top: 150px;
     }
     @include media-screen-min-1024 {
-      padding-block: 300px 100px;
+      padding-block: 240px 150px;
+    }
+    @include media-screen-min-1280 {
+      padding-top: 240px;
     }
     @include media-screen-min-1440 {
       padding-block: 232px 335px;
