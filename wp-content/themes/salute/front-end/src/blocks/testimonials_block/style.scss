@@ -1,7 +1,10 @@
 @import '../../styles/variables.scss';
 .testimonials_block {
-  padding-block: 70px 60px;
+  padding-block: 60px 100px;
   @include media-screen-min-1024 {
+    padding-block: 100px;
+  }
+  @include media-screen-min-1440 {
     padding-block: 123px 203px;
   }
   .content {
