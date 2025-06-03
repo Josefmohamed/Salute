@@ -5,8 +5,8 @@
 
   .container {
 
-    @include media-screen-min-1280{
-      padding-inline: 156px 175px ;
+    @include media-screen-min-1440 {
+      padding-inline: 156px 175px;
     }
   }
 
@@ -35,43 +35,84 @@
     //}
   }
 
-  .join-salute-highlights {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    margin-top: 50px;
-    row-gap: 60px;
-    @include media-screen-min-992 {
-      margin-top: 90px;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 50px;
-    }
-    @include media-screen-min-1024 {
-      gap: 50px 90px;
-    }
-    @include media-screen-min-1500 {
-      gap: 84px 143px;
-      padding-inline: 59px;
+  .cards-wrapper {
+    margin-top: 77px;
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+    @include media-screen-min-1440 {
+      padding-inline: 38px 28px;
     }
 
-    .join-salute-title {
-      color: $midnight-depth;
-      margin-bottom: 13px;
+    .card {
       display: flex;
       align-items: center;
-      gap: 15px;
-      @include media-screen-min-600 {
-        gap: 24px;
+      justify-content: space-between;
+      gap: 156px;
+
+      &:nth-child(odd) {
+        margin-left: auto;
+        .card-line-svg{
+          right: 85%;
+          top: 50%;
+          transform: translateY(-50%);
+        }
       }
 
-      .join-salute-title-svg {
-        flex-shrink: 0;
-        width: 30px;
-        height: 30px;
-        @include media-screen-min-600 {
-          width: 40px;
-          height: 40px;
+      &:nth-child(even) {
+        margin-right: auto;
+        flex-direction: row-reverse;
+        .card-line-svg{
+          left: 85%;
+          top: 50%;
+          transform: translateY(-50%);
         }
       }
     }
+
+    .card-title {
+      padding: 43px 42px;
+      background-color: $skybolt-blue;
+      text-align: center;
+      border-radius: 25px;
+      width: 100%;
+      max-width: 440px;
+      line-height: 130%;
+      position: relative;
+    }
+
+    .card-content {
+      background-color: $frosted-sky;
+      border-radius: 38px;
+      padding: 52px 47px 29px 65px;
+      width: 100%;
+      max-width: 647px;
+      position: relative;
+      @include media-screen-min-1280 {
+        min-width: 647px;
+      }
+
+      .card-line-svg{
+        position: absolute;
+        z-index: -1;
+      }
+    }
+
+    .card-info {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+
+      p, ul, ol {
+        color: $midnight-depth;
+        padding-left: 13px;
+
+      }
+
+      span {
+        color: $midnight-depth;
+      }
+    }
+
   }
 }
