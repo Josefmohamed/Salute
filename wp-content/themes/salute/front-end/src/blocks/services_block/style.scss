@@ -148,6 +148,9 @@
         color: $midnight-depth;
         font-size: 60px;
         line-height: 28px;
+        @include media-screen-max-600 {
+          font-size: 40px;
+        }
       }
       padding-inline: $card-padding-mobile;
 

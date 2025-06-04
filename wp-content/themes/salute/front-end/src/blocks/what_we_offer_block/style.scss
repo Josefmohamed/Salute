@@ -3,14 +3,6 @@
   padding-block: 74px 105px;
   .title {
     color: $skybolt-blue;
-    margin-inline: auto;
-    max-width: 240px;
-    @include media-screen-min-1024 {
-      max-width: 380px;
-    }
-    @include media-screen-min-1440 {
-      max-width: 455px;
-    }
   }
   .offer-highlights {
     margin-top: 41px;
