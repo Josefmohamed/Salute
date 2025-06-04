@@ -26,6 +26,8 @@ $description = get_field('description');
 $main_title = get_field('main_title');
 $phone_number = get_field('phone_number');
 $email = get_field('email');
+$info = get_field('info');
+$text = get_field('text');
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
     <div class="container">
@@ -69,5 +71,16 @@ $email = get_field('email');
               </div>
           </div>
       </div>
+        <div class="bottom-content column">
+            <?php if ($info) { ?>
+            <div class="info paragraph-32 midnight-depth fw-800"><?= $info ?></div>
+            <?php } ?>
+            <?php if ($text) { ?>
+                <div class="text paragraph-28 fw-400"><?= $text ?></div>
+            <?php } ?>
+        </div>
   </div>
+    <svg class="bottom-svg" width="1170" height="506" viewBox="0 0 1170 506" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1227 9H59C31.3858 9 9 31.3858 9 59V542C9 569.614 31.3858 592 59 592H149H240C267.614 592 290 614.386 290 642V1003" stroke="#8BCCFE" stroke-width="17"/>
+    </svg>
 </section>

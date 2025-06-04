@@ -10,11 +10,6 @@ footer {
     padding-top: 101px;
   }
   .footer-cards {
-    gap: 40px;
-    position: relative;
-    @include media-screen-min-1024 {
-      gap: 82px;
-    }
     @include media-screen-min-1500 {
       padding-inline: 28px 14px;
     }
@@ -23,6 +18,7 @@ footer {
       justify-content: space-between;
       gap: 20px;
       flex-wrap: wrap;
+      margin-bottom: 44px;
       @include media-screen-max-992 {
         flex-direction: column;
           gap: 40px;
@@ -96,7 +92,6 @@ footer {
         }
 
       }
-
     }
     .center-line {
       width: 100%;
@@ -106,6 +101,7 @@ footer {
     .bottom-content {
       display: flex;
       justify-content: space-between;
+      margin-top: 38px;
       @include media-screen-max-992 {
         flex-direction: column;
         gap: 40px;
@@ -120,6 +116,7 @@ footer {
           }
         }
       }
+
     }
   }
 }
