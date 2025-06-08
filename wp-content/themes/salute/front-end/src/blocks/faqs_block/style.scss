@@ -120,6 +120,7 @@
       }
       .accordion-trigger {
         color: $white;
+        cursor: pointer;
       }
       .toggle-open {
         path {
@@ -145,6 +146,7 @@
       width: 92.4%;
     }
     .toggle-open {
+      cursor: pointer;
       width: 30px;
       height: 30px;
       position: absolute;

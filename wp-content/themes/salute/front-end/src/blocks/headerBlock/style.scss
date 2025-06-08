@@ -259,6 +259,7 @@ header {
     width: fit-content;
     color: $midnight-depth;
     transition: color 0.3s linear;
+    list-style: none;
     &:after {
       position: absolute;
       content: "";
