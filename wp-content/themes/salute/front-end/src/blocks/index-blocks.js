@@ -15,6 +15,7 @@ import {what_we_offer_block} from './what_we_offer_block';
 import {page_not_found} from './page_not_found';
 import {join_salute_block} from './join_salute_block';
 import {hiring_block} from './hiring_block';
+import {careers_hero_block} from './careers_hero_block';
 
 export function indexBlocks() {
   headerBlock()
@@ -33,5 +34,6 @@ export function indexBlocks() {
   page_not_found()
   join_salute_block()
   hiring_block()
+  careers_hero_block()
 }
 

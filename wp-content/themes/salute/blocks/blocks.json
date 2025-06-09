@@ -46,10 +46,13 @@
   "join_salute_block": {
     "title": "Join Salute Block",
     "status": true
-  } ,
+  },
   "hiring_block": {
     "title": "Hiring Block",
     "status": true
+  },
+  "careers_hero_block": {
+    "title": "Careers Hero Block",
+    "status": true
   }
-
 }

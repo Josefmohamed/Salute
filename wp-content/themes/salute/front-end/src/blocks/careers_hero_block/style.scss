@@ -1,0 +1,100 @@
+@import '../../styles/variables.scss';
+
+.careers_hero_block {
+  padding-block: 125px 0;
+  position: relative;
+  @include media-screen-min-992 {
+    padding-block: 180px 0;
+
+  }
+  @include media-screen-min-1024{
+    padding-block: 232px 0;
+  }
+
+    .container {
+
+    @include media-screen-min-992{
+      padding-inline: 44px;
+    }
+  }
+
+  .content-wrapper {
+    position: relative;
+    background-color: $midnight-depth;
+    border-radius: 50px;
+    padding:  35px 24px 0;
+    @include media-screen-min-768{
+      padding: 65px 50px 0;
+    }
+    @include media-screen-min-992 {
+      padding: 105px 95px 93px;
+    }
+    @include media-screen-min-1440{
+      padding: 105px 156px 93px;
+    }
+
+  }
+
+  .text-wrapper {
+    @include media-screen-min-992{
+      max-width: 74%;
+    }
+  }
+
+  .title {
+    line-height: 120%;
+    color: #92C8ED;
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    color: $frosted-sky;
+    line-height: 120%;
+    text-transform: capitalize;
+    margin-bottom: 33px;
+  }
+
+  .description p {
+    font-size: 18px;
+    line-height: 120%;
+    @include media-screen-min-600{
+      font-size: 25px;
+    }
+
+  }
+
+  .hero-image {
+
+    margin-inline: auto;
+    @include media-screen-min-600{
+      width: 70%;
+    }
+    @include media-screen-min-992{
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 29%;
+      margin-inline: unset;
+    }
+    .cover-image{
+      padding-top: 85%;
+      //margin-top: -50px;
+      @include media-screen-min-992 {
+        padding-top: 180%;
+        margin-top: unset;
+      }
+      @include media-screen-min-1920{
+        padding-top: 150%;
+      }
+      img{
+        //height --> 694
+        //width  --> 480
+        object-fit: contain;
+        @include media-screen-min-992 {
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+}
