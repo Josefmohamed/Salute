@@ -7,13 +7,36 @@
     padding-block: 180px 0;
 
   }
-  @include media-screen-min-1024{
+  @include media-screen-min-1024 {
     padding-block: 232px 0;
   }
 
-    .container {
-
+  .section-svg {
+    position: absolute;
+    top: calc(100% - 85px);
+    right: 12%;
+    z-index: 2;
+    height: 250px;
+    @include media-screen-min-768 {
+      height: 300px;
+    }
     @include media-screen-min-992{
+      right: 32%;
+    }
+    @include media-screen-min-1024 {
+      height: 394px;
+    }
+    @include media-screen-min-1440 {
+      top: calc(100% - 100px);
+    }
+    @include media-screen-min-1500 {
+      right: 35%;
+    }
+  }
+
+  .container {
+
+    @include media-screen-min-992 {
       padding-inline: 44px;
     }
   }
@@ -22,43 +45,45 @@
     position: relative;
     background-color: $midnight-depth;
     border-radius: 50px;
-    padding:  35px 24px 0;
-    @include media-screen-min-768{
+    padding: 35px 24px 0;
+    @include media-screen-min-768 {
       padding: 65px 50px 0;
     }
     @include media-screen-min-992 {
       padding: 105px 95px 93px;
     }
-    @include media-screen-min-1440{
-      padding: 105px 156px 93px;
+    @include media-screen-min-1440 {
+      padding: 105px 156px 120px;
     }
 
   }
 
   .text-wrapper {
-    @include media-screen-min-992{
+    @include media-screen-min-992 {
       max-width: 74%;
     }
   }
 
   .title {
-    line-height: 120%;
+    line-height: 82px;
     color: #92C8ED;
-    margin-bottom: 20px;
   }
 
   .subtitle {
     color: $frosted-sky;
     line-height: 120%;
     text-transform: capitalize;
-    margin-bottom: 33px;
+    padding-bottom: 20px;
   }
 
   .description p {
     font-size: 18px;
     line-height: 120%;
-    @include media-screen-min-600{
+    @include media-screen-min-600 {
       font-size: 25px;
+    }
+    @include media-screen-min-1024 {
+      font-size: 28px;
     }
 
   }
@@ -66,27 +91,29 @@
   .hero-image {
 
     margin-inline: auto;
-    @include media-screen-min-600{
+    @include media-screen-min-600 {
       width: 70%;
     }
-    @include media-screen-min-992{
+    @include media-screen-min-992 {
       position: absolute;
       bottom: 0;
       right: 0;
       width: 29%;
       margin-inline: unset;
     }
-    .cover-image{
+
+    .cover-image {
       padding-top: 85%;
       //margin-top: -50px;
       @include media-screen-min-992 {
         padding-top: 180%;
         margin-top: unset;
       }
-      @include media-screen-min-1920{
+      @include media-screen-min-1920 {
         padding-top: 150%;
       }
-      img{
+
+      img {
         //height --> 694
         //width  --> 480
         object-fit: contain;
