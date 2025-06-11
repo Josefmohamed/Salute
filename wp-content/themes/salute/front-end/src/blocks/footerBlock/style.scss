@@ -3,6 +3,7 @@ footer {
   background:$midnight-depth;
   padding-block: 64px 50px;
   border-radius: 44px 44px 0 0;
+  position: relative;
   @include media-screen-min-768 {
     padding-block: 96px 93px;
   }

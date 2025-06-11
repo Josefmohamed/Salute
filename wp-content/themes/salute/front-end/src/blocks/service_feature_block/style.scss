@@ -3,6 +3,7 @@
 .service_feature_block {
   background-color: $twilight-steel;
   border-radius: 50px;
+  z-index: 4;
   @include media-screen-max-992  {
     padding-block: 60px;
   }

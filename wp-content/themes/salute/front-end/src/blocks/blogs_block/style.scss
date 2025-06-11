@@ -2,9 +2,11 @@
 
 .blogs_block {
   padding-block: 225px 123px;
+  position: relative;
   @include media-screen-min-1280   {
     padding-block: 248px 346px;
   }
+
 
   .container {
     padding: 0;
@@ -12,6 +14,33 @@
 
   .content-wrapper {
     position: relative;
+
+    .blogs-svg {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      height: auto;
+      transform: translate(-50%, -50%);
+      max-width: 280px;
+      @include media-screen-min-600 {
+        max-width: 400px;
+        top: 50%;
+        transform: translate(-50%, -10%);
+      }
+      @include media-screen-min-768 {
+        max-width: 500px;
+        transform: translate(-50%, 0%);
+      }
+      @include media-screen-min-992 {
+        max-width: 600px;
+        transform: translate(-30%, -15%);
+      }
+      @include media-screen-min-1280 {
+        max-width: unset;
+        transform: translate(-30%, -10%);
+      }
+    }
+
   }
 
   .swiper {

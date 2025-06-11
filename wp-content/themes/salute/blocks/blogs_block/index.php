@@ -38,8 +38,15 @@ if ($programmatic_or_manual === 'programmatic') {
 }
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
+
+
     <div class="container">
         <div class="content-wrapper">
+
+            <svg class="blogs-svg" width="821" height="1003" viewBox="0 0 821 1003" fill="none">
+                <path d="M821 9H59C31.3858 9 9 31.3858 9 59V542C9 569.614 31.3858 592 59 592H149H240C267.614 592 290 614.386 290 642V1003"
+                      stroke="#8BCCFE" stroke-width="17"/>
+            </svg>
         <?php if ($programmatic_or_manual === 'manual') {
             ?>
             <div class="swiper blogs-swiper">
