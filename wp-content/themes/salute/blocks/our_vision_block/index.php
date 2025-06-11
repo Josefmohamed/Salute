@@ -28,7 +28,7 @@ $image = get_field('image');
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
   <div class="container">
-      <div class="content-wrapper">
+      <div class="content-wrapper" id="our_vision_block_22">
           <div class="left-image-card">
                   <?php
                   $picture_class = 'left-image aspect-ratio';
