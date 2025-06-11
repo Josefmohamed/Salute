@@ -41,6 +41,11 @@ $text = get_field('text');
                   <?php } ?>
               </div>
           <div class="right-content">
+              <svg class="top-svg" width="882" height="1227" viewBox="0 0 882 1227" fill="none">
+                  <path d="M-429 0L-429 1168C-429 1195.61 -406.614 1218 -379 1218L104 1218C131.614 1218 154 1195.61 154 1168L154 1078L154 987C154 959.386 176.386 937 204 937L882 937"
+                        stroke="#8BCCFE" stroke-width="17"/>
+              </svg>
+
               <?php if ($main_title) { ?>
               <div class="paragraph-32 main-title"><?= $main_title ?></div>
               <?php } ?>
@@ -73,7 +78,9 @@ $text = get_field('text');
             <?php } ?>
         </div>
   </div>
-    <svg class="bottom-svg" width="1170" height="506" viewBox="0 0 1170 506" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg class="bottom-svg" width="1170" height="506" viewBox="0 0 1170 506" fill="none" >
         <path d="M1227 9H59C31.3858 9 9 31.3858 9 59V542C9 569.614 31.3858 592 59 592H149H240C267.614 592 290 614.386 290 642V1003" stroke="#8BCCFE" stroke-width="17"/>
     </svg>
+
+
 </section>
