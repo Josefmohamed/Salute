@@ -275,7 +275,7 @@ header {
 
     &:before {
       //content: 'Home'; /* duplicate the text */
-      content: 'Home'; // This pulls from the data-text attribute
+      content: attr(data-text);; // This pulls from the data-text attribute
       position: absolute;
       top: 50%;
       left: 50%;

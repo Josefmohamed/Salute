@@ -211,15 +211,15 @@ $xxx-large-screen-min-width: 2500px;
       margin-left: 15px;
       transition: fill $duration;
     }
-    &:hover{
-      background-color: $co378_blue;
-      color: $white;
-      svg {
-        path {
-          fill: $white;
-        }
-      }
-    }
+    //&:hover{
+    //  background-color: $co378_blue;
+    //  color: $white;
+    //  svg {
+    //    path {
+    //      fill: $white;
+    //    }
+    //  }
+    //}
   }
 }
 

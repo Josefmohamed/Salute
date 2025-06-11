@@ -153,6 +153,9 @@
         padding: 45px 40px;
       }
       @include media-screen-min-1440 {
+        padding: 70px 40px;
+      }
+      @include media-screen-min-1500 {
         padding: 94px 80px;
       }
       @include media-screen-min-1024 {
