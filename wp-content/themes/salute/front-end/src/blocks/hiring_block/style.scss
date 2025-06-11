@@ -1,7 +1,10 @@
 @import '../../styles/variables.scss';
 
 .hiring_block {
-  padding-block: 55px 80px;
+  padding-block: 50px;
+  @include media-screen-min-1024 {
+    padding-block: 55px 74px;
+  }
 
   .container {
 

@@ -2,8 +2,10 @@
 
 .join_salute_block {
   position: relative;
-  padding-bottom: 80px;
-  padding-top: 233px;
+  padding-block: 50px;
+  @include media-screen-min-1024 {
+    padding-block: 233px 80px;
+  }
   @include media-screen-min-1440 {
     padding-block: 110px 172px;
   }
@@ -46,7 +48,7 @@
       width: 100%;
       background-color: $frosted-sky;
       border-radius: 50px;
-      padding: 30px;
+      padding: 30px 20px;
       @include media-screen-min-992 {
         width: 48.17%;
         padding: 50px;
@@ -58,41 +60,69 @@
        color: $graphite-gray;
         margin-bottom: 28px;
         }
+      //.tel-and-mail {
+      //  display: flex;
+      //  flex-direction: column;
+      //  gap: 20px;
+      //  .same-svg {
+      //    width: 21px;
+      //    height: 21px;
+      //    flex-shrink: 0;
+      //    transition: fill $duration;
+      //  }
+      //  .phone-number {
+      //    transition: color $duration;
+      //    display: flex;
+      //    align-items: center;
+      //    gap: 15px;
+      //    color: $graphite-gray;
+      //
+      //    &:hover {
+      //      color: $skybolt-blue;
+      //      .phone-svg {
+      //        fill: $skybolt-blue;
+      //      }
+      //      .same-svg {
+      //        path {
+      //          fill: $skybolt-blue;
+      //        }
+      //      }
+      //    }
+      //  }
+      //  .email  {
+      //    transition: color $duration;
+      //    display: flex;
+      //    align-items: center;
+      //    color: $graphite-gray;
+      //    gap: 15px;
+      //    &:hover {
+      //      color: $skybolt-blue;
+      //      .same-svg {
+      //        path {
+      //          fill: $skybolt-blue;
+      //        }
+      //      }
+      //    }
+      //  }
+      //}
       .tel-and-mail {
         display: flex;
         flex-direction: column;
         gap: 20px;
-        .same-svg {
-          width: 21px;
-          height: 21px;
-          flex-shrink: 0;
-          transition: fill $duration;
-        }
-        .phone-number {
+        .twilight-steel {
           transition: color $duration;
           display: flex;
           align-items: center;
           gap: 15px;
           color: $graphite-gray;
-
-          &:hover {
-            color: $skybolt-blue;
-            .phone-svg {
-              fill: $skybolt-blue;
-            }
-            .same-svg {
-              path {
-                fill: $skybolt-blue;
-              }
-            }
+          @include media-screen-max-600 {
+            gap: 8px;
+            font-size: 15px;
           }
-        }
-        .email  {
-          transition: color $duration;
-          display: flex;
-          align-items: center;
-          gap: 15px;
-          color: $graphite-gray;
+          .same-svg {
+            flex-shrink: 0;
+            transition: fill $duration;
+          }
           &:hover {
             color: $skybolt-blue;
             .same-svg {
@@ -103,6 +133,7 @@
           }
         }
       }
+
     }
     }
   .bottom-content {
@@ -114,6 +145,9 @@
     }
     @include media-screen-min-1440 {
       margin-top: 240px;
+    }
+    @include media-screen-min-768 {
+      align-items: flex-end;
     }
     .text {
       p {

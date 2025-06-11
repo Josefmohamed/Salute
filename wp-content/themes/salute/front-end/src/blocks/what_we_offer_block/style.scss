@@ -1,6 +1,9 @@
 @import '../../styles/variables.scss';
 .what_we_offer_block {
-  padding-block: 74px 105px;
+  padding-block: 50px;
+  @include media-screen-min-1024 {
+    padding-block: 74px 110px;
+  }
   .title {
     color: $skybolt-blue;
   }
