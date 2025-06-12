@@ -4,7 +4,7 @@ $post_title = get_the_title($post_id);
 $answer = get_field('answer', $post_id);
 
 ?>
-<div class="accordion-panel " itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<div class="accordion-panel animation-fade-me-up" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
   <?php if ($post_title) { ?>
     <div id="panel2-title" class="title ">
       <button class="accordion-trigger paragraph-28 fw-800" aria-expanded="false" aria-controls="accordion1-content">

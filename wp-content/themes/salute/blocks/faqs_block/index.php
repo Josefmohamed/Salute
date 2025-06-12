@@ -46,12 +46,12 @@ if ($programmatic_or_manual === 'programmatic') {
   <div class="container">
       <div class="content column">
           <?php if ($title) { ?>
-              <h4 class="abrite-h4 text fw-800 text-center uppercase-text"><?= $title ?></h4>
+              <h4 class="abrite-h4 text fw-800 text-center uppercase-text animation-fade-me-up"><?= $title ?></h4>
           <?php } ?>
           <?php if ($description) { ?>
-              <div class="paragraph-20 description text-center"><?= $description ?></div>
+              <div class="paragraph-20 description text-center animation-fade-me-up"><?= $description ?></div>
           <?php } ?>
-          <div class="line"></div>
+          <div class="line animation-fade-me-up"></div>
       </div>
       <?php if ($programmatic_or_manual === 'manual') {
           ?>

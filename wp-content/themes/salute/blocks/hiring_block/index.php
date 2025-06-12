@@ -28,9 +28,9 @@ $title = get_field('title');
     <div class="container">
         <div class="title-wrapper ">
             <?php if ($title) { ?>
-                <h4 class="salute-h4 uppercase-text title fw-800  text-center"><?= $title ?></h4>
+                <h4 class="salute-h4 uppercase-text title fw-800 animation-fade-me-up text-center"><?= $title ?></h4>
             <?php } ?>
-            <div class="line"></div>
+            <div class="line animation-fade-me-up"></div>
         </div>
         <?php if (have_rows('hiring_card')) { ?>
             <div class="cards-wrapper">
@@ -41,9 +41,9 @@ $title = get_field('title');
                     $role_summary = get_sub_field('role_summary');
                     $requirements = get_sub_field('requirements');
                     ?>
-                    <div class="card">
+                    <div class="card animation-fade-me-up">
                         <?php if ($position_title) { ?>
-                            <div class="card-title fw-800 paragraph-32 capitalize-text">
+                            <div class="card-title animation-fade-me-up fw-800 paragraph-32 capitalize-text">
                                 <?= $position_title ?>
                             </div>
                         <?php } ?>

@@ -11,12 +11,12 @@ $privacy_policy = get_field('privacy_policy', 'options');
       <div class="footer-cards">
           <div class="top-content">
                   <?php if ($footer_logo) { ?>
-                      <a href="<?= site_url() ?>" target="_self" role="img" class="footer-logo" aria-labelledby=" header_logo">
+                      <a href="<?= site_url() ?>" target="_self" role="img" class="footer-logo animation-fade-me-up" aria-labelledby=" header_logo">
                           <?= \Theme\Helpers::display_attachment($footer_logo, array("width" => 278, "height" => 69)) ?>
                       </a>
                   <?php } ?>
                   <?php if (have_rows('footer_links', 'options')) { ?>
-                      <ul class="footer-links">
+                      <ul class="footer-links animation-fade-me-up">
                           <?php while (have_rows('footer_links', 'options')) {
                               the_row();
                               $link = get_sub_field('link');
@@ -30,7 +30,7 @@ $privacy_policy = get_field('privacy_policy', 'options');
                       </ul>
                   <?php } ?>
               <?php if (have_rows('social_links', 'options')) { ?>
-                  <div class="social-links-wrapper">
+                  <div class="social-links-wrapper animation-fade-me-up">
                       <?php while (have_rows('social_links', 'options')) {
                           the_row();
                           $url = get_sub_field('url');
@@ -50,7 +50,7 @@ $privacy_policy = get_field('privacy_policy', 'options');
           <div class="center-line"></div>
           <div class="bottom-content">
               <?php if ($footer_text): ?>
-                  <h5 class="captions paragraph-18  white-color"><?= $footer_text ?></h5>
+                  <h5 class="captions paragraph-18 white-color"><?= $footer_text ?></h5>
               <?php endif; ?>
               <?php if ($privacy_policy): ?>
                   <div class="privacy-policy paragraph-18"><?= $privacy_policy ?></div>

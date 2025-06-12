@@ -32,27 +32,26 @@ $text = get_field('text');
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
     <div class="container">
       <div class="content-wrapper">
-          <div class="left-content column">
+          <div class="left-content animation-fade-me-up column">
                   <?php if ($title) { ?>
-                      <h4 class="salute-h4 text fw-800 uppercase-text"><?= $title ?></h4>
+                      <h4 class="salute-h4 text fw-800 uppercase-text animation-fade-me-up"><?= $title ?></h4>
                   <?php } ?>
                   <?php if ($description) { ?>
-                      <div class="paragraph-24 fw-500 description"><?= $description ?></div>
+                      <div class="paragraph-24 fw-500 description animation-fade-me-up"><?= $description ?></div>
                   <?php } ?>
               </div>
-          <div class="right-content">
+          <div class="right-content animation-fade-me-up">
               <svg class="top-svg" width="882" height="1227" viewBox="0 0 882 1227" fill="none">
                   <path d="M-429 0L-429 1168C-429 1195.61 -406.614 1218 -379 1218L104 1218C131.614 1218 154 1195.61 154 1168L154 1078L154 987C154 959.386 176.386 937 204 937L882 937"
                         stroke="#8BCCFE" stroke-width="17"/>
               </svg>
-
               <?php if ($main_title) { ?>
-              <div class="paragraph-32 main-title"><?= $main_title ?></div>
+              <div class="paragraph-32 main-title animation-fade-me-up"><?= $main_title ?></div>
               <?php } ?>
-              <div class="tel-and-mail">
+              <div class="tel-and-mail animation-fade-me-up">
                   <?php if ($email) : ?>
                       <a href="mailto:<?= $email ?>"
-                         class="email paragraph-20 twilight-steel">
+                         class="email paragraph-20 twilight-steel animation-fade-me-up">
                           <svg class="same-svg" width="25" height="17" viewBox="0 0 25 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd" clip-rule="evenodd" d="M1.59803 0H23.402C23.8518 0 24.26 0.189124 24.5514 0.492447L12.5 8.70151L0.448579 0.492447C0.740005 0.189124 1.14764 0 1.59803 0ZM24.9982 1.5287L15.5654 7.95408L24.9705 15.7027C24.9898 15.6036 25 15.5009 25 15.3964V1.60363C25 1.57825 24.9994 1.55347 24.9982 1.5287ZM24.3858 16.6574L14.611 8.60363L12.8191 9.82417C12.7932 9.8423 12.7661 9.85861 12.7378 9.8719L12.7168 9.88157C12.6505 9.90997 12.5807 9.92447 12.5114 9.92628H12.4868C12.4175 9.92508 12.3477 9.90997 12.2814 9.88157L12.2604 9.8719C12.2321 9.85861 12.205 9.8423 12.1791 9.82417L10.3872 8.60363L0.61356 16.6574C0.885116 16.8719 1.22712 17 1.59803 17H23.402C23.7723 17 24.1143 16.8719 24.3864 16.6574H24.3858ZM0.0295039 15.7027L9.43461 7.95408L0.00180636 1.5287C0.000602119 1.55347 0 1.57885 0 1.60363V15.3964C0 15.5009 0.010236 15.6036 0.0295039 15.7027Z" fill="#182A3B"/>
                           </svg>
@@ -60,7 +59,7 @@ $text = get_field('text');
                       </a>
                   <?php endif; ?>
                   <?php if ($phone_number) : ?>
-                      <a href="tel:<?= $phone_number ?>" class="phone-number paragraph-20 twilight-steel">
+                      <a href="tel:<?= $phone_number ?>" class="phone-number paragraph-20 twilight-steel animation-fade-me-up">
                           <svg class="same-svg" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd" clip-rule="evenodd" d="M7.74702 6.17406C8.38509 5.53099 8.38253 4.48043 7.74088 3.84044L4.37196 0.478327C3.73031 -0.16166 2.6834 -0.159094 2.04533 0.483973C-2.64834 5.21588 1.69585 11.7707 5.48385 15.5511C9.27184 19.3315 15.8291 23.6554 20.5232 18.9235C21.1613 18.2799 21.1588 17.2299 20.5171 16.5899L17.1482 13.2278C16.5065 12.5878 15.4596 12.5904 14.8216 13.2339C13.2399 14.8285 13.5224 15.2807 11.5299 14.1285C9.60853 13.0174 7.98854 11.4007 6.87102 9.47921C5.71206 7.48688 6.16439 7.76813 7.74651 6.17355L7.74702 6.17406Z" fill="#182A3B"/>
                           </svg>
@@ -69,18 +68,16 @@ $text = get_field('text');
               </div>
           </div>
       </div>
-        <div class="bottom-content column">
+        <div class="bottom-content column animation-fade-me-up">
             <?php if ($info) { ?>
-            <div class="info paragraph-32 midnight-depth fw-800"><?= $info ?></div>
+            <div class="info paragraph-32 midnight-depth fw-800 animation-fade-me-up"><?= $info ?></div>
             <?php } ?>
             <?php if ($text) { ?>
-                <div class="text paragraph-28 fw-400"><?= $text ?></div>
+                <div class="text paragraph-28 fw-400 animation-fade-me-up"><?= $text ?></div>
             <?php } ?>
         </div>
   </div>
     <svg class="bottom-svg" width="1170" height="506" viewBox="0 0 1170 506" fill="none" >
         <path d="M1227 9H59C31.3858 9 9 31.3858 9 59V542C9 569.614 31.3858 592 59 592H149H240C267.614 592 290 614.386 290 642V1003" stroke="#8BCCFE" stroke-width="17"/>
     </svg>
-
-
 </section>

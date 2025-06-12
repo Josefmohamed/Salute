@@ -27,19 +27,19 @@ $title = get_field('title');
     <div class="container">
     <div class="content column">
         <?php if ($title) { ?>
-            <h4 class="abrite-h4 uppercase-text title fw-800  text-center"><?= $title ?></h4>
+            <h4 class="abrite-h4 uppercase-text title fw-800 animation-fade-me-up text-center"><?= $title ?></h4>
         <?php } ?>
-        <div class="line"></div>
+        <div class="line animation-fade-me-up"></div>
     </div>
     <?php if (have_rows('what_offer_highlights')) { ?>
-    <div class="offer-highlights">
+    <div class="offer-highlights animation-fade-me-up">
         <?php while (have_rows('what_offer_highlights')) {
             the_row();
             $icon = get_sub_field('icon');
             $offer_title = get_sub_field('offer_title');
             ?>
             <?php if ($offer_title) { ?>
-                <div class="offer-highlight paragraph-32 capitalize-text column text-center column">
+                <div class="offer-highlight paragraph-32 capitalize-text column text-center column animation-fade-me-up">
                     <?php if (!empty($icon) && is_array($icon)) { ?>
                         <picture class="offer-highlight-icon">
                             <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">

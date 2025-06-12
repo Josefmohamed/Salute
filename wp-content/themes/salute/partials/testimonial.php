@@ -5,7 +5,7 @@ $post_title = get_the_title($post_id);
 $comment = get_field('comment', $post_id);
 $testimonial_title = get_the_title($post_id);
 ?>
-<div class="swiper-slide card" id="post-id-<?= $post_id ?>">
+<div class="swiper-slide card animation-fade-me-up" id="post-id-<?= $post_id ?>">
     <div class="author-info">
         <?php if (!empty($author_image) && is_array($author_image)) { ?>
             <picture class="author-image">

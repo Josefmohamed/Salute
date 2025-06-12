@@ -8,12 +8,12 @@ $hide_sidebar = get_field('hide_sidebar', $post_id);
     <section class="single_hero_block">
         <div class="container">
                 <div class=" blog-card" id="post-id-<?= $post_id ?>">
-                    <h3 class="salute-h3 fw-800 card-title">
+                    <h3 class="salute-h3 fw-800 card-title animation-fade-me-up">
                             <?php the_title(); ?>
                         </h3>
                     <?php if ($thumbnail_id) { ?>
                         <?php
-                        $picture_class = 'cover-image';
+                        $picture_class = 'cover-image animation-fade-me-up';
                         echo bis_get_attachment_picture(
                             $thumbnail_id,
                             [
@@ -33,7 +33,7 @@ $hide_sidebar = get_field('hide_sidebar', $post_id);
                         );
                         ?>
                     <?php } ?>
-                    <svg class="card-svg" width="79" height="75" viewBox="0 0 79 75" fill="none">
+                    <svg class="card-svg animation-fade-me-up" width="79" height="75" viewBox="0 0 79 75" fill="none">
                         <path d="M78.3821 74.9999H67.9291V26.4596C67.9291 17.9041 61.2847 10.9432 53.1184 10.9432H0V0H53.1258C67.0531 0 78.3821 11.8687 78.3821 26.4596V74.9999Z"
                               fill="#8BCCFE"/>
                         <path d="M7.21608 75.002H0V64.0511H7.21608C29.5473 64.0511 47.7137 45.0192 47.7137 21.624H58.1666C58.1666 35.8805 52.8659 49.2813 43.2445 59.3689C33.6231 69.4488 20.8242 75.002 7.21608 75.002Z"
@@ -42,10 +42,9 @@ $hide_sidebar = get_field('hide_sidebar', $post_id);
                 </div>
         </div>
     </section>
-    <section class="single-content">
+    <section class="single-content animation-fade-me-up">
         <div class="container">
             <?php the_content(); ?>
         </div>
     </section>
-
 <?php get_footer(); ?>

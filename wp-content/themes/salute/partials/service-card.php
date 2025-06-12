@@ -5,7 +5,7 @@ $comment = get_field('comment', $post_id);
 $index = $args['index'] ?? null;
 
 ?>
-<div class="accordion-panel">
+<div class="accordion-panel animation-fade-me-up">
     <?php if ($post_title) { ?>
         <div id="panel2-title" class="title ">
             <button class="accordion-trigger salute-h6 fw-700" aria-expanded="false" aria-controls="accordion1-content">

@@ -1,14 +1,10 @@
 @import '../../styles/variables.scss';
 
 .careers_hero_block {
-  padding-block: 125px 0;
   position: relative;
-  @include media-screen-min-992 {
-    padding-block: 180px 0;
-
-  }
+  padding-top: 180px;
   @include media-screen-min-1024 {
-    padding-block: 232px 0;
+    padding-top: 232px;
   }
 
   .section-svg {

@@ -28,9 +28,9 @@ $title = get_field('title');
     <div class="container">
     <div class="content column">
         <?php if ($title) { ?>
-            <h4 class="abrite-h4 uppercase-text title fw-800  text-center"><?= $title ?></h4>
+            <h4 class="abrite-h4 uppercase-text title fw-800 animation-fade-me-up text-center"><?= $title ?></h4>
         <?php } ?>
-        <div class="line"></div>
+        <div class="line animation-fade-me-up"></div>
     </div>
     <?php if (have_rows('join_salute_highlights')) { ?>
     <div class="join-salute-highlights column">
@@ -42,7 +42,7 @@ $title = get_field('title');
             ?>
         <div class="join-salute-highlight">
             <?php if ($highlight_title) { ?>
-                    <div class="join-salute-title fw-800 paragraph-32 capitalize-text">
+                    <div class="join-salute-title fw-800 paragraph-32 capitalize-text animation-fade-me-up">
                         <?php if (!empty($icon) && is_array($icon)) { ?>
                             <picture class="join-salute-title-svg">
                                 <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">
@@ -52,7 +52,7 @@ $title = get_field('title');
                     </div>
                 <?php } ?>
             <?php if ($highlight_description) { ?>
-                    <div class="highlight-description paragraph-20 midnight-depth">
+                    <div class="highlight-description paragraph-20 midnight-depth animation-fade-me-up">
                         <?= $highlight_description ?>
                     </div>
                 <?php } ?>

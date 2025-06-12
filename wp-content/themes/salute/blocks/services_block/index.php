@@ -46,7 +46,7 @@ if ($programmatic_or_manual === 'programmatic') {
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?> <?= $block_type ?>">
     <?php if ($service_image) { ?>
-    <div class="service-image-card ">
+    <div class="service-image-card animation-fade-me-up">
         <svg class="service-svg" width="1640" height="655" viewBox="0 0 1640 655" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M1310.73 281.202C1314.9 293.163 1317.81 305.72 1319.29 318.706C1308.2 322.437 1296.69 324.588 1285.13 325.043C1283.58 325.105 1282.02 325.135 1280.48 325.14H1280.05C1246.44 325.14 1214.87 312.263 1191.11 288.858C1167.23 265.312 1154 233.83 1153.86 200.206C1153.82 187.943 1155.52 175.942 1158.94 164.367C1172 165.357 1184.65 167.779 1196.76 171.488C1193.6 180.642 1192.02 190.221 1192.06 200.053C1192.25 248.126 1231.85 287.11 1280.36 286.948C1281.45 286.944 1282.54 286.922 1283.63 286.882C1292.81 286.519 1301.98 284.583 1310.74 281.202H1310.73Z" fill="#92C8ED"/>
             <path d="M1204.45 154.004C1192.15 150.08 1179.31 147.351 1166.07 145.958L1369.65 -293L1418 -301L1204.45 154.004Z" fill="#92C8ED"/>
@@ -83,19 +83,19 @@ if ($programmatic_or_manual === 'programmatic') {
         );
         ?>
         <?php if ($image_title): ?>
-            <h4 class="image-title uppercase-text fw-800 salute-h4"><?= esc_html($image_title) ?></h4>
+            <h4 class="image-title uppercase-text fw-800 salute-h4 animation-fade-me-up"><?= esc_html($image_title) ?></h4>
         <?php endif; ?>
     </div>
     <?php } ?>
     <div class="container">
       <div class="content column">
           <?php if ($title) { ?>
-              <h4 class="abrite-h4 text fw-800 text-center"><?= $title ?></h4>
+              <h4 class="abrite-h4 text fw-800 text-center animation-fade-me-up"><?= $title ?></h4>
           <?php } ?>
           <?php if ($description) { ?>
-              <div class="paragraph-20 description text-center"><?= $description ?></div>
+              <div class="paragraph-20 description text-center animation-fade-me-up"><?= $description ?></div>
           <?php } ?>
-          <div class="line"></div>
+          <div class="line animation-fade-me-up"></div>
       </div>
         <?php if ($programmatic_or_manual === 'manual') { ?>
             <div class="wrapper">

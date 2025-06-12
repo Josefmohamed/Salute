@@ -26,18 +26,18 @@ $description = get_field('description');
 $image = get_field('image');
 
 ?>
-<section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
+<section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?> animation-fade-me-up" >
   <div class="container">
           <div class="cards-wrapper">
               <div class="left-content column">
                   <?php if ($title) { ?>
-                      <h4 class="abrite-h4 text uppercase-text fw-800"><?= $title ?></h4>
+                      <h4 class="abrite-h4 text uppercase-text fw-800 animation-fade-me-up"><?= $title ?></h4>
                   <?php } ?>
                   <?php if ($description) { ?>
-                      <div class="paragraph-24 description urbanist white-color"><?= $description ?></div>
+                      <div class="paragraph-24 description urbanist white-color animation-fade-me-up"><?= $description ?></div>
                   <?php } ?>
               </div>
-              <div class="right-image-card">
+              <div class="right-image-card animation-fade-me-up">
                   <?php
                   $picture_class = 'left-image aspect-ratio';
                   echo bis_get_attachment_picture(
