@@ -4,7 +4,7 @@
   position: relative;
   padding-bottom: 80px;
   margin-top: -5.5vh;
-  z-index: 4;
+  z-index: 6;
   @include media-screen-min-600 {
     padding-bottom: 80px;
   }
@@ -22,7 +22,17 @@
       padding: 0;
     }
   }
-
+.section-svg {
+  position: absolute;
+  z-index: 1;
+  right: 27.3vw;
+  bottom: -115px;
+  height: 38.55vw;
+  width: auto;
+  @include media-screen-max-992 {
+    display: none;
+  }
+}
 
   .content-wrapper {
     position: relative;
@@ -40,10 +50,13 @@
     }
     @include media-screen-min-1024 {
       flex-direction: row;
-      padding: 80px 55px 0;
+      //padding: 80px 55px 0;
+      padding: 7vw 5.45vw 0 6.9vw;
+
     }
     @include media-screen-min-1440 {
-      padding: 120px 94px 0 118px;
+      //padding: 120px 94px 0 118px;
+      padding: 7vw 5.45vw 0 6.9vw;
     }
   }
 
@@ -82,13 +95,6 @@
       @include media-screen-min-1440 {
         line-height: 140%;
       }
-    }
-
-    .section-svg{
-      position: absolute;
-      right: 47%;
-      top: calc(100% - 100px);
-      z-index: 5;
     }
   }
 }

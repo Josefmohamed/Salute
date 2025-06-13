@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Connected Sections</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #e6ecf8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 100px 50px;
+            position: relative;
+        }
+
+        .text {
+            width: 40%;
+            z-index: 2;
+        }
+
+        .image {
+            width: 300px;
+            height: 200px;
+            background-color: #bbb;
+            border-radius: 10px;
+            z-index: 2;
+        }
+
+        .connector {
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        #section2 {
+            flex-direction: row-reverse;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Section 1 -->
+<div class="section" id="section1">
+    <div class="image" id="image1"></div>
+    <div class="text" id="text1">
+        <h2>OUR VISION</h2>
+        <p>To become the most trusted, compassionate, and reliable non-emergency medical transportation provider in the United States.</p>
+    </div>
+</div>
+
+<!-- SVG Connector -->
+<svg class="connector" id="svgConnector">
+    <path id="connectorPath" stroke="#2980b9" stroke-width="3" fill="none"/>
+</svg>
+
+<!-- Section 2 -->
+<div class="section" id="section2">
+    <div class="image" id="image2"></div>
+    <div class="text" id="text2">
+        <h2>TRANSPORTATION ACCESSIBILITY</h2>
+        <p>Specially designed vehicles allow us to serve those with mobility challenges, ensuring comfort and safety at every step.</p>
+    </div>
+</div>
+
+<script>
+    function drawConnector() {
+        const svg = document.getElementById("svgConnector");
+        const path = document.getElementById("connectorPath");
+        const text1 = document.getElementById("text1");
+        const image2 = document.getElementById("image2");
+
+        const textRect = text1.getBoundingClientRect();
+        const imageRect = image2.getBoundingClientRect();
+
+        const startX = textRect.left + textRect.width / 2;
+        const startY = textRect.top + textRect.height / 2 + window.scrollY;
+
+        const endX = imageRect.left + imageRect.width / 2;
+        const endY = imageRect.top + imageRect.height / 2 + window.scrollY;
+
+        const width = window.innerWidth;
+        const height = document.body.scrollHeight;
+
+        svg.setAttribute("width", width);
+        svg.setAttribute("height", height);
+
+        // Draw a nice bezier curve
+        const curve = `
+        M ${startX},${startY}
+        C ${startX},${(startY + endY) / 2}
+          ${endX},${(startY + endY) / 2}
+          ${endX},${endY}
+      `;
+
+        path.setAttribute("d", curve);
+    }
+
+    window.addEventListener("load", drawConnector);
+    window.addEventListener("resize", drawConnector);
+    window.addEventListener("scroll", drawConnector);
+</script>
+
+</body>
+</html>
