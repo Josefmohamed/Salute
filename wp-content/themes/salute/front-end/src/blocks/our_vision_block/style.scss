@@ -4,7 +4,6 @@
   position: relative;
   padding-bottom: 80px;
   margin-top: -5.5vh;
-  z-index: 6;
   @include media-screen-min-600 {
     padding-bottom: 80px;
   }
@@ -22,7 +21,8 @@
       padding: 0;
     }
   }
-.section-svg {
+
+  .section-svg {
   position: absolute;
   z-index: 1;
   right: 27.3vw;
@@ -48,7 +48,7 @@
     @include media-screen-min-768 {
       padding: 80px 80px;
     }
-    @include media-screen-min-1024 {
+    @include media-screen-min-992 {
       flex-direction: row;
       //padding: 80px 55px 0;
       padding: 7vw 5.45vw 0 6.9vw;
@@ -62,7 +62,7 @@
 
   .left-image-card {
 
-    @include media-screen-min-1024 {
+    @include media-screen-min-992 {
       margin-bottom: -180px;
       width: 48.6%;
       flex-shrink: 0;
@@ -80,7 +80,7 @@
   .right-content {
     gap: 18px;
     position: relative;
-    @include media-screen-min-1024 {
+    @include media-screen-min-992 {
       padding-bottom: 80px;
       margin-top: 83px;
       max-width: 457px;

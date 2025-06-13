@@ -26,11 +26,11 @@ $title = get_field('title');
 ?>
 <section id="<?= esc_attr($id) ?>" class="<?= esc_attr($className) ?>">
     <div class="container">
-    <div class="content column">
+    <div class="content animation-fade-me-up column">
         <?php if ($title) { ?>
-            <h4 class="abrite-h4 uppercase-text title fw-800 animation-fade-me-up text-center"><?= $title ?></h4>
+            <h4 class="abrite-h4 uppercase-text title fw-800 text-center"><?= $title ?></h4>
         <?php } ?>
-        <div class="line animation-fade-me-up"></div>
+        <div class="line"></div>
     </div>
     <?php if (have_rows('join_salute_highlights')) { ?>
     <div class="join-salute-highlights column">
@@ -40,9 +40,9 @@ $title = get_field('title');
             $highlight_title = get_sub_field('highlight_title');
             $highlight_description = get_sub_field('highlight_description');
             ?>
-        <div class="join-salute-highlight">
+        <div class="join-salute-highlight animation-fade-me-up">
             <?php if ($highlight_title) { ?>
-                    <div class="join-salute-title fw-800 paragraph-32 capitalize-text animation-fade-me-up">
+                    <div class="join-salute-title fw-800 paragraph-32 capitalize-text">
                         <?php if (!empty($icon) && is_array($icon)) { ?>
                             <picture class="join-salute-title-svg">
                                 <img src="<?= $icon['url'] ?>" alt="<?= $icon['alt'] ?>">
@@ -52,7 +52,7 @@ $title = get_field('title');
                     </div>
                 <?php } ?>
             <?php if ($highlight_description) { ?>
-                    <div class="highlight-description paragraph-20 midnight-depth animation-fade-me-up">
+                    <div class="highlight-description paragraph-20 midnight-depth">
                         <?= $highlight_description ?>
                     </div>
                 <?php } ?>

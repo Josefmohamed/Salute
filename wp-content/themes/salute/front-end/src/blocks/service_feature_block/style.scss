@@ -2,19 +2,44 @@
 
 .service_feature_block {
   background-color: $twilight-steel;
-  border-radius: 50px;
-  z-index: 4;
-  @include media-screen-max-992  {
-    padding-block: 60px;
+  border-radius: 15px;
+  position: relative;
+  margin-inline: 16px;
+  @include media-screen-max-992 {
+    border-radius: 50px;
+    padding-block: 30px;
+  }
+  @include media-screen-min-600 {
+    margin-inline: 24px;
+  }
+  @include media-screen-min-768 {
+    margin-inline: 32px;
+  }
+  @include media-screen-min-992 {
+    margin-inline: 0;
+  }
+  .section-svg {
+    position: absolute;
+    z-index: 1;
+    right: 27.3vw;
+    width: auto;
+    @include media-screen-max-992 {
+      display: none;
+    }
   }
   .cards-wrapper {
     display: flex;
-    border-radius: 50px;
     flex-direction: column;
+    z-index: 2;
+    position: relative;
+    border-radius: 15px;
+
     @include media-screen-min-992 {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
+      border-radius: 50px;
+
     }
     @include media-screen-min-1440 {
       padding-inline: 43px 16px;
@@ -32,6 +57,13 @@
       .text {
         color: $sky-breeze;
       }
+      .description {
+        @include media-screen-max-992 {
+          p {
+            font-size: 18px;
+          }
+        }
+      }
     }
     .right-image-card {
       width: 100%;
@@ -39,7 +71,7 @@
       @include media-screen-min-992 {
         width: 49.47%;
         margin-bottom: -115px;
-        padding-top: 115px;
+        margin-top: 115px;
       }
       .left-image {
         padding-top: 127.15%;

@@ -47,10 +47,11 @@ export function headerBlock() {
                 stagger: .05,
                 duration: .4,
                 delay: .5,
+                clearProps: 'all'
             });
         }
     });
-
+    window.addEventListener('resize', () => burgerMenu.classList.contains('burger-menu-active') && burgerMenu.click())
     // region open sub menu in responsive
     const menuItems = header.querySelectorAll('.menu-item-has-children');
     const mobileMedia = window.matchMedia('(max-width: 992px)');

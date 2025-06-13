@@ -15,6 +15,26 @@ export function services_block() {
   });
 
   function toggleAccordion(panelToActivate) {
+    // Close all other panels first
+    accordions.forEach((panel) => {
+      if (panel !== panelToActivate) {
+        const button = panel.querySelector("button");
+        const content = panel.querySelector(".accordion-content");
+        const learnLink = panel.querySelector(".link.learn");
+        const labelSpan = learnLink?.querySelector(".label");
+
+        button.setAttribute("aria-expanded", "false");
+        content.setAttribute("aria-hidden", "true");
+        panel.classList.remove("accordion-panel-style");
+
+        if (labelSpan) {
+          const openText = learnLink.getAttribute("data-open-label");
+          labelSpan.textContent = openText;
+        }
+      }
+    });
+
+    // Now toggle the clicked panel
     const activeButton = panelToActivate.querySelector("button");
     const activePanel = panelToActivate.querySelector(".accordion-content");
     const learnLink = panelToActivate.querySelector(".link.learn");
