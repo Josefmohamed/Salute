@@ -30,12 +30,12 @@ $header_logo = get_field('header_logo', 'options');
       <div class="cards-wrapper">
           <!--     logo-->
           <?php if ($header_logo) { ?>
-              <a href="<?= site_url() ?>" target="_self" role="img" class="header-logo animation-move-me-left" aria-labelledby=" header_logo">
+              <a href="<?= site_url() ?>" target="_self" role="img" class="header-logo" aria-labelledby=" header_logo">
                   <?= \Theme\Helpers::display_attachment($header_logo, array("width" => 183, "height" => 46)) ?>
               </a>
           <?php } ?>
           <!-- burger menu and cross-->
-          <button aria-label="Open Menu Links" class="burger-menu animation-move-me-right">
+          <button aria-label="Open Menu Links" class="burger-menu">
               <span></span>
               <span></span>
               <span></span>
@@ -44,7 +44,7 @@ $header_logo = get_field('header_logo', 'options');
           <nav class="navbar">
               <div class="navbar-wrapper">
                   <?php if (have_rows('menu_links', 'options')) { ?>
-                      <ul class="primary-menu animation-move-me-right">
+                      <ul class="primary-menu">
                           <?php while (have_rows('menu_links', 'options')) {
                               the_row();
                               $menu_link = get_sub_field('link');
