@@ -10,7 +10,6 @@ header {
   @include media-screen-min-1024 {
     top: 52px;
   }
-  // header
   .container {
     margin: 0 auto;
     padding-inline: 24px;
@@ -21,7 +20,6 @@ header {
       padding-inline: 44px;
     }
   }
-
   .cards-wrapper {
     display: flex;
     align-items: center;
@@ -48,7 +46,6 @@ header {
       padding: 35px 111px;
     }
   }
-  // logo
   .header-logo {
     width: 125px;
     height: 46px;
@@ -71,8 +68,6 @@ header {
       object-fit: contain;
     }
   }
-
-  // burger menu
   .burger-menu {
     width: 30px;
     height: 20px;
@@ -180,8 +175,6 @@ header {
     }
 
   }
-
-  // links
   .navbar {
     position: relative;
     align-items: center;
@@ -209,7 +202,6 @@ header {
       }
     }
   }
-
   .navbar-wrapper {
     padding-inline: 50px;
     padding-top: 130px;
@@ -230,7 +222,6 @@ header {
       gap: 32px;
     }
   }
-
   .primary-menu {
     display: flex;
     flex-direction: column;
@@ -246,7 +237,6 @@ header {
       gap: 40px;
     }
   }
-
   .menu-item {
     position: relative;
     cursor: pointer;
@@ -308,9 +298,7 @@ header {
 
 
     }
-
   &.dark-header {
-
     .burger-menu {
       span {
         &:after, &:before {
@@ -356,24 +344,23 @@ header {
       }
 
     }
-
     .menu-item {
       color: $frosted-sky;
       &:hover {
         color: $sky-breeze;
       }
     }
-    .navbar-wrapper {
+    .navbar-wrapper   {
       @include media-screen-max-1024 {
         background-color: $midnight-depth;
       }
     }
-
+    .header-logo {
+      svg {
+        path {
+          fill: $sky-breeze;
+        }
+      }
+    }
   }
-
-}
-
-
-#wpadminbar {
-  display: none;
 }
